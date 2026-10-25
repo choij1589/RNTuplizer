@@ -1,0 +1,11 @@
+{
+  "LIB": [
+    "executable_run_options"
+  ],
+  "TOOLNAME": "tensorflow-executable_run_options",
+  "TOOLREVISION": "1",
+  "TOOLVERSION": "2.12.0-4a4075bce51a4e32baa38afcdc2c20ee",
+  "USE": [
+    "tensorflow"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "INCLUDE": [
+    "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/ucx/1.18.1-7cd3b7632527d250e92a42bcb9b43d94/include"
+  ],
+  "LIB": [
+    "ucp",
+    "uct",
+    "ucs",
+    "ucm"
+  ],
+  "LIBDIR": [
+    "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/ucx/1.18.1-7cd3b7632527d250e92a42bcb9b43d94/lib"
+  ],
+  "RUNTIME": {
+    "PATH:PATH": [
+      "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/ucx/1.18.1-7cd3b7632527d250e92a42bcb9b43d94/bin"
+    ]
+  },
+  "TOOLNAME": "ucx",
+  "TOOLREVISION": "1",
+  "TOOLVERSION": "1.18.1-7cd3b7632527d250e92a42bcb9b43d94",
+  "UCX_BASE": "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/ucx/1.18.1-7cd3b7632527d250e92a42bcb9b43d94",
+  "VARIABLES": [
+    "UCX_BASE",
+    "INCLUDE",
+    "LIBDIR"
+  ]
+}

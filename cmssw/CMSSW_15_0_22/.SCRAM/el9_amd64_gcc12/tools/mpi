@@ -1,0 +1,8 @@
+{
+  "TOOLNAME": "mpi",
+  "TOOLREVISION": "1",
+  "TOOLVERSION": "1.0-97be0217982d13fd7ab551ca580d0776",
+  "USE": [
+    "openmpi"
+  ]
+}

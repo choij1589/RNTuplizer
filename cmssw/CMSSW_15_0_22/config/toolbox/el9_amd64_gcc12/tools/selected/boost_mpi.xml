@@ -1,0 +1,6 @@
+<tool name="boost_mpi" version="1.80.0-71a9f99e945ddf5b85afd9761a632291" revision="1">
+  <info url="http://www.boost.org"/>
+  <lib name="boost_mpi"/>
+  <use name="boost"/>
+  <use name="boost_serialization"/>
+</tool>

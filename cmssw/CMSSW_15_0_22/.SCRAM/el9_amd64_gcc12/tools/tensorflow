@@ -1,0 +1,30 @@
+{
+  "FLAGS": {
+    "SYSTEM_INCLUDE": [
+      "1"
+    ]
+  },
+  "INCLUDE": [
+    "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/tensorflow/2.12.0-4a4075bce51a4e32baa38afcdc2c20ee/include"
+  ],
+  "LIBDIR": [
+    "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/tensorflow/2.12.0-4a4075bce51a4e32baa38afcdc2c20ee/lib"
+  ],
+  "RUNTIME": {
+    "PATH:PATH": [
+      "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/tensorflow/2.12.0-4a4075bce51a4e32baa38afcdc2c20ee/bin"
+    ],
+    "TF_CPP_MIN_LOG_LEVEL": [
+      "3"
+    ]
+  },
+  "TENSORFLOW_BASE": "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/tensorflow/2.12.0-4a4075bce51a4e32baa38afcdc2c20ee",
+  "TOOLNAME": "tensorflow",
+  "TOOLREVISION": "1",
+  "TOOLVERSION": "2.12.0-4a4075bce51a4e32baa38afcdc2c20ee",
+  "VARIABLES": [
+    "TENSORFLOW_BASE",
+    "LIBDIR",
+    "INCLUDE"
+  ]
+}

@@ -1,0 +1,10 @@
+<tool name="tensorflow" version="2.12.0-4a4075bce51a4e32baa38afcdc2c20ee" revision="1">
+  <client>
+    <environment name="TENSORFLOW_BASE" default="/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/tensorflow/2.12.0-4a4075bce51a4e32baa38afcdc2c20ee"/>
+    <environment name="LIBDIR" default="$TENSORFLOW_BASE/lib"/>
+    <environment name="INCLUDE" default="$TENSORFLOW_BASE/include"/>
+  </client>
+  <runtime name="PATH" value="$TENSORFLOW_BASE/bin" type="path"/>
+  <runtime name="TF_CPP_MIN_LOG_LEVEL" value="3"/>
+  <flags SYSTEM_INCLUDE="1"/>
+</tool>

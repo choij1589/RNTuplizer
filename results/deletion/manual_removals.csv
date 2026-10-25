@@ -1,0 +1,2 @@
+date,src,dst,size_bytes,reason
+2026-10-25,/pnfs/knu.ac.kr/data/cms/store/user/choij/SampleFactory/TTToHcToWA_AToMuMu_MHc-130_MA-90_MultiLepFilter_TuneCP5_cff/chain_RunIII2024Summer24/20261019_043451/NanoAODv15_.root,/pnfs/knu.ac.kr/data/cms/store/user/choij/SampleFactory_quarantine/20261025/TTToHcToWA_AToMuMu_MHc-130_MA-90_MultiLepFilter_TuneCP5_cff/chain_RunIII2024Summer24/20261019_043451/NanoAODv15_.root,2647354,stray leftover test file (user-requested)

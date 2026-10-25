@@ -1,0 +1,10 @@
+<tool name="mpich" version="v4.3.0-f8c44d72765b74a645f88724700894b8" revision="1">
+  <lib name="mpi"/>
+  <lib name="mpicxx"/>
+  <client>
+    <environment name="MPICH_BASE" default="/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/mpich/v4.3.0-f8c44d72765b74a645f88724700894b8"/>
+    <environment name="LIBDIR"     default="$MPICH_BASE/lib"/>
+    <environment name="INCLUDE"    default="$MPICH_BASE/include"/>
+  </client>
+  <runtime name="PATH" value="$MPICH_BASE/bin" type="path"/>
+</tool>

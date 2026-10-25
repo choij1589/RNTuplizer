@@ -1,0 +1,13 @@
+universe = vanilla
+executable = /d0/scratch/choij/SampleFactoryQC/.claude/skills/qc-condor/scripts/run_qc.sh
+arguments = /d0/scratch/choij/SampleFactoryQC /d0/scratch/choij/SampleFactoryQC/results/TTToHcToWA_AToMuMu_MHc-130_MA-25_MultiLepFilter_TuneCP5_cff/.work r000
+output = /d0/scratch/choij/SampleFactoryQC/results/TTToHcToWA_AToMuMu_MHc-130_MA-25_MultiLepFilter_TuneCP5_cff/.work/log/chunk_r000.out
+error = /d0/scratch/choij/SampleFactoryQC/results/TTToHcToWA_AToMuMu_MHc-130_MA-25_MultiLepFilter_TuneCP5_cff/.work/log/chunk_r000.err
+log = /d0/scratch/choij/SampleFactoryQC/results/TTToHcToWA_AToMuMu_MHc-130_MA-25_MultiLepFilter_TuneCP5_cff/.work/log/cluster.log
+should_transfer_files = NO
+getenv = False
+request_cpus = 1
+request_memory = 2 GB
++JobFlavour = "longlunch"
+max_retries = 0
+queue

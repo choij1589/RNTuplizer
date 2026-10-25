@@ -1,0 +1,44 @@
+{
+  "DD4HEP_CORE_BASE": "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/dd4hep/v01-29-00-bd1fa0b0545dfc8e6e668b6daf7f9111",
+  "FLAGS": {
+    "CPPDEFINES": [
+      "DD4HEP_USE_GEANT4_UNITS=1"
+    ],
+    "LISTCOMPONENTS": [
+      "$(DD4HEP_CORE_BASE)/bin/listcomponents_dd4hep"
+    ]
+  },
+  "INCLUDE": [
+    "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/dd4hep/v01-29-00-bd1fa0b0545dfc8e6e668b6daf7f9111/include"
+  ],
+  "LIB": [
+    "DDCore",
+    "DDParsers"
+  ],
+  "LIBDIR": [
+    "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/dd4hep/v01-29-00-bd1fa0b0545dfc8e6e668b6daf7f9111/lib"
+  ],
+  "RUNTIME": {
+    "PATH:PATH": [
+      "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/dd4hep/v01-29-00-bd1fa0b0545dfc8e6e668b6daf7f9111/bin"
+    ],
+    "PATH:ROOT_INCLUDE_PATH": [
+      "/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/dd4hep/v01-29-00-bd1fa0b0545dfc8e6e668b6daf7f9111/include"
+    ]
+  },
+  "TOOLNAME": "dd4hep-core",
+  "TOOLREVISION": "1",
+  "TOOLVERSION": "v01-29-00-bd1fa0b0545dfc8e6e668b6daf7f9111",
+  "USE": [
+    "root_cxxdefaults",
+    "root",
+    "boost",
+    "xerces-c",
+    "clhep"
+  ],
+  "VARIABLES": [
+    "DD4HEP_CORE_BASE",
+    "LIBDIR",
+    "INCLUDE"
+  ]
+}

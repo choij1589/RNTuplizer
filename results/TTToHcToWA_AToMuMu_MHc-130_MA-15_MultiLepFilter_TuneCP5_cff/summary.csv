@@ -1,0 +1,2 @@
+masspoint,n_files,n_files_corrupted,n_files_clean,n_events_total,n_events_corrupted,n_events_clean,n_files_unreadable,gen_num_passed,gen_num_total,filter_efficiency,filter_eff_err,n_files_incomplete,n_events_missing_incomplete,n_files_missing_result,n_files_removed,all_custom_branches_present
+TTToHcToWA_AToMuMu_MHc-130_MA-15_MultiLepFilter_TuneCP5_cff,102,0,102,317947,0,317947,0,317947,510000,0.623425,0.000678,0,0,0,1,1
