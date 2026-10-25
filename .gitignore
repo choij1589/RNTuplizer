@@ -6,3 +6,4 @@ __pycache__/
 results/*/*/runs/*/logs/
 results/*/*/runs/*/out/
 results/*/*/runs/*/lists/
+unfinished_tasks.txt
