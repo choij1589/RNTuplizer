@@ -1,0 +1,2034 @@
+tree,branch,decision,type,zip_bytes,rule
+Events,run,KEEP,UInt_t,523,default
+Events,luminosityBlock,KEEP,UInt_t,559,default
+Events,event,KEEP,ULong64_t,3477,default
+Events,bunchCrossing,KEEP,UInt_t,541,default
+Events,orbitNumber,KEEP,UInt_t,535,default
+Events,HTXS_njets25,DROP,UChar_t,494,line 8
+Events,HTXS_njets30,DROP,UChar_t,494,line 8
+Events,HTXS_stage1_1_cat_pTjet25GeV,DROP,Int_t,586,line 8
+Events,HTXS_stage1_1_cat_pTjet30GeV,DROP,Int_t,586,line 8
+Events,HTXS_stage1_1_fine_cat_pTjet25GeV,DROP,Int_t,601,line 8
+Events,HTXS_stage1_1_fine_cat_pTjet30GeV,DROP,Int_t,601,line 8
+Events,HTXS_stage1_2_cat_pTjet25GeV,DROP,Int_t,586,line 8
+Events,HTXS_stage1_2_cat_pTjet30GeV,DROP,Int_t,586,line 8
+Events,HTXS_stage1_2_fine_cat_pTjet25GeV,DROP,Int_t,601,line 8
+Events,HTXS_stage1_2_fine_cat_pTjet30GeV,DROP,Int_t,601,line 8
+Events,HTXS_stage_0,DROP,Int_t,538,line 8
+Events,HTXS_stage_1_pTjet25,DROP,Int_t,562,line 8
+Events,HTXS_stage_1_pTjet30,DROP,Int_t,562,line 8
+Events,HTXS_Higgs_pt,DROP,Float_t,541,line 8
+Events,HTXS_Higgs_y,DROP,Float_t,550,line 8
+Events,HTXS_Mjj,DROP,Float_t,526,line 8
+Events,HTXS_V_pt,DROP,Float_t,529,line 8
+Events,HTXS_dPhijj,DROP,Float_t,535,line 8
+Events,HTXS_ptHjj,DROP,Float_t,532,line 8
+Events,BeamSpot_type,KEEP,Short_t,517,default
+Events,BeamSpot_sigmaZ,KEEP,Float_t,559,default
+Events,BeamSpot_sigmaZError,KEEP,Float_t,574,default
+Events,BeamSpot_z,KEEP,Float_t,544,default
+Events,BeamSpot_zError,KEEP,Float_t,559,default
+Events,nboostedTau,DROP,Int_t,1975,auto: all members dropped
+Events,boostedTau_idAntiEle2018,DROP,UChar_t[nboostedTau],4742,line 10
+Events,boostedTau_idAntiMu,DROP,UChar_t[nboostedTau],3467,line 10
+Events,boostedTau_idMVAnewDM2017v2,DROP,UChar_t[nboostedTau],4635,line 10
+Events,boostedTau_idMVAoldDM2017v2,DROP,UChar_t[nboostedTau],4659,line 10
+Events,boostedTau_jetIdx,DROP,Short_t[nboostedTau],4769,line 10
+Events,boostedTau_rawAntiEleCat2018,DROP,Short_t[nboostedTau],4442,line 10
+Events,boostedTau_charge,DROP,Int_t[nboostedTau],3929,line 10
+Events,boostedTau_decayMode,DROP,Int_t[nboostedTau],4078,line 10
+Events,boostedTau_chargedIso,DROP,Float_t[nboostedTau],10173,line 10
+Events,boostedTau_eta,DROP,Float_t[nboostedTau],13656,line 10
+Events,boostedTau_leadTkDeltaEta,DROP,Float_t[nboostedTau],10933,line 10
+Events,boostedTau_leadTkDeltaPhi,DROP,Float_t[nboostedTau],11081,line 10
+Events,boostedTau_leadTkPtOverTauPt,DROP,Float_t[nboostedTau],7126,line 10
+Events,boostedTau_mass,DROP,Float_t[nboostedTau],5487,line 10
+Events,boostedTau_neutralIso,DROP,Float_t[nboostedTau],7445,line 10
+Events,boostedTau_phi,DROP,Float_t[nboostedTau],13616,line 10
+Events,boostedTau_photonsOutsideSignalCone,DROP,Float_t[nboostedTau],5815,line 10
+Events,boostedTau_pt,DROP,Float_t[nboostedTau],17341,line 10
+Events,boostedTau_puCorr,DROP,Float_t[nboostedTau],10885,line 10
+Events,boostedTau_rawAntiEle2018,DROP,Float_t[nboostedTau],12037,line 10
+Events,boostedTau_rawBoostedDeepTauRunIIv2p0VSe,DROP,Float_t[nboostedTau],11690,line 10
+Events,boostedTau_rawBoostedDeepTauRunIIv2p0VSjet,DROP,Float_t[nboostedTau],9684,line 10
+Events,boostedTau_rawBoostedDeepTauRunIIv2p0VSmu,DROP,Float_t[nboostedTau],11453,line 10
+Events,boostedTau_rawIso,DROP,Float_t[nboostedTau],10385,line 10
+Events,boostedTau_rawIsodR03,DROP,Float_t[nboostedTau],8765,line 10
+Events,boostedTau_rawMVAnewDM2017v2,DROP,Float_t[nboostedTau],10962,line 10
+Events,boostedTau_rawMVAoldDM2017v2,DROP,Float_t[nboostedTau],10838,line 10
+Events,CaloMET_phi,KEEP,Float_t,7819,default
+Events,CaloMET_pt,KEEP,Float_t,7328,default
+Events,CaloMET_sumEt,KEEP,Float_t,6725,default
+Events,nCorrT1METJet,KEEP,Int_t,2301,default
+Events,CorrT1METJet_EmEF,KEEP,Float_t[nCorrT1METJet],9453,default
+Events,CorrT1METJet_area,KEEP,Float_t[nCorrT1METJet],9081,default
+Events,CorrT1METJet_eta,KEEP,Float_t[nCorrT1METJet],19518,default
+Events,CorrT1METJet_muonSubtrDeltaEta,KEEP,Float_t[nCorrT1METJet],10924,default
+Events,CorrT1METJet_muonSubtrDeltaPhi,KEEP,Float_t[nCorrT1METJet],6120,default
+Events,CorrT1METJet_muonSubtrFactor,KEEP,Float_t[nCorrT1METJet],13662,default
+Events,CorrT1METJet_phi,KEEP,Float_t[nCorrT1METJet],19634,default
+Events,CorrT1METJet_rawMass,KEEP,Float_t[nCorrT1METJet],16650,default
+Events,CorrT1METJet_rawPt,KEEP,Float_t[nCorrT1METJet],14256,default
+Events,DeepMETResolutionTune_phi,KEEP,Float_t,9377,default
+Events,DeepMETResolutionTune_pt,KEEP,Float_t,13074,default
+Events,DeepMETResponseTune_phi,KEEP,Float_t,9379,default
+Events,DeepMETResponseTune_pt,KEEP,Float_t,13048,default
+Events,nElectron,KEEP,Int_t,1981,default
+Events,Electron_convVeto,KEEP,Bool_t[nElectron],2873,default
+Events,Electron_cutBased,KEEP,UChar_t[nElectron],4229,default
+Events,Electron_cutBased_HEEP,KEEP,Bool_t[nElectron],3284,default
+Events,Electron_isEB,KEEP,Bool_t[nElectron],3405,default
+Events,Electron_isEcalDriven,KEEP,Bool_t[nElectron],3469,default
+Events,Electron_isPFcand,KEEP,Bool_t[nElectron],3413,default
+Events,Electron_jetNDauCharged,KEEP,UChar_t[nElectron],4663,default
+Events,Electron_lostHits,KEEP,UChar_t[nElectron],3373,default
+Events,Electron_mvaIso_WP80,KEEP,Bool_t[nElectron],3474,default
+Events,Electron_mvaIso_WP90,KEEP,Bool_t[nElectron],3510,default
+Events,Electron_mvaIso_WPHZZ,KEEP,Bool_t[nElectron],3525,default
+Events,Electron_mvaNoIso_WP80,KEEP,Bool_t[nElectron],3512,default
+Events,Electron_mvaNoIso_WP90,KEEP,Bool_t[nElectron],3544,default
+Events,Electron_seedGain,KEEP,UChar_t[nElectron],2753,default
+Events,Electron_tightCharge,KEEP,UChar_t[nElectron],3506,default
+Events,Electron_jetIdx,KEEP,Short_t[nElectron],5183,default
+Events,Electron_photonIdx,DROP,Short_t[nElectron],4292,line 21
+Events,Electron_seediEtaOriX,KEEP,Short_t[nElectron],8113,default
+Events,Electron_seediPhiOriY,KEEP,Short_t[nElectron],8505,default
+Events,Electron_svIdx,KEEP,Short_t[nElectron],4060,default
+Events,Electron_fsrPhotonIdx,DROP,Short_t[nElectron],3137,line 22
+Events,Electron_charge,KEEP,Int_t[nElectron],3927,default
+Events,Electron_pdgId,KEEP,Int_t[nElectron],3908,default
+Events,Electron_vidNestedWPBitmap,KEEP,Int_t[nElectron],8272,default
+Events,Electron_vidNestedWPBitmapHEEP,KEEP,Int_t[nElectron],8076,default
+Events,Electron_DeltaEtaInSC,KEEP,Float_t[nElectron],12621,default
+Events,Electron_DeltaPhiInSC,KEEP,Float_t[nElectron],12989,default
+Events,Electron_DeltaPhiInSeed,KEEP,Float_t[nElectron],12623,default
+Events,Electron_PreshowerEnergy,KEEP,Float_t[nElectron],6026,default
+Events,Electron_deltaEtaSC,KEEP,Float_t[nElectron],12239,default
+Events,Electron_dr03EcalRecHitSumEt,KEEP,Float_t[nElectron],5414,default
+Events,Electron_dr03HcalDepth1TowerSumEt,KEEP,Float_t[nElectron],5189,default
+Events,Electron_dr03HcalTowerSumEt,KEEP,Float_t[nElectron],11363,default
+Events,Electron_dr03TkSumPt,KEEP,Float_t[nElectron],4518,default
+Events,Electron_dr03TkSumPtHEEP,KEEP,Float_t[nElectron],4326,default
+Events,Electron_dxy,KEEP,Float_t[nElectron],12618,default
+Events,Electron_dxyErr,KEEP,Float_t[nElectron],8519,default
+Events,Electron_dz,KEEP,Float_t[nElectron],13079,default
+Events,Electron_dzErr,KEEP,Float_t[nElectron],8332,default
+Events,Electron_eInvMinusPInv,KEEP,Float_t[nElectron],12512,default
+Events,Electron_ecalEnergy,KEEP,Float_t[nElectron],11567,default
+Events,Electron_ecalEnergyError,KEEP,Float_t[nElectron],11830,default
+Events,Electron_ecalPFClusIso,KEEP,Float_t[nElectron],11208,default
+Events,Electron_energyErr,KEEP,Float_t[nElectron],9208,default
+Events,Electron_eta,KEEP,Float_t[nElectron],13554,default
+Events,Electron_fbrem,KEEP,Float_t[nElectron],12188,default
+Events,Electron_gsfTrketaMode,KEEP,Float_t[nElectron],11940,default
+Events,Electron_gsfTrkpMode,KEEP,Float_t[nElectron],11570,default
+Events,Electron_gsfTrkpModeErr,KEEP,Float_t[nElectron],10195,default
+Events,Electron_gsfTrkphiMode,KEEP,Float_t[nElectron],11512,default
+Events,Electron_hcalPFClusIso,KEEP,Float_t[nElectron],10976,default
+Events,Electron_hoe,KEEP,Float_t[nElectron],9470,default
+Events,Electron_ip3d,KEEP,Float_t[nElectron],12277,default
+Events,Electron_jetDF,KEEP,Float_t[nElectron],9764,default
+Events,Electron_jetPtRelv2,KEEP,Float_t[nElectron],9867,default
+Events,Electron_jetRelIso,KEEP,Float_t[nElectron],10152,default
+Events,Electron_mass,KEEP,Float_t[nElectron],8833,default
+Events,Electron_miniPFRelIso_all,KEEP,Float_t[nElectron],14873,default
+Events,Electron_miniPFRelIso_chg,KEEP,Float_t[nElectron],13309,default
+Events,Electron_mvaHZZIso,KEEP,Float_t[nElectron],13160,default
+Events,Electron_mvaIso,KEEP,Float_t[nElectron],12595,default
+Events,Electron_mvaNoIso,KEEP,Float_t[nElectron],14065,default
+Events,Electron_pfRelIso03_all,KEEP,Float_t[nElectron],16191,default
+Events,Electron_pfRelIso03_chg,KEEP,Float_t[nElectron],15247,default
+Events,Electron_pfRelIso04_all,KEEP,Float_t[nElectron],11367,default
+Events,Electron_phi,KEEP,Float_t[nElectron],13438,default
+Events,Electron_pt,KEEP,Float_t[nElectron],18091,default
+Events,Electron_r9,KEEP,Float_t[nElectron],10115,default
+Events,Electron_rawEnergy,KEEP,Float_t[nElectron],11340,default
+Events,Electron_scEtOverPt,KEEP,Float_t[nElectron],10651,default
+Events,Electron_sieie,KEEP,Float_t[nElectron],10860,default
+Events,Electron_sip3d,KEEP,Float_t[nElectron],11844,default
+Events,Electron_superclusterEnergy,KEEP,Float_t[nElectron],11375,default
+Events,Electron_superclusterEta,KEEP,Float_t[nElectron],11962,default
+Events,Electron_superclusterPhi,KEEP,Float_t[nElectron],11610,default
+Events,Electron_promptMVA,KEEP,Float_t[nElectron],11496,default
+Events,nFatJet,KEEP,Int_t,1415,default
+Events,FatJet_nConstituents,KEEP,UChar_t[nFatJet],2710,default
+Events,FatJet_chMultiplicity,KEEP,Short_t[nFatJet],2781,default
+Events,FatJet_neMultiplicity,KEEP,Short_t[nFatJet],2753,default
+Events,FatJet_subJetIdx1,KEEP,Short_t[nFatJet],2097,default
+Events,FatJet_subJetIdx2,KEEP,Short_t[nFatJet],2145,default
+Events,FatJet_electronIdx3SJ,KEEP,Short_t[nFatJet],2105,default
+Events,FatJet_muonIdx3SJ,KEEP,Short_t[nFatJet],2209,default
+Events,FatJet_area,KEEP,Float_t[nFatJet],3359,default
+Events,FatJet_chEmEF,KEEP,Float_t[nFatJet],2969,default
+Events,FatJet_chHEF,KEEP,Float_t[nFatJet],4554,default
+Events,FatJet_eta,KEEP,Float_t[nFatJet],5112,default
+Events,FatJet_globalParT3_QCD,KEEP,Float_t[nFatJet],4860,default
+Events,FatJet_globalParT3_TopbWev,KEEP,Float_t[nFatJet],4852,default
+Events,FatJet_globalParT3_TopbWmv,KEEP,Float_t[nFatJet],4828,default
+Events,FatJet_globalParT3_TopbWq,KEEP,Float_t[nFatJet],4877,default
+Events,FatJet_globalParT3_TopbWqq,KEEP,Float_t[nFatJet],4864,default
+Events,FatJet_globalParT3_TopbWtauhv,KEEP,Float_t[nFatJet],4845,default
+Events,FatJet_globalParT3_WvsQCD,KEEP,Float_t[nFatJet],4749,default
+Events,FatJet_globalParT3_XWW3q,KEEP,Float_t[nFatJet],4894,default
+Events,FatJet_globalParT3_XWW4q,KEEP,Float_t[nFatJet],4874,default
+Events,FatJet_globalParT3_XWWqqev,KEEP,Float_t[nFatJet],4900,default
+Events,FatJet_globalParT3_XWWqqmv,KEEP,Float_t[nFatJet],4860,default
+Events,FatJet_globalParT3_Xbb,KEEP,Float_t[nFatJet],4872,default
+Events,FatJet_globalParT3_Xcc,KEEP,Float_t[nFatJet],4888,default
+Events,FatJet_globalParT3_Xcs,KEEP,Float_t[nFatJet],4896,default
+Events,FatJet_globalParT3_Xqq,KEEP,Float_t[nFatJet],4900,default
+Events,FatJet_globalParT3_Xtauhtaue,KEEP,Float_t[nFatJet],4866,default
+Events,FatJet_globalParT3_Xtauhtauh,KEEP,Float_t[nFatJet],4858,default
+Events,FatJet_globalParT3_Xtauhtaum,KEEP,Float_t[nFatJet],4850,default
+Events,FatJet_globalParT3_massCorrGeneric,KEEP,Float_t[nFatJet],4384,default
+Events,FatJet_globalParT3_massCorrX2p,KEEP,Float_t[nFatJet],4268,default
+Events,FatJet_globalParT3_withMassTopvsQCD,KEEP,Float_t[nFatJet],4875,default
+Events,FatJet_globalParT3_withMassWvsQCD,KEEP,Float_t[nFatJet],4789,default
+Events,FatJet_globalParT3_withMassZvsQCD,KEEP,Float_t[nFatJet],4697,default
+Events,FatJet_hfEmEF,KEEP,Float_t[nFatJet],1789,default
+Events,FatJet_hfHEF,KEEP,Float_t[nFatJet],1838,default
+Events,FatJet_mass,KEEP,Float_t[nFatJet],4351,default
+Events,FatJet_msoftdrop,KEEP,Float_t[nFatJet],4574,default
+Events,FatJet_muEF,KEEP,Float_t[nFatJet],3847,default
+Events,FatJet_n2b1,KEEP,Float_t[nFatJet],4163,default
+Events,FatJet_n3b1,KEEP,Float_t[nFatJet],2763,default
+Events,FatJet_neEmEF,KEEP,Float_t[nFatJet],4513,default
+Events,FatJet_neHEF,KEEP,Float_t[nFatJet],4530,default
+Events,FatJet_particleNetLegacy_QCD,KEEP,Float_t[nFatJet],4566,default
+Events,FatJet_particleNetLegacy_Xbb,KEEP,Float_t[nFatJet],4814,default
+Events,FatJet_particleNetLegacy_Xcc,KEEP,Float_t[nFatJet],4782,default
+Events,FatJet_particleNetLegacy_Xqq,KEEP,Float_t[nFatJet],4794,default
+Events,FatJet_particleNetLegacy_mass,KEEP,Float_t[nFatJet],4533,default
+Events,FatJet_particleNetWithMass_H4qvsQCD,KEEP,Float_t[nFatJet],4879,default
+Events,FatJet_particleNetWithMass_HbbvsQCD,KEEP,Float_t[nFatJet],4815,default
+Events,FatJet_particleNetWithMass_HccvsQCD,KEEP,Float_t[nFatJet],4791,default
+Events,FatJet_particleNetWithMass_QCD,KEEP,Float_t[nFatJet],4892,default
+Events,FatJet_particleNetWithMass_TvsQCD,KEEP,Float_t[nFatJet],4853,default
+Events,FatJet_particleNetWithMass_WvsQCD,KEEP,Float_t[nFatJet],4713,default
+Events,FatJet_particleNetWithMass_ZvsQCD,KEEP,Float_t[nFatJet],4725,default
+Events,FatJet_particleNet_QCD,KEEP,Float_t[nFatJet],4152,default
+Events,FatJet_particleNet_QCD0HF,KEEP,Float_t[nFatJet],4209,default
+Events,FatJet_particleNet_QCD1HF,KEEP,Float_t[nFatJet],4173,default
+Events,FatJet_particleNet_QCD2HF,KEEP,Float_t[nFatJet],4177,default
+Events,FatJet_particleNet_WVsQCD,KEEP,Float_t[nFatJet],4017,default
+Events,FatJet_particleNet_XbbVsQCD,KEEP,Float_t[nFatJet],4047,default
+Events,FatJet_particleNet_XccVsQCD,KEEP,Float_t[nFatJet],4067,default
+Events,FatJet_particleNet_XggVsQCD,KEEP,Float_t[nFatJet],4063,default
+Events,FatJet_particleNet_XqqVsQCD,KEEP,Float_t[nFatJet],4123,default
+Events,FatJet_particleNet_XteVsQCD,KEEP,Float_t[nFatJet],4135,default
+Events,FatJet_particleNet_XtmVsQCD,KEEP,Float_t[nFatJet],3643,default
+Events,FatJet_particleNet_XttVsQCD,KEEP,Float_t[nFatJet],4023,default
+Events,FatJet_particleNet_massCorr,KEEP,Float_t[nFatJet],3863,default
+Events,FatJet_phi,KEEP,Float_t[nFatJet],5104,default
+Events,FatJet_pt,KEEP,Float_t[nFatJet],4053,default
+Events,FatJet_rawFactor,KEEP,Float_t[nFatJet],3334,default
+Events,FatJet_tau1,KEEP,Float_t[nFatJet],4359,default
+Events,FatJet_tau2,KEEP,Float_t[nFatJet],4423,default
+Events,FatJet_tau3,KEEP,Float_t[nFatJet],4403,default
+Events,FatJet_tau4,KEEP,Float_t[nFatJet],4419,default
+Events,FatJet_lsf3,KEEP,Float_t[nFatJet],3983,default
+Events,nFatJetPFCand,KEEP,Int_t,2093,default
+Events,FatJetPFCand_pfCandIdx,KEEP,Int_t[nFatJetPFCand],23880,default
+Events,FatJetPFCand_jetIdx,KEEP,Int_t[nFatJetPFCand],4432,default
+Events,nFsrPhoton,DROP,Int_t,1092,auto: all members dropped
+Events,FsrPhoton_electronIdx,DROP,Short_t[nFsrPhoton],1469,line 12
+Events,FsrPhoton_muonIdx,DROP,Short_t[nFsrPhoton],1601,line 12
+Events,FsrPhoton_dROverEt2,DROP,Float_t[nFsrPhoton],3243,line 12
+Events,FsrPhoton_eta,DROP,Float_t[nFsrPhoton],2757,line 12
+Events,FsrPhoton_phi,DROP,Float_t[nFsrPhoton],2749,line 12
+Events,FsrPhoton_pt,DROP,Float_t[nFsrPhoton],2514,line 12
+Events,FsrPhoton_relIso03,DROP,Float_t[nFsrPhoton],3104,line 12
+Events,nGenJetAK8,KEEP,Int_t,2000,default
+Events,GenJetAK8_eta,KEEP,Float_t[nGenJetAK8],13253,default
+Events,GenJetAK8_mass,KEEP,Float_t[nGenJetAK8],10676,default
+Events,GenJetAK8_phi,KEEP,Float_t[nGenJetAK8],13177,default
+Events,GenJetAK8_pt,KEEP,Float_t[nGenJetAK8],17034,default
+Events,nGenJet,KEEP,Int_t,2631,default
+Events,GenJet_eta,KEEP,Float_t[nGenJet],75100,default
+Events,GenJet_mass,KEEP,Float_t[nGenJet],58572,default
+Events,GenJet_phi,KEEP,Float_t[nGenJet],73840,default
+Events,GenJet_pt,KEEP,Float_t[nGenJet],108092,default
+Events,nGenPart,KEEP,Int_t,3714,default
+Events,GenPart_genPartIdxMother,KEEP,Short_t[nGenPart],76240,default
+Events,GenPart_statusFlags,KEEP,UShort_t[nGenPart],52150,default
+Events,GenPart_pdgId,KEEP,Int_t[nGenPart],101293,default
+Events,GenPart_status,KEEP,Int_t[nGenPart],45168,default
+Events,GenPart_eta,KEEP,Float_t[nGenPart],276303,default
+Events,GenPart_mass,KEEP,Float_t[nGenPart],82574,default
+Events,GenPart_phi,KEEP,Float_t[nGenPart],261283,default
+Events,GenPart_pt,KEEP,Float_t[nGenPart],276356,default
+Events,GenPart_iso,KEEP,Float_t[nGenPart],101295,default
+Events,nGenProton,KEEP,Int_t,2508,default
+Events,GenProton_isPU,KEEP,Bool_t[nGenProton],3108,default
+Events,GenProton_px,KEEP,Float_t[nGenProton],21258,default
+Events,GenProton_py,KEEP,Float_t[nGenProton],21318,default
+Events,GenProton_pz,KEEP,Float_t[nGenProton],15054,default
+Events,GenProton_vz,KEEP,Float_t[nGenProton],21082,default
+Events,nSubGenJetAK8,KEEP,Int_t,2285,default
+Events,SubGenJetAK8_eta,KEEP,Float_t[nSubGenJetAK8],22242,default
+Events,SubGenJetAK8_mass,KEEP,Float_t[nSubGenJetAK8],18185,default
+Events,SubGenJetAK8_phi,KEEP,Float_t[nSubGenJetAK8],21890,default
+Events,SubGenJetAK8_pt,KEEP,Float_t[nSubGenJetAK8],30775,default
+Events,Generator_id1,KEEP,Int_t,1397,default
+Events,Generator_id2,KEEP,Int_t,1389,default
+Events,Generator_binvar,KEEP,Float_t,562,default
+Events,Generator_scalePDF,KEEP,Float_t,7496,default
+Events,Generator_weight,KEEP,Float_t,562,default
+Events,Generator_x1,KEEP,Float_t,8830,default
+Events,Generator_x2,KEEP,Float_t,8686,default
+Events,Generator_xpdf1,KEEP,Float_t,547,default
+Events,Generator_xpdf2,KEEP,Float_t,547,default
+Events,GenVtx_x,KEEP,Float_t,5294,default
+Events,GenVtx_y,KEEP,Float_t,5422,default
+Events,GenVtx_z,KEEP,Float_t,10778,default
+Events,nGenVisTau,KEEP,Int_t,984,default
+Events,GenVisTau_status,KEEP,UChar_t[nGenVisTau],1266,default
+Events,GenVisTau_charge,KEEP,Short_t[nGenVisTau],1194,default
+Events,GenVisTau_genPartIdxMother,KEEP,Short_t[nGenVisTau],1444,default
+Events,GenVisTau_eta,KEEP,Float_t[nGenVisTau],1825,default
+Events,GenVisTau_mass,KEEP,Float_t[nGenVisTau],1620,default
+Events,GenVisTau_phi,KEEP,Float_t[nGenVisTau],1837,default
+Events,GenVisTau_pt,KEEP,Float_t[nGenVisTau],1694,default
+Events,genWeight,KEEP,Float_t,541,default
+Events,LHEWeight_originalXWGTUP,KEEP,Float_t,586,default
+Events,nLHEPdfWeight,KEEP,Int_t,553,default
+Events,LHEPdfWeight,KEEP,Float_t[nLHEPdfWeight],299490,default
+Events,nLHEReweightingWeight,KEEP,Int_t,565,default
+Events,LHEReweightingWeight,KEEP,Float_t[nLHEReweightingWeight],586,default
+Events,nLHEScaleWeight,KEEP,Int_t,559,default
+Events,LHEScaleWeight,KEEP,Float_t[nLHEScaleWeight],50068,default
+Events,nPSWeight,KEEP,Int_t,541,default
+Events,PSWeight,KEEP,Float_t[nPSWeight],31442,default
+Events,nIsoTrack,DROP,Int_t,1629,auto: all members dropped
+Events,IsoTrack_isHighPurityTrack,DROP,Bool_t[nIsoTrack],2496,line 13
+Events,IsoTrack_isPFcand,DROP,Bool_t[nIsoTrack],2093,line 13
+Events,IsoTrack_isFromLostTrack,DROP,Bool_t[nIsoTrack],2486,line 13
+Events,IsoTrack_charge,DROP,Short_t[nIsoTrack],2587,line 13
+Events,IsoTrack_fromPV,DROP,Short_t[nIsoTrack],2827,line 13
+Events,IsoTrack_pdgId,DROP,Int_t[nIsoTrack],3012,line 13
+Events,IsoTrack_dxy,DROP,Float_t[nIsoTrack],6826,line 13
+Events,IsoTrack_dz,DROP,Float_t[nIsoTrack],6899,line 13
+Events,IsoTrack_eta,DROP,Float_t[nIsoTrack],6870,line 13
+Events,IsoTrack_pfRelIso03_all,DROP,Float_t[nIsoTrack],5855,line 13
+Events,IsoTrack_pfRelIso03_chg,DROP,Float_t[nIsoTrack],5355,line 13
+Events,IsoTrack_phi,DROP,Float_t[nIsoTrack],6942,line 13
+Events,IsoTrack_pt,DROP,Float_t[nIsoTrack],5879,line 13
+Events,IsoTrack_miniPFRelIso_all,DROP,Float_t[nIsoTrack],5497,line 13
+Events,IsoTrack_miniPFRelIso_chg,DROP,Float_t[nIsoTrack],4493,line 13
+Events,nJet,KEEP,Int_t,2618,default
+Events,Jet_chMultiplicity,KEEP,UChar_t[nJet],18140,default
+Events,Jet_nConstituents,KEEP,UChar_t[nJet],19401,default
+Events,Jet_nElectrons,KEEP,UChar_t[nJet],6588,default
+Events,Jet_nMuons,KEEP,UChar_t[nJet],8116,default
+Events,Jet_nSVs,KEEP,UChar_t[nJet],8586,default
+Events,Jet_neMultiplicity,KEEP,UChar_t[nJet],15100,default
+Events,Jet_electronIdx1,KEEP,Short_t[nJet],7882,default
+Events,Jet_electronIdx2,KEEP,Short_t[nJet],4542,default
+Events,Jet_muonIdx1,KEEP,Short_t[nJet],10618,default
+Events,Jet_muonIdx2,KEEP,Short_t[nJet],5074,default
+Events,Jet_svIdx1,KEEP,Short_t[nJet],11236,default
+Events,Jet_svIdx2,KEEP,Short_t[nJet],6808,default
+Events,Jet_hfadjacentEtaStripsSize,KEEP,Int_t[nJet],5352,default
+Events,Jet_hfcentralEtaStripSize,KEEP,Int_t[nJet],6180,default
+Events,Jet_PNetRegPtRawCorr,KEEP,Float_t[nJet],43264,default
+Events,Jet_PNetRegPtRawCorrNeutrino,KEEP,Float_t[nJet],32308,default
+Events,Jet_PNetRegPtRawRes,KEEP,Float_t[nJet],57464,default
+Events,Jet_UParTAK4RegPtRawCorr,KEEP,Float_t[nJet],44208,default
+Events,Jet_UParTAK4RegPtRawCorrNeutrino,KEEP,Float_t[nJet],44292,default
+Events,Jet_UParTAK4RegPtRawRes,KEEP,Float_t[nJet],51404,default
+Events,Jet_UParTAK4V1RegPtRawCorr,KEEP,Float_t[nJet],37776,default
+Events,Jet_UParTAK4V1RegPtRawCorrNeutrino,KEEP,Float_t[nJet],38372,default
+Events,Jet_UParTAK4V1RegPtRawRes,KEEP,Float_t[nJet],50916,default
+Events,Jet_area,KEEP,Float_t[nJet],23960,default
+Events,Jet_btagDeepFlavB,KEEP,Float_t[nJet],59860,default
+Events,Jet_btagDeepFlavCvB,KEEP,Float_t[nJet],52420,default
+Events,Jet_btagDeepFlavCvL,KEEP,Float_t[nJet],57644,default
+Events,Jet_btagDeepFlavQG,KEEP,Float_t[nJet],50484,default
+Events,Jet_btagPNetB,KEEP,Float_t[nJet],52576,default
+Events,Jet_btagPNetCvB,KEEP,Float_t[nJet],48976,default
+Events,Jet_btagPNetCvL,KEEP,Float_t[nJet],50308,default
+Events,Jet_btagPNetCvNotB,KEEP,Float_t[nJet],54316,default
+Events,Jet_btagPNetQvG,KEEP,Float_t[nJet],53840,default
+Events,Jet_btagPNetTauVJet,KEEP,Float_t[nJet],55436,default
+Events,Jet_btagUParTAK4B,KEEP,Float_t[nJet],60412,default
+Events,Jet_btagUParTAK4CvB,KEEP,Float_t[nJet],53556,default
+Events,Jet_btagUParTAK4CvL,KEEP,Float_t[nJet],57324,default
+Events,Jet_btagUParTAK4CvNotB,KEEP,Float_t[nJet],60844,default
+Events,Jet_btagUParTAK4Ele,KEEP,Float_t[nJet],59584,default
+Events,Jet_btagUParTAK4Mu,KEEP,Float_t[nJet],56564,default
+Events,Jet_btagUParTAK4QvG,KEEP,Float_t[nJet],51528,default
+Events,Jet_btagUParTAK4SvCB,KEEP,Float_t[nJet],60500,default
+Events,Jet_btagUParTAK4SvUDG,KEEP,Float_t[nJet],54868,default
+Events,Jet_btagUParTAK4TauVJet,KEEP,Float_t[nJet],61452,default
+Events,Jet_btagUParTAK4UDG,KEEP,Float_t[nJet],60872,default
+Events,Jet_btagUParTAK4probb,KEEP,Float_t[nJet],62444,default
+Events,Jet_btagUParTAK4probbb,KEEP,Float_t[nJet],62312,default
+Events,Jet_chEmEF,KEEP,Float_t[nJet],15216,default
+Events,Jet_chHEF,KEEP,Float_t[nJet],53788,default
+Events,Jet_eta,KEEP,Float_t[nJet],70700,default
+Events,Jet_hfEmEF,KEEP,Float_t[nJet],4956,default
+Events,Jet_hfHEF,KEEP,Float_t[nJet],9404,default
+Events,Jet_hfsigmaEtaEta,KEEP,Float_t[nJet],8676,default
+Events,Jet_hfsigmaPhiPhi,KEEP,Float_t[nJet],8684,default
+Events,Jet_mass,KEEP,Float_t[nJet],57372,default
+Events,Jet_muEF,KEEP,Float_t[nJet],27268,default
+Events,Jet_muonSubtrDeltaEta,KEEP,Float_t[nJet],47096,default
+Events,Jet_muonSubtrDeltaPhi,KEEP,Float_t[nJet],35488,default
+Events,Jet_muonSubtrFactor,KEEP,Float_t[nJet],44752,default
+Events,Jet_neEmEF,KEEP,Float_t[nJet],44996,default
+Events,Jet_neHEF,KEEP,Float_t[nJet],42192,default
+Events,Jet_phi,KEEP,Float_t[nJet],69932,default
+Events,Jet_pt,KEEP,Float_t[nJet],55064,default
+Events,Jet_puIdDisc,KEEP,Float_t[nJet],51288,default
+Events,Jet_rawFactor,KEEP,Float_t[nJet],34800,default
+Events,LHE_Njets,KEEP,UChar_t,1081,default
+Events,LHE_Nb,KEEP,UChar_t,476,default
+Events,LHE_Nc,KEEP,UChar_t,1144,default
+Events,LHE_Nuds,KEEP,UChar_t,1518,default
+Events,LHE_Nglu,KEEP,UChar_t,482,default
+Events,LHE_NpNLO,KEEP,UChar_t,485,default
+Events,LHE_NpLO,KEEP,UChar_t,482,default
+Events,LHE_HT,KEEP,Float_t,12908,default
+Events,LHE_HTIncoming,KEEP,Float_t,544,default
+Events,LHE_Vpt,KEEP,Float_t,12843,default
+Events,LHE_AlphaS,KEEP,Float_t,9712,default
+Events,nLHEPart,KEEP,Int_t,566,default
+Events,LHEPart_firstMotherIdx,KEEP,Short_t[nLHEPart],5756,default
+Events,LHEPart_lastMotherIdx,KEEP,Short_t[nLHEPart],5753,default
+Events,LHEPart_pdgId,KEEP,Int_t[nLHEPart],12472,default
+Events,LHEPart_status,KEEP,Int_t[nLHEPart],5316,default
+Events,LHEPart_spin,KEEP,Int_t[nLHEPart],10268,default
+Events,LHEPart_pt,KEEP,Float_t[nLHEPart],78136,default
+Events,LHEPart_eta,KEEP,Float_t[nLHEPart],84936,default
+Events,LHEPart_phi,KEEP,Float_t[nLHEPart],83708,default
+Events,LHEPart_mass,KEEP,Float_t[nLHEPart],82284,default
+Events,LHEPart_incomingpz,KEEP,Float_t[nLHEPart],22708,default
+Events,nLowPtElectron,DROP,Int_t,2000,auto: all members dropped
+Events,LowPtElectron_convVeto,DROP,Bool_t[nLowPtElectron],3068,line 14
+Events,LowPtElectron_convWP,DROP,UChar_t[nLowPtElectron],3042,line 14
+Events,LowPtElectron_lostHits,DROP,UChar_t[nLowPtElectron],3536,line 14
+Events,LowPtElectron_electronIdx,DROP,Short_t[nLowPtElectron],4381,line 14
+Events,LowPtElectron_photonIdx,DROP,Short_t[nLowPtElectron],2979,line 14
+Events,LowPtElectron_charge,DROP,Int_t[nLowPtElectron],3974,line 14
+Events,LowPtElectron_pdgId,DROP,Int_t[nLowPtElectron],3959,line 14
+Events,LowPtElectron_ID,DROP,Float_t[nLowPtElectron],18778,line 14
+Events,LowPtElectron_convVtxRadius,DROP,Float_t[nLowPtElectron],3959,line 14
+Events,LowPtElectron_deltaEtaSC,DROP,Float_t[nLowPtElectron],12650,line 14
+Events,LowPtElectron_dxy,DROP,Float_t[nLowPtElectron],12841,line 14
+Events,LowPtElectron_dxyErr,DROP,Float_t[nLowPtElectron],8750,line 14
+Events,LowPtElectron_dz,DROP,Float_t[nLowPtElectron],13318,line 14
+Events,LowPtElectron_dzErr,DROP,Float_t[nLowPtElectron],8583,line 14
+Events,LowPtElectron_eInvMinusPInv,DROP,Float_t[nLowPtElectron],12871,line 14
+Events,LowPtElectron_energyErr,DROP,Float_t[nLowPtElectron],9571,line 14
+Events,LowPtElectron_eta,DROP,Float_t[nLowPtElectron],13773,line 14
+Events,LowPtElectron_hoe,DROP,Float_t[nLowPtElectron],9441,line 14
+Events,LowPtElectron_mass,DROP,Float_t[nLowPtElectron],9136,line 14
+Events,LowPtElectron_miniPFRelIso_all,DROP,Float_t[nLowPtElectron],14080,line 14
+Events,LowPtElectron_miniPFRelIso_chg,DROP,Float_t[nLowPtElectron],12284,line 14
+Events,LowPtElectron_phi,DROP,Float_t[nLowPtElectron],13745,line 14
+Events,LowPtElectron_pt,DROP,Float_t[nLowPtElectron],18570,line 14
+Events,LowPtElectron_ptbiased,DROP,Float_t[nLowPtElectron],16880,line 14
+Events,LowPtElectron_r9,DROP,Float_t[nLowPtElectron],12022,line 14
+Events,LowPtElectron_scEtOverPt,DROP,Float_t[nLowPtElectron],10890,line 14
+Events,LowPtElectron_sieie,DROP,Float_t[nLowPtElectron],10219,line 14
+Events,LowPtElectron_unbiased,DROP,Float_t[nLowPtElectron],17556,line 14
+Events,GenMET_phi,KEEP,Float_t,7884,default
+Events,GenMET_pt,KEEP,Float_t,7609,default
+Events,nMuon,KEEP,Int_t,2069,default
+Events,Muon_bestTrackType,KEEP,UChar_t[nMuon],3424,default
+Events,Muon_highPtId,KEEP,UChar_t[nMuon],4501,default
+Events,Muon_highPurity,KEEP,Bool_t[nMuon],3835,default
+Events,Muon_inTimeMuon,KEEP,Bool_t[nMuon],3367,default
+Events,Muon_isGlobal,KEEP,Bool_t[nMuon],4221,default
+Events,Muon_isPFcand,KEEP,Bool_t[nMuon],4109,default
+Events,Muon_isStandalone,KEEP,Bool_t[nMuon],4161,default
+Events,Muon_isTracker,KEEP,Bool_t[nMuon],3868,default
+Events,Muon_jetNDauCharged,KEEP,UChar_t[nMuon],7371,default
+Events,Muon_looseId,KEEP,Bool_t[nMuon],4098,default
+Events,Muon_mediumId,KEEP,Bool_t[nMuon],4273,default
+Events,Muon_mediumPromptId,KEEP,Bool_t[nMuon],4503,default
+Events,Muon_miniIsoId,KEEP,UChar_t[nMuon],5924,default
+Events,Muon_multiIsoId,KEEP,UChar_t[nMuon],4763,default
+Events,Muon_mvaMuID_WP,KEEP,UChar_t[nMuon],4559,default
+Events,Muon_nStations,KEEP,UChar_t[nMuon],6772,default
+Events,Muon_nTrackerLayers,KEEP,UChar_t[nMuon],7639,default
+Events,Muon_pfIsoId,KEEP,UChar_t[nMuon],6910,default
+Events,Muon_puppiIsoId,KEEP,UChar_t[nMuon],6071,default
+Events,Muon_softId,KEEP,Bool_t[nMuon],3991,default
+Events,Muon_softMvaId,KEEP,Bool_t[nMuon],4648,default
+Events,Muon_tightCharge,KEEP,UChar_t[nMuon],3294,default
+Events,Muon_tightId,KEEP,Bool_t[nMuon],4398,default
+Events,Muon_tkIsoId,KEEP,UChar_t[nMuon],5310,default
+Events,Muon_triggerIdLoose,KEEP,Bool_t[nMuon],4043,default
+Events,Muon_jetIdx,KEEP,Short_t[nMuon],8679,default
+Events,Muon_svIdx,KEEP,Short_t[nMuon],4952,default
+Events,Muon_fsrPhotonIdx,DROP,Short_t[nMuon],4069,line 23
+Events,Muon_charge,KEEP,Int_t[nMuon],5727,default
+Events,Muon_pdgId,KEEP,Int_t[nMuon],5748,default
+Events,Muon_VXBS_Cov00,KEEP,Float_t[nMuon],33591,default
+Events,Muon_VXBS_Cov03,KEEP,Float_t[nMuon],33011,default
+Events,Muon_VXBS_Cov33,KEEP,Float_t[nMuon],32611,default
+Events,Muon_dxy,KEEP,Float_t[nMuon],27882,default
+Events,Muon_dxyErr,KEEP,Float_t[nMuon],16199,default
+Events,Muon_dxybs,KEEP,Float_t[nMuon],27592,default
+Events,Muon_dxybsErr,KEEP,Float_t[nMuon],15697,default
+Events,Muon_dz,KEEP,Float_t[nMuon],28127,default
+Events,Muon_dzErr,KEEP,Float_t[nMuon],16452,default
+Events,Muon_eta,KEEP,Float_t[nMuon],34238,default
+Events,Muon_ip3d,KEEP,Float_t[nMuon],26305,default
+Events,Muon_jetDF,KEEP,Float_t[nMuon],20360,default
+Events,Muon_jetPtRelv2,KEEP,Float_t[nMuon],20311,default
+Events,Muon_jetRelIso,KEEP,Float_t[nMuon],21196,default
+Events,Muon_mass,KEEP,Float_t[nMuon],5065,default
+Events,Muon_miniPFRelIso_all,KEEP,Float_t[nMuon],26337,default
+Events,Muon_miniPFRelIso_chg,KEEP,Float_t[nMuon],19729,default
+Events,Muon_mvaMuID,KEEP,Float_t[nMuon],15690,default
+Events,Muon_pfRelIso03_all,KEEP,Float_t[nMuon],33355,default
+Events,Muon_pfRelIso03_chg,KEEP,Float_t[nMuon],29535,default
+Events,Muon_pfRelIso04_all,KEEP,Float_t[nMuon],37831,default
+Events,Muon_phi,KEEP,Float_t[nMuon],33822,default
+Events,Muon_pt,KEEP,Float_t[nMuon],43307,default
+Events,Muon_ptErr,KEEP,Float_t[nMuon],18572,default
+Events,Muon_segmentComp,KEEP,Float_t[nMuon],23922,default
+Events,Muon_sip3d,KEEP,Float_t[nMuon],25404,default
+Events,Muon_softMva,KEEP,Float_t[nMuon],12998,default
+Events,Muon_softMvaRun3,KEEP,Float_t[nMuon],14450,default
+Events,Muon_tkRelIso,KEEP,Float_t[nMuon],16613,default
+Events,Muon_tuneP_charge,KEEP,Float_t[nMuon],5829,default
+Events,Muon_tuneP_pterr,KEEP,Float_t[nMuon],18578,default
+Events,Muon_tunepRelPt,KEEP,Float_t[nMuon],5107,default
+Events,Muon_bsConstrainedChi2,KEEP,Float_t[nMuon],20076,default
+Events,Muon_bsConstrainedPt,KEEP,Float_t[nMuon],43350,default
+Events,Muon_bsConstrainedPtErr,KEEP,Float_t[nMuon],18471,default
+Events,Muon_mvaLowPt,KEEP,Float_t[nMuon],24177,default
+Events,Muon_pnScore_heavy,KEEP,Float_t[nMuon],31428,default
+Events,Muon_pnScore_light,KEEP,Float_t[nMuon],30356,default
+Events,Muon_pnScore_prompt,KEEP,Float_t[nMuon],26847,default
+Events,Muon_pnScore_tau,KEEP,Float_t[nMuon],30378,default
+Events,Muon_promptMVA,KEEP,Float_t[nMuon],25860,default
+Events,nPFCand,KEEP,Int_t,2075,default
+Events,PFCand_pdgId,KEEP,Int_t[nPFCand],12116,default
+Events,PFCand_eta,KEEP,Float_t[nPFCand],76376,default
+Events,PFCand_mass,KEEP,Float_t[nPFCand],21096,default
+Events,PFCand_phi,KEEP,Float_t[nPFCand],80084,default
+Events,PFCand_pt,KEEP,Float_t[nPFCand],70616,default
+Events,PFMET_covXX,KEEP,Float_t,5451,default
+Events,PFMET_covXY,KEEP,Float_t,6899,default
+Events,PFMET_covYY,KEEP,Float_t,5443,default
+Events,PFMET_phi,KEEP,Float_t,9365,default
+Events,PFMET_phiUnclusteredDown,KEEP,Float_t,7878,default
+Events,PFMET_phiUnclusteredUp,KEEP,Float_t,7864,default
+Events,PFMET_pt,KEEP,Float_t,12830,default
+Events,PFMET_ptUnclusteredDown,KEEP,Float_t,7331,default
+Events,PFMET_ptUnclusteredUp,KEEP,Float_t,7317,default
+Events,PFMET_significance,KEEP,Float_t,7752,default
+Events,PFMET_sumEt,KEEP,Float_t,6619,default
+Events,PFMET_sumPtUnclustered,KEEP,Float_t,6664,default
+Events,nPhoton,DROP,Int_t,2019,auto: all members dropped
+Events,Photon_cutBased,DROP,UChar_t[nPhoton],4175,line 11
+Events,Photon_electronVeto,DROP,Bool_t[nPhoton],3623,line 11
+Events,Photon_hasConversionTracks,DROP,Bool_t[nPhoton],3352,line 11
+Events,Photon_isScEtaEB,DROP,Bool_t[nPhoton],3486,line 11
+Events,Photon_isScEtaEE,DROP,Bool_t[nPhoton],3418,line 11
+Events,Photon_mvaID_WP80,DROP,Bool_t[nPhoton],3513,line 11
+Events,Photon_mvaID_WP90,DROP,Bool_t[nPhoton],3549,line 11
+Events,Photon_pixelSeed,DROP,Bool_t[nPhoton],3598,line 11
+Events,Photon_seedGain,DROP,UChar_t[nPhoton],2783,line 11
+Events,Photon_electronIdx,DROP,Short_t[nPhoton],4216,line 11
+Events,Photon_jetIdx,DROP,Short_t[nPhoton],5345,line 11
+Events,Photon_seediEtaOriX,DROP,Short_t[nPhoton],8467,line 11
+Events,Photon_seediPhiOriY,DROP,Short_t[nPhoton],8871,line 11
+Events,Photon_vidNestedWPBitmap,DROP,Int_t[nPhoton],8050,line 11
+Events,Photon_ecalPFClusterIso,DROP,Float_t[nPhoton],11823,line 11
+Events,Photon_energyErr,DROP,Float_t[nPhoton],12302,line 11
+Events,Photon_energyRaw,DROP,Float_t[nPhoton],11838,line 11
+Events,Photon_esEffSigmaRR,DROP,Float_t[nPhoton],7083,line 11
+Events,Photon_esEnergyOverRawE,DROP,Float_t[nPhoton],6991,line 11
+Events,Photon_eta,DROP,Float_t[nPhoton],14472,line 11
+Events,Photon_etaWidth,DROP,Float_t[nPhoton],11475,line 11
+Events,Photon_haloTaggerMVAVal,DROP,Float_t[nPhoton],5103,line 11
+Events,Photon_hcalPFClusterIso,DROP,Float_t[nPhoton],11739,line 11
+Events,Photon_hoe,DROP,Float_t[nPhoton],11352,line 11
+Events,Photon_hoe_PUcorr,DROP,Float_t[nPhoton],8233,line 11
+Events,Photon_hoe_Tower,DROP,Float_t[nPhoton],7638,line 11
+Events,Photon_mvaID,DROP,Float_t[nPhoton],10550,line 11
+Events,Photon_pfChargedIso,DROP,Float_t[nPhoton],11271,line 11
+Events,Photon_pfChargedIsoPFPV,DROP,Float_t[nPhoton],16363,line 11
+Events,Photon_pfChargedIsoWorstVtx,DROP,Float_t[nPhoton],19423,line 11
+Events,Photon_pfPhoIso03,DROP,Float_t[nPhoton],17693,line 11
+Events,Photon_pfRelIso03_all_quadratic,DROP,Float_t[nPhoton],16875,line 11
+Events,Photon_pfRelIso03_chg_quadratic,DROP,Float_t[nPhoton],15363,line 11
+Events,Photon_phi,DROP,Float_t[nPhoton],14332,line 11
+Events,Photon_phiWidth,DROP,Float_t[nPhoton],11911,line 11
+Events,Photon_pt,DROP,Float_t[nPhoton],18845,line 11
+Events,Photon_r9,DROP,Float_t[nPhoton],10701,line 11
+Events,Photon_s4,DROP,Float_t[nPhoton],10429,line 11
+Events,Photon_sieie,DROP,Float_t[nPhoton],11330,line 11
+Events,Photon_sieip,DROP,Float_t[nPhoton],13366,line 11
+Events,Photon_sipip,DROP,Float_t[nPhoton],11178,line 11
+Events,Photon_superclusterEta,DROP,Float_t[nPhoton],12600,line 11
+Events,Photon_trkSumPtHollowConeDR03,DROP,Float_t[nPhoton],11509,line 11
+Events,Photon_trkSumPtSolidConeDR04,DROP,Float_t[nPhoton],11998,line 11
+Events,Photon_x_calo,DROP,Float_t[nPhoton],12433,line 11
+Events,Photon_y_calo,DROP,Float_t[nPhoton],12421,line 11
+Events,Photon_z_calo,DROP,Float_t[nPhoton],12185,line 11
+Events,Pileup_nPU,KEEP,Int_t,3864,default
+Events,Pileup_sumEOOT,KEEP,Int_t,5224,default
+Events,Pileup_sumLOOT,KEEP,Int_t,4368,default
+Events,Pileup_nTrueInt,KEEP,Float_t,6519,default
+Events,Pileup_pudensity,KEEP,Float_t,1866,default
+Events,Pileup_gpudensity,KEEP,Float_t,4585,default
+Events,Pileup_pthatmax,KEEP,Float_t,6987,default
+Events,PuppiMET_covXX,KEEP,Float_t,6060,default
+Events,PuppiMET_covXY,KEEP,Float_t,6908,default
+Events,PuppiMET_covYY,KEEP,Float_t,6052,default
+Events,PuppiMET_phi,KEEP,Float_t,9342,default
+Events,PuppiMET_phiUnclusteredDown,KEEP,Float_t,7847,default
+Events,PuppiMET_phiUnclusteredUp,KEEP,Float_t,7917,default
+Events,PuppiMET_pt,KEEP,Float_t,13159,default
+Events,PuppiMET_ptUnclusteredDown,KEEP,Float_t,7384,default
+Events,PuppiMET_ptUnclusteredUp,KEEP,Float_t,7334,default
+Events,PuppiMET_significance,KEEP,Float_t,8137,default
+Events,PuppiMET_sumEt,KEEP,Float_t,6736,default
+Events,PuppiMET_sumPtUnclustered,KEEP,Float_t,7069,default
+Events,nPVBS,KEEP,Int_t,529,default
+Events,PVBS_chi2,KEEP,Float_t[nPVBS],6937,default
+Events,PVBS_cov00,KEEP,Float_t[nPVBS],9552,default
+Events,PVBS_cov10,KEEP,Float_t[nPVBS],10432,default
+Events,PVBS_cov11,KEEP,Float_t[nPVBS],8956,default
+Events,PVBS_cov20,KEEP,Float_t[nPVBS],10452,default
+Events,PVBS_cov21,KEEP,Float_t[nPVBS],10500,default
+Events,PVBS_cov22,KEEP,Float_t[nPVBS],9636,default
+Events,PVBS_x,KEEP,Float_t[nPVBS],7328,default
+Events,PVBS_y,KEEP,Float_t[nPVBS],7716,default
+Events,PVBS_z,KEEP,Float_t[nPVBS],13152,default
+Events,RawPFMET_phi,KEEP,Float_t,9374,default
+Events,RawPFMET_pt,KEEP,Float_t,12863,default
+Events,RawPFMET_sumEt,KEEP,Float_t,8012,default
+Events,RawPuppiMET_phi,KEEP,Float_t,9327,default
+Events,RawPuppiMET_pt,KEEP,Float_t,12956,default
+Events,RawPuppiMET_sumEt,KEEP,Float_t,8245,default
+Events,Rho_fixedGridRhoAll,KEEP,Float_t,12715,default
+Events,Rho_fixedGridRhoFastjetAll,KEEP,Float_t,12732,default
+Events,Rho_fixedGridRhoFastjetCentral,KEEP,Float_t,12884,default
+Events,Rho_fixedGridRhoFastjetCentralCalo,KEEP,Float_t,11608,default
+Events,Rho_fixedGridRhoFastjetCentralChargedPileUp,KEEP,Float_t,12227,default
+Events,Rho_fixedGridRhoFastjetCentralNeutral,KEEP,Float_t,11781,default
+Events,nGenDressedLepton,KEEP,Int_t,1577,default
+Events,GenDressedLepton_hasTauAnc,KEEP,Bool_t[nGenDressedLepton],3644,default
+Events,GenDressedLepton_pdgId,KEEP,Int_t[nGenDressedLepton],6856,default
+Events,GenDressedLepton_eta,KEEP,Float_t[nGenDressedLepton],27942,default
+Events,GenDressedLepton_mass,KEEP,Float_t[nGenDressedLepton],9573,default
+Events,GenDressedLepton_phi,KEEP,Float_t[nGenDressedLepton],27746,default
+Events,GenDressedLepton_pt,KEEP,Float_t[nGenDressedLepton],38935,default
+Events,FiducialMET_phi,KEEP,Float_t,9399,default
+Events,FiducialMET_pt,KEEP,Float_t,13116,default
+Events,nGenIsolatedPhoton,KEEP,Int_t,772,default
+Events,GenIsolatedPhoton_eta,KEEP,Float_t[nGenIsolatedPhoton],1133,default
+Events,GenIsolatedPhoton_mass,KEEP,Float_t[nGenIsolatedPhoton],1116,default
+Events,GenIsolatedPhoton_phi,KEEP,Float_t[nGenIsolatedPhoton],1141,default
+Events,GenIsolatedPhoton_pt,KEEP,Float_t[nGenIsolatedPhoton],1210,default
+Events,nSoftActivityJet,DROP,Int_t,598,auto: all members dropped
+Events,SoftActivityJet_eta,DROP,Float_t[nSoftActivityJet],37563,line 15
+Events,SoftActivityJet_phi,DROP,Float_t[nSoftActivityJet],36531,line 15
+Events,SoftActivityJet_pt,DROP,Float_t[nSoftActivityJet],42263,line 15
+Events,SoftActivityJetNjets10,KEEP,Int_t,2440,default
+Events,SoftActivityJetNjets2,KEEP,Int_t,3293,default
+Events,SoftActivityJetNjets5,KEEP,Int_t,2665,default
+Events,SoftActivityJetHT,KEEP,Float_t,11857,default
+Events,SoftActivityJetHT10,KEEP,Float_t,12731,default
+Events,SoftActivityJetHT2,KEEP,Float_t,11932,default
+Events,SoftActivityJetHT5,KEEP,Float_t,12520,default
+Events,nSubJet,KEEP,Int_t,2179,default
+Events,SubJet_UParTAK4RegPtRawCorr,KEEP,Float_t[nSubJet],13295,default
+Events,SubJet_UParTAK4RegPtRawCorrNeutrino,KEEP,Float_t[nSubJet],13375,default
+Events,SubJet_UParTAK4RegPtRawRes,KEEP,Float_t[nSubJet],15764,default
+Events,SubJet_UParTAK4V1RegPtRawCorr,KEEP,Float_t[nSubJet],12089,default
+Events,SubJet_UParTAK4V1RegPtRawCorrNeutrino,KEEP,Float_t[nSubJet],12025,default
+Events,SubJet_UParTAK4V1RegPtRawRes,KEEP,Float_t[nSubJet],15838,default
+Events,SubJet_area,KEEP,Float_t[nSubJet],11115,default
+Events,SubJet_btagDeepFlavB,KEEP,Float_t[nSubJet],16574,default
+Events,SubJet_btagUParTAK4B,KEEP,Float_t[nSubJet],16334,default
+Events,SubJet_eta,KEEP,Float_t[nSubJet],18912,default
+Events,SubJet_mass,KEEP,Float_t[nSubJet],16215,default
+Events,SubJet_n2b1,KEEP,Float_t[nSubJet],13079,default
+Events,SubJet_n3b1,KEEP,Float_t[nSubJet],13303,default
+Events,SubJet_phi,KEEP,Float_t[nSubJet],18760,default
+Events,SubJet_pt,KEEP,Float_t[nSubJet],15157,default
+Events,SubJet_rawFactor,KEEP,Float_t[nSubJet],9310,default
+Events,SubJet_tau1,KEEP,Float_t[nSubJet],15271,default
+Events,SubJet_tau2,KEEP,Float_t[nSubJet],14803,default
+Events,SubJet_tau3,KEEP,Float_t[nSubJet],14203,default
+Events,SubJet_tau4,KEEP,Float_t[nSubJet],13727,default
+Events,nTauProd,DROP,Int_t,2822,auto: all members dropped
+Events,TauProd_tauIdx,DROP,Short_t[nTauProd],7564,line 16
+Events,TauProd_pdgId,DROP,Int_t[nTauProd],11093,line 16
+Events,TauProd_eta,DROP,Float_t[nTauProd],42483,line 16
+Events,TauProd_phi,DROP,Float_t[nTauProd],42543,line 16
+Events,TauProd_pt,DROP,Float_t[nTauProd],36276,line 16
+Events,TauSpinner_weight_cp_0,DROP,Double_t,624,line 17
+Events,TauSpinner_weight_cp_0_alt,DROP,Double_t,636,line 17
+Events,TauSpinner_weight_cp_0p25,DROP,Double_t,633,line 17
+Events,TauSpinner_weight_cp_0p25_alt,DROP,Double_t,645,line 17
+Events,TauSpinner_weight_cp_0p5,DROP,Double_t,630,line 17
+Events,TauSpinner_weight_cp_0p5_alt,DROP,Double_t,642,line 17
+Events,TauSpinner_weight_cp_minus0p25,DROP,Double_t,648,line 17
+Events,TauSpinner_weight_cp_minus0p25_alt,DROP,Double_t,660,line 17
+Events,TauSpinner_weight_cp_0p375,DROP,Double_t,636,line 17
+Events,TauSpinner_weight_cp_0p375_alt,DROP,Double_t,648,line 17
+Events,nTau,DROP,Int_t,2094,auto: all members dropped
+Events,Tau_decayMode,DROP,UChar_t[nTau],5189,line 9
+Events,Tau_idAntiEleDeadECal,DROP,Bool_t[nTau],3957,line 9
+Events,Tau_idAntiMu,DROP,UChar_t[nTau],4526,line 9
+Events,Tau_idDecayModeNewDMs,DROP,Bool_t[nTau],3805,line 9
+Events,Tau_idDecayModeOldDMs,DROP,Bool_t[nTau],4161,line 9
+Events,Tau_idDeepTau2018v2p5VSe,DROP,UChar_t[nTau],5206,line 9
+Events,Tau_idDeepTau2018v2p5VSjet,DROP,UChar_t[nTau],4660,line 9
+Events,Tau_idDeepTau2018v2p5VSmu,DROP,UChar_t[nTau],5105,line 9
+Events,Tau_nSVs,DROP,UChar_t[nTau],4110,line 9
+Events,Tau_charge,DROP,Short_t[nTau],5108,line 9
+Events,Tau_decayModePNet,DROP,Short_t[nTau],5789,line 9
+Events,Tau_decayModeUParT,DROP,Short_t[nTau],6036,line 9
+Events,Tau_eleIdx,DROP,Short_t[nTau],4852,line 9
+Events,Tau_jetIdx,DROP,Short_t[nTau],7788,line 9
+Events,Tau_muIdx,DROP,Short_t[nTau],6197,line 9
+Events,Tau_svIdx1,DROP,Short_t[nTau],4676,line 9
+Events,Tau_svIdx2,DROP,Short_t[nTau],3452,line 9
+Events,Tau_chargedIso,DROP,Float_t[nTau],18688,line 9
+Events,Tau_dxy,DROP,Float_t[nTau],24359,line 9
+Events,Tau_dz,DROP,Float_t[nTau],27448,line 9
+Events,Tau_eta,DROP,Float_t[nTau],26847,line 9
+Events,Tau_leadTkDeltaEta,DROP,Float_t[nTau],20908,line 9
+Events,Tau_leadTkDeltaPhi,DROP,Float_t[nTau],21096,line 9
+Events,Tau_leadTkPtOverTauPt,DROP,Float_t[nTau],13857,line 9
+Events,Tau_mass,DROP,Float_t[nTau],10598,line 9
+Events,Tau_neutralIso,DROP,Float_t[nTau],13244,line 9
+Events,Tau_phi,DROP,Float_t[nTau],26471,line 9
+Events,Tau_photonsOutsideSignalCone,DROP,Float_t[nTau],9990,line 9
+Events,Tau_probDM0PNet,DROP,Float_t[nTau],20639,line 9
+Events,Tau_probDM0UParT,DROP,Float_t[nTau],20710,line 9
+Events,Tau_probDM10PNet,DROP,Float_t[nTau],22922,line 9
+Events,Tau_probDM10UParT,DROP,Float_t[nTau],22553,line 9
+Events,Tau_probDM11PNet,DROP,Float_t[nTau],23758,line 9
+Events,Tau_probDM11UParT,DROP,Float_t[nTau],22689,line 9
+Events,Tau_probDM1PNet,DROP,Float_t[nTau],20327,line 9
+Events,Tau_probDM1UParT,DROP,Float_t[nTau],20314,line 9
+Events,Tau_probDM2PNet,DROP,Float_t[nTau],21923,line 9
+Events,Tau_probDM2UParT,DROP,Float_t[nTau],21162,line 9
+Events,Tau_pt,DROP,Float_t[nTau],37340,line 9
+Events,Tau_ptCorrPNet,DROP,Float_t[nTau],13328,line 9
+Events,Tau_ptCorrUParT,DROP,Float_t[nTau],17839,line 9
+Events,Tau_puCorr,DROP,Float_t[nTau],20264,line 9
+Events,Tau_qConfPNet,DROP,Float_t[nTau],20689,line 9
+Events,Tau_qConfUParT,DROP,Float_t[nTau],20696,line 9
+Events,Tau_rawDeepTau2018v2p5VSe,DROP,Float_t[nTau],22137,line 9
+Events,Tau_rawDeepTau2018v2p5VSjet,DROP,Float_t[nTau],22827,line 9
+Events,Tau_rawDeepTau2018v2p5VSmu,DROP,Float_t[nTau],21836,line 9
+Events,Tau_rawIso,DROP,Float_t[nTau],18912,line 9
+Events,Tau_rawIsodR03,DROP,Float_t[nTau],14076,line 9
+Events,Tau_rawPNetVSe,DROP,Float_t[nTau],20232,line 9
+Events,Tau_rawPNetVSjet,DROP,Float_t[nTau],23102,line 9
+Events,Tau_rawPNetVSmu,DROP,Float_t[nTau],22031,line 9
+Events,Tau_rawUParTVSe,DROP,Float_t[nTau],19671,line 9
+Events,Tau_rawUParTVSjet,DROP,Float_t[nTau],22973,line 9
+Events,Tau_rawUParTVSmu,DROP,Float_t[nTau],21266,line 9
+Events,nTrackGenJetAK4,DROP,Int_t,2687,auto: all members dropped
+Events,TrackGenJetAK4_eta,DROP,Float_t[nTrackGenJetAK4],52596,line 18
+Events,TrackGenJetAK4_phi,DROP,Float_t[nTrackGenJetAK4],50020,line 18
+Events,TrackGenJetAK4_pt,DROP,Float_t[nTrackGenJetAK4],59740,line 18
+Events,nTrigObj,KEEP,Int_t,3954,default
+Events,TrigObj_l1charge,KEEP,Short_t[nTrigObj],13674,default
+Events,TrigObj_id,KEEP,UShort_t[nTrigObj],19180,default
+Events,TrigObj_l1iso,KEEP,Int_t[nTrigObj],24849,default
+Events,TrigObj_filterBits,KEEP,ULong64_t[nTrigObj],92844,default
+Events,TrigObj_pt,KEEP,Float_t[nTrigObj],197744,default
+Events,TrigObj_eta,KEEP,Float_t[nTrigObj],197063,default
+Events,TrigObj_phi,KEEP,Float_t[nTrigObj],194847,default
+Events,TrigObj_l1pt,KEEP,Float_t[nTrigObj],94862,default
+Events,TrigObj_l1pt_2,KEEP,Float_t[nTrigObj],10344,default
+Events,TrigObj_l2pt,KEEP,Float_t[nTrigObj],96970,default
+Events,TrkMET_phi,KEEP,Float_t,7764,default
+Events,TrkMET_pt,KEEP,Float_t,7273,default
+Events,TrkMET_sumEt,KEEP,Float_t,6826,default
+Events,genTtbarId,KEEP,Int_t,2572,default
+Events,nOtherPV,KEEP,Int_t,542,default
+Events,OtherPV_z,KEEP,Float_t[nOtherPV],21737,default
+Events,OtherPV_score,KEEP,Float_t[nOtherPV],19165,default
+Events,PV_npvs,KEEP,UChar_t,2903,default
+Events,PV_npvsGood,KEEP,UChar_t,2895,default
+Events,PV_ndof,KEEP,Float_t,5699,default
+Events,PV_x,KEEP,Float_t,5470,default
+Events,PV_y,KEEP,Float_t,5502,default
+Events,PV_z,KEEP,Float_t,10770,default
+Events,PV_chi2,KEEP,Float_t,4631,default
+Events,PV_score,KEEP,Float_t,6070,default
+Events,PV_sumpt2,KEEP,Float_t,7369,default
+Events,PV_sumpx,KEEP,Float_t,8082,default
+Events,PV_sumpy,KEEP,Float_t,8278,default
+Events,nSV,KEEP,Int_t,2255,default
+Events,SV_charge,KEEP,Short_t[nSV],6769,default
+Events,SV_dlen,KEEP,Float_t[nSV],20375,default
+Events,SV_dlenSig,KEEP,Float_t[nSV],19768,default
+Events,SV_dxy,KEEP,Float_t[nSV],20344,default
+Events,SV_dxySig,KEEP,Float_t[nSV],20129,default
+Events,SV_pAngle,KEEP,Float_t[nSV],11977,default
+Events,boostedTau_genPartFlav,DROP,UChar_t[nboostedTau],4000,line 10
+Events,boostedTau_genPartIdx,DROP,Short_t[nboostedTau],5829,line 10
+Events,Electron_genPartFlav,KEEP,UChar_t[nElectron],4326,default
+Events,Electron_genPartIdx,KEEP,Short_t[nElectron],6011,default
+Events,Electron_IPx,KEEP,Float_t[nElectron],9646,default
+Events,Electron_IPy,KEEP,Float_t[nElectron],9598,default
+Events,Electron_IPz,KEEP,Float_t[nElectron],9570,default
+Events,Electron_ipLengthSig,KEEP,Float_t[nElectron],9498,default
+Events,FatJet_hadronFlavour,KEEP,UChar_t[nFatJet],2094,default
+Events,FatJet_genJetAK8Idx,KEEP,Short_t[nFatJet],2071,default
+Events,GenJetAK8_hadronFlavour,KEEP,UChar_t[nGenJetAK8],3723,default
+Events,GenJetAK8_nBHadrons,KEEP,UChar_t[nGenJetAK8],3583,default
+Events,GenJetAK8_nCHadrons,KEEP,UChar_t[nGenJetAK8],3995,default
+Events,GenJetAK8_partonFlavour,KEEP,Short_t[nGenJetAK8],5135,default
+Events,GenJet_hadronFlavour,KEEP,UChar_t[nGenJet],8890,default
+Events,GenJet_nBHadrons,KEEP,UChar_t[nGenJet],7314,default
+Events,GenJet_nCHadrons,KEEP,UChar_t[nGenJet],8826,default
+Events,GenJet_partonFlavour,KEEP,Short_t[nGenJet],17858,default
+Events,GenVtx_t0,KEEP,Float_t,9433,default
+Events,Jet_hadronFlavour,KEEP,UChar_t[nJet],8293,default
+Events,Jet_genJetIdx,KEEP,Short_t[nJet],14781,default
+Events,Jet_partonFlavour,KEEP,Short_t[nJet],16553,default
+Events,LowPtElectron_genPartFlav,DROP,UChar_t[nLowPtElectron],4349,line 14
+Events,LowPtElectron_genPartIdx,DROP,Short_t[nLowPtElectron],5978,line 14
+Events,Muon_genPartFlav,KEEP,UChar_t[nMuon],5338,default
+Events,Muon_genPartIdx,KEEP,Short_t[nMuon],11011,default
+Events,Muon_IPx,KEEP,Float_t[nMuon],24442,default
+Events,Muon_IPy,KEEP,Float_t[nMuon],24394,default
+Events,Muon_IPz,KEEP,Float_t[nMuon],24438,default
+Events,Muon_ipLengthSig,KEEP,Float_t[nMuon],23850,default
+Events,Photon_genPartFlav,DROP,UChar_t[nPhoton],3812,line 11
+Events,Photon_genPartIdx,DROP,Short_t[nPhoton],6077,line 11
+Events,SubJet_hadronFlavour,KEEP,UChar_t[nSubJet],4106,default
+Events,SubJet_nBHadrons,KEEP,UChar_t[nSubJet],3674,default
+Events,SubJet_nCHadrons,KEEP,UChar_t[nSubJet],4090,default
+Events,SubJet_subGenJetAK8Idx,KEEP,Short_t[nSubJet],4648,default
+Events,SV_ntracks,KEEP,UChar_t[nSV],5952,default
+Events,SV_chi2,KEEP,Float_t[nSV],17595,default
+Events,SV_eta,KEEP,Float_t[nSV],24508,default
+Events,SV_mass,KEEP,Float_t[nSV],19519,default
+Events,SV_ndof,KEEP,Float_t[nSV],14935,default
+Events,SV_phi,KEEP,Float_t[nSV],24288,default
+Events,SV_pt,KEEP,Float_t[nSV],19929,default
+Events,SV_x,KEEP,Float_t[nSV],21726,default
+Events,SV_y,KEEP,Float_t[nSV],22298,default
+Events,SV_z,KEEP,Float_t[nSV],24942,default
+Events,Tau_genPartFlav,DROP,UChar_t[nTau],5611,line 9
+Events,Tau_genPartIdx,DROP,Short_t[nTau],9424,line 9
+Events,Tau_hasRefitSV,DROP,Bool_t[nTau],4080,line 9
+Events,Tau_IPx,DROP,Float_t[nTau],24543,line 9
+Events,Tau_IPy,DROP,Float_t[nTau],24611,line 9
+Events,Tau_IPz,DROP,Float_t[nTau],24655,line 9
+Events,Tau_ipLengthSig,DROP,Float_t[nTau],23851,line 9
+Events,Tau_refitSVchi2,DROP,Float_t[nTau],6983,line 9
+Events,Tau_refitSVcov00,DROP,Float_t[nTau],7330,line 9
+Events,Tau_refitSVcov10,DROP,Float_t[nTau],7494,line 9
+Events,Tau_refitSVcov11,DROP,Float_t[nTau],7326,line 9
+Events,Tau_refitSVcov20,DROP,Float_t[nTau],7534,line 9
+Events,Tau_refitSVcov21,DROP,Float_t[nTau],7534,line 9
+Events,Tau_refitSVcov22,DROP,Float_t[nTau],7374,line 9
+Events,Tau_refitSVx,DROP,Float_t[nTau],7478,line 9
+Events,Tau_refitSVy,DROP,Float_t[nTau],7490,line 9
+Events,Tau_refitSVz,DROP,Float_t[nTau],7454,line 9
+Events,L1_AXO_Loose,KEEP,Bool_t,1130,default
+Events,L1_AXO_Nominal,KEEP,Bool_t,1116,default
+Events,L1_AXO_Tight,KEEP,Bool_t,1094,default
+Events,L1_AXO_VLoose,KEEP,Bool_t,1153,default
+Events,L1_AXO_VTight,KEEP,Bool_t,1017,default
+Events,L1_AlwaysTrue,KEEP,Bool_t,497,default
+Events,L1_BPTX_AND_Ref1_VME,KEEP,Bool_t,518,default
+Events,L1_BPTX_AND_Ref3_VME,KEEP,Bool_t,518,default
+Events,L1_BPTX_AND_Ref4_VME,KEEP,Bool_t,518,default
+Events,L1_BPTX_BeamGas_B1_VME,KEEP,Bool_t,524,default
+Events,L1_BPTX_BeamGas_B2_VME,KEEP,Bool_t,524,default
+Events,L1_BPTX_BeamGas_Ref1_VME,KEEP,Bool_t,530,default
+Events,L1_BPTX_BeamGas_Ref2_VME,KEEP,Bool_t,530,default
+Events,L1_BPTX_NotOR_VME,KEEP,Bool_t,509,default
+Events,L1_BPTX_OR_Ref3_VME,KEEP,Bool_t,515,default
+Events,L1_BPTX_OR_Ref4_VME,KEEP,Bool_t,515,default
+Events,L1_BPTX_RefAND_VME,KEEP,Bool_t,512,default
+Events,L1_BptxMinus,KEEP,Bool_t,494,default
+Events,L1_BptxOR,KEEP,Bool_t,485,default
+Events,L1_BptxPlus,KEEP,Bool_t,491,default
+Events,L1_BptxXOR,KEEP,Bool_t,488,default
+Events,L1_CDC_SingleMu_3_er1p2_TOP120_DPHI2p618_3p142,KEEP,Bool_t,596,default
+Events,L1_CICADA_Loose,KEEP,Bool_t,779,default
+Events,L1_CICADA_Medium,KEEP,Bool_t,738,default
+Events,L1_CICADA_Tight,KEEP,Bool_t,683,default
+Events,L1_CICADA_VLoose,KEEP,Bool_t,822,default
+Events,L1_CICADA_VTight,KEEP,Bool_t,654,default
+Events,L1_DoubleEG11_er1p2_dR_Max0p6,KEEP,Bool_t,613,default
+Events,L1_DoubleEG8er2p5_HTT280er,KEEP,Bool_t,968,default
+Events,L1_DoubleEG8er2p5_HTT300er,KEEP,Bool_t,940,default
+Events,L1_DoubleEG8er2p5_HTT320er,KEEP,Bool_t,916,default
+Events,L1_DoubleEG_15_10_er2p5,KEEP,Bool_t,1111,default
+Events,L1_DoubleEG_20_10_er2p5,KEEP,Bool_t,1091,default
+Events,L1_DoubleEG_22_10_er2p5,KEEP,Bool_t,1075,default
+Events,L1_DoubleEG_25_12_er2p5,KEEP,Bool_t,1011,default
+Events,L1_DoubleEG_25_14_er2p5,KEEP,Bool_t,971,default
+Events,L1_DoubleEG_27_14_er2p5,KEEP,Bool_t,963,default
+Events,L1_DoubleEG_LooseIso16_LooseIso12_er1p5,KEEP,Bool_t,803,default
+Events,L1_DoubleEG_LooseIso18_LooseIso12_er1p5,KEEP,Bool_t,795,default
+Events,L1_DoubleEG_LooseIso20_LooseIso12_er1p5,KEEP,Bool_t,791,default
+Events,L1_DoubleEG_LooseIso22_12_er2p5,KEEP,Bool_t,1015,default
+Events,L1_DoubleEG_LooseIso22_LooseIso12_er1p5,KEEP,Bool_t,787,default
+Events,L1_DoubleEG_LooseIso25_12_er2p5,KEEP,Bool_t,1011,default
+Events,L1_DoubleEG_LooseIso25_LooseIso12_er1p5,KEEP,Bool_t,783,default
+Events,L1_DoubleIsoTau26er2p1_Jet55_RmOvlp_dR0p5,KEEP,Bool_t,1209,default
+Events,L1_DoubleIsoTau26er2p1_Jet70_RmOvlp_dR0p5,KEEP,Bool_t,1161,default
+Events,L1_DoubleIsoTau28er2p1,KEEP,Bool_t,1184,default
+Events,L1_DoubleIsoTau30er2p1,KEEP,Bool_t,1160,default
+Events,L1_DoubleIsoTau32er2p1,KEEP,Bool_t,1144,default
+Events,L1_DoubleIsoTau32er2p1_Mass_Max80,KEEP,Bool_t,993,default
+Events,L1_DoubleIsoTau34er2p1,KEEP,Bool_t,1124,default
+Events,L1_DoubleIsoTau35er2p1,KEEP,Bool_t,1116,default
+Events,L1_DoubleIsoTau36er2p1,KEEP,Bool_t,1104,default
+Events,L1_DoubleJet100er2p3_dEta_Max1p6,KEEP,Bool_t,926,default
+Events,L1_DoubleJet100er2p5,KEEP,Bool_t,950,default
+Events,L1_DoubleJet112er2p3_dEta_Max1p6,KEEP,Bool_t,850,default
+Events,L1_DoubleJet120er2p5,KEEP,Bool_t,822,default
+Events,L1_DoubleJet120er2p5_Mu3_dR_Max0p8,KEEP,Bool_t,764,default
+Events,L1_DoubleJet150er2p5,KEEP,Bool_t,698,default
+Events,L1_DoubleJet16er2p5_Mu3_dR_Max0p4,KEEP,Bool_t,1217,default
+Events,L1_DoubleJet30er2p5_Mass_Min225_dEta_Max1p5,KEEP,Bool_t,1007,default
+Events,L1_DoubleJet30er2p5_Mass_Min250_dEta_Max1p5,KEEP,Bool_t,963,default
+Events,L1_DoubleJet30er2p5_Mass_Min300_dEta_Max1p5,KEEP,Bool_t,847,default
+Events,L1_DoubleJet30er2p5_Mass_Min330_dEta_Max1p5,KEEP,Bool_t,803,default
+Events,L1_DoubleJet35er2p5_Mu3_dR_Max0p4,KEEP,Bool_t,1153,default
+Events,L1_DoubleJet40er2p5,KEEP,Bool_t,1131,default
+Events,L1_DoubleJet45_Mass_Min550_IsoTau45er2p1_RmOvlp_dR0p5,KEEP,Bool_t,897,default
+Events,L1_DoubleJet45_Mass_Min550_LooseIsoEG20er2p1_RmOvlp_dR0p2,KEEP,Bool_t,849,default
+Events,L1_DoubleJet45_Mass_Min600_IsoTau45er2p1_RmOvlp_dR0p5,KEEP,Bool_t,877,default
+Events,L1_DoubleJet45_Mass_Min600_LooseIsoEG20er2p1_RmOvlp_dR0p2,KEEP,Bool_t,829,default
+Events,L1_DoubleJet60er2p5_Mu3_dR_Max0p4,KEEP,Bool_t,1033,default
+Events,L1_DoubleJet80er2p5_Mu3_dR_Max0p4,KEEP,Bool_t,897,default
+Events,L1_DoubleJet_110_35_DoubleJet35_Mass_Min800,KEEP,Bool_t,863,default
+Events,L1_DoubleJet_110_35_DoubleJet35_Mass_Min850,KEEP,Bool_t,843,default
+Events,L1_DoubleJet_65_35_DoubleJet35_Mass_Min600_DoubleJetCentral50,KEEP,Bool_t,957,default
+Events,L1_DoubleJet_65_35_DoubleJet35_Mass_Min650_DoubleJetCentral50,KEEP,Bool_t,929,default
+Events,L1_DoubleJet_70_35_DoubleJet35_Mass_Min500_ETMHF65,KEEP,Bool_t,988,default
+Events,L1_DoubleJet_70_35_DoubleJet35_Mass_Min550_ETMHF65,KEEP,Bool_t,960,default
+Events,L1_DoubleJet_85_35_DoubleJet35_Mass_Min600_Mu3OQ,KEEP,Bool_t,1006,default
+Events,L1_DoubleJet_85_35_DoubleJet35_Mass_Min650_Mu3OQ,KEEP,Bool_t,978,default
+Events,L1_DoubleLLPJet40,KEEP,Bool_t,509,default
+Events,L1_DoubleLooseIsoEG22er2p1,KEEP,Bool_t,732,default
+Events,L1_DoubleLooseIsoEG24er2p1,KEEP,Bool_t,728,default
+Events,L1_DoubleMu0,KEEP,Bool_t,734,default
+Events,L1_DoubleMu0_Mass_Min1,KEEP,Bool_t,716,default
+Events,L1_DoubleMu0_OQ,KEEP,Bool_t,707,default
+Events,L1_DoubleMu0_SQ,KEEP,Bool_t,787,default
+Events,L1_DoubleMu0_SQ_OS,KEEP,Bool_t,948,default
+Events,L1_DoubleMu0_Upt15_Upt7,KEEP,Bool_t,1163,default
+Events,L1_DoubleMu0_Upt5_Upt5,KEEP,Bool_t,1164,default
+Events,L1_DoubleMu0_Upt6_IP_Min1_Upt4,KEEP,Bool_t,652,default
+Events,L1_DoubleMu0_Upt6_SQ_er2p0,KEEP,Bool_t,1068,default
+Events,L1_DoubleMu0_Upt7_SQ_er2p0,KEEP,Bool_t,1088,default
+Events,L1_DoubleMu0_Upt8_SQ_er2p0,KEEP,Bool_t,1100,default
+Events,L1_DoubleMu0_dR_Max1p6_Jet90er2p5_dR_Max0p8,KEEP,Bool_t,999,default
+Events,L1_DoubleMu0er1p4_OQ_OS_dEta_Max1p6,KEEP,Bool_t,1235,default
+Events,L1_DoubleMu0er1p4_SQ_OS_dEta_Max1p2,KEEP,Bool_t,1243,default
+Events,L1_DoubleMu0er1p4_SQ_OS_dR_Max1p4,KEEP,Bool_t,1109,default
+Events,L1_DoubleMu0er1p5_SQ,KEEP,Bool_t,1106,default
+Events,L1_DoubleMu0er1p5_SQ_OS,KEEP,Bool_t,1171,default
+Events,L1_DoubleMu0er1p5_SQ_OS_dEta_Max1p2,KEEP,Bool_t,1251,default
+Events,L1_DoubleMu0er1p5_SQ_OS_dR_Max1p4,KEEP,Bool_t,1117,default
+Events,L1_DoubleMu0er1p5_SQ_dR_Max1p4,KEEP,Bool_t,1184,default
+Events,L1_DoubleMu0er2p0_SQ_OS_dEta_Max0p3_dPhi_0p8to1p2,KEEP,Bool_t,793,default
+Events,L1_DoubleMu0er2p0_SQ_OS_dEta_Max1p5,KEEP,Bool_t,1175,default
+Events,L1_DoubleMu0er2p0_SQ_OS_dEta_Max1p6,KEEP,Bool_t,1171,default
+Events,L1_DoubleMu0er2p0_SQ_dEta_Max1p5,KEEP,Bool_t,1070,default
+Events,L1_DoubleMu0er2p0_SQ_dEta_Max1p6,KEEP,Bool_t,1050,default
+Events,L1_DoubleMu18er2p1_SQ,KEEP,Bool_t,1081,default
+Events,L1_DoubleMu3_OS_er2p3_Mass_Max14_DoubleEG7p5_er2p1_Mass_Max20,KEEP,Bool_t,705,default
+Events,L1_DoubleMu3_SQ_ETMHF30_HTT60er,KEEP,Bool_t,1163,default
+Events,L1_DoubleMu3_SQ_ETMHF30_Jet60er2p5_OR_DoubleJet40er2p5,KEEP,Bool_t,1248,default
+Events,L1_DoubleMu3_SQ_ETMHF40_HTT60er,KEEP,Bool_t,1223,default
+Events,L1_DoubleMu3_SQ_ETMHF40_Jet60er2p5_OR_DoubleJet40er2p5,KEEP,Bool_t,1288,default
+Events,L1_DoubleMu3_SQ_ETMHF50_HTT60er,KEEP,Bool_t,1223,default
+Events,L1_DoubleMu3_SQ_ETMHF50_Jet60er2p5,KEEP,Bool_t,1228,default
+Events,L1_DoubleMu3_SQ_ETMHF50_Jet60er2p5_OR_DoubleJet40er2p5,KEEP,Bool_t,1288,default
+Events,L1_DoubleMu3_SQ_ETMHF60_Jet60er2p5,KEEP,Bool_t,1208,default
+Events,L1_DoubleMu3_SQ_HTT220er,KEEP,Bool_t,1178,default
+Events,L1_DoubleMu3er2p0_SQ_OS_dR_Max1p6,KEEP,Bool_t,1205,default
+Events,L1_DoubleMu4_SQ_EG9er2p5,KEEP,Bool_t,1162,default
+Events,L1_DoubleMu4_SQ_OS,KEEP,Bool_t,956,default
+Events,L1_DoubleMu4_SQ_OS_dR_Max1p2,KEEP,Bool_t,1098,default
+Events,L1_DoubleMu4er2p0_SQ_OS_dR_Max1p6,KEEP,Bool_t,1205,default
+Events,L1_DoubleMu4p5_SQ_OS,KEEP,Bool_t,970,default
+Events,L1_DoubleMu4p5_SQ_OS_dR_Max1p2,KEEP,Bool_t,1092,default
+Events,L1_DoubleMu4p5er2p0_SQ_OS,KEEP,Bool_t,1077,default
+Events,L1_DoubleMu4p5er2p0_SQ_OS_Mass_7to18,KEEP,Bool_t,810,default
+Events,L1_DoubleMu4p5er2p0_SQ_OS_Mass_Min7,KEEP,Bool_t,1107,default
+Events,L1_DoubleMu5_OS_er2p3_Mass_8to14_DoubleEG3er2p1_Mass_Max20,KEEP,Bool_t,760,default
+Events,L1_DoubleMu5_SQ_EG9er2p5,KEEP,Bool_t,1162,default
+Events,L1_DoubleMu5_SQ_OS_dR_Max1p6,KEEP,Bool_t,1182,default
+Events,L1_DoubleMu6_Upt6_SQ_er2p0,KEEP,Bool_t,1084,default
+Events,L1_DoubleMu7_Upt7_SQ_er2p0,KEEP,Bool_t,1104,default
+Events,L1_DoubleMu8_SQ,KEEP,Bool_t,855,default
+Events,L1_DoubleMu8_Upt8_SQ_er2p0,KEEP,Bool_t,1108,default
+Events,L1_DoubleMu9_SQ,KEEP,Bool_t,879,default
+Events,L1_DoubleMu_12_5,KEEP,Bool_t,790,default
+Events,L1_DoubleMu_15_5_SQ,KEEP,Bool_t,839,default
+Events,L1_DoubleMu_15_7,KEEP,Bool_t,818,default
+Events,L1_DoubleMu_15_7_Mass_Min1,KEEP,Bool_t,828,default
+Events,L1_DoubleMu_15_7_SQ,KEEP,Bool_t,863,default
+Events,L1_DoubleTau70er2p1,KEEP,Bool_t,811,default
+Events,L1_ETM120,KEEP,Bool_t,873,default
+Events,L1_ETM150,KEEP,Bool_t,765,default
+Events,L1_ETMHF100,KEEP,Bool_t,963,default
+Events,L1_ETMHF100_HTT60er,KEEP,Bool_t,983,default
+Events,L1_ETMHF110,KEEP,Bool_t,919,default
+Events,L1_ETMHF110_HTT60er,KEEP,Bool_t,939,default
+Events,L1_ETMHF120,KEEP,Bool_t,883,default
+Events,L1_ETMHF120_HTT60er,KEEP,Bool_t,903,default
+Events,L1_ETMHF130,KEEP,Bool_t,843,default
+Events,L1_ETMHF130_HTT60er,KEEP,Bool_t,867,default
+Events,L1_ETMHF140,KEEP,Bool_t,807,default
+Events,L1_ETMHF150,KEEP,Bool_t,767,default
+Events,L1_ETMHF70,KEEP,Bool_t,1112,default
+Events,L1_ETMHF70_HTT60er,KEEP,Bool_t,1136,default
+Events,L1_ETMHF80,KEEP,Bool_t,1040,default
+Events,L1_ETMHF80_HTT60er,KEEP,Bool_t,1064,default
+Events,L1_ETMHF80_SingleJet55er2p5_dPhi_Min2p1,KEEP,Bool_t,1111,default
+Events,L1_ETMHF80_SingleJet55er2p5_dPhi_Min2p6,KEEP,Bool_t,1087,default
+Events,L1_ETMHF90,KEEP,Bool_t,1000,default
+Events,L1_ETMHF90_HTT60er,KEEP,Bool_t,1016,default
+Events,L1_ETMHF90_SingleJet60er2p5_dPhi_Min2p1,KEEP,Bool_t,1063,default
+Events,L1_ETMHF90_SingleJet60er2p5_dPhi_Min2p6,KEEP,Bool_t,1043,default
+Events,L1_ETT2000,KEEP,Bool_t,620,default
+Events,L1_FirstBunchAfterTrain,KEEP,Bool_t,527,default
+Events,L1_FirstBunchBeforeTrain,KEEP,Bool_t,530,default
+Events,L1_FirstBunchInTrain,KEEP,Bool_t,518,default
+Events,L1_FirstCollisionInOrbit,KEEP,Bool_t,530,default
+Events,L1_FirstCollisionInTrain,KEEP,Bool_t,530,default
+Events,L1_HCAL_LaserMon_Trig,KEEP,Bool_t,521,default
+Events,L1_HCAL_LaserMon_Veto,KEEP,Bool_t,521,default
+Events,L1_HTMHF100,KEEP,Bool_t,1171,default
+Events,L1_HTMHF120,KEEP,Bool_t,1111,default
+Events,L1_HTMHF125,KEEP,Bool_t,1087,default
+Events,L1_HTMHF130,KEEP,Bool_t,1063,default
+Events,L1_HTMHF150,KEEP,Bool_t,995,default
+Events,L1_HTT120_SingleLLPJet40,KEEP,Bool_t,622,default
+Events,L1_HTT120er,KEEP,Bool_t,1067,default
+Events,L1_HTT160_SingleLLPJet50,KEEP,Bool_t,598,default
+Events,L1_HTT160er,KEEP,Bool_t,1167,default
+Events,L1_HTT200_SingleLLPJet60,KEEP,Bool_t,582,default
+Events,L1_HTT200er,KEEP,Bool_t,1163,default
+Events,L1_HTT240_SingleLLPJet70,KEEP,Bool_t,578,default
+Events,L1_HTT255er,KEEP,Bool_t,1095,default
+Events,L1_HTT280er,KEEP,Bool_t,1067,default
+Events,L1_HTT280er_QuadJet_70_55_40_35_er2p5,KEEP,Bool_t,1013,default
+Events,L1_HTT320er,KEEP,Bool_t,1003,default
+Events,L1_HTT320er_QuadJet_70_55_40_40_er2p5,KEEP,Bool_t,937,default
+Events,L1_HTT320er_QuadJet_80_60_er2p1_45_40_er2p3,KEEP,Bool_t,935,default
+Events,L1_HTT320er_QuadJet_80_60_er2p1_50_45_er2p3,KEEP,Bool_t,879,default
+Events,L1_HTT360er,KEEP,Bool_t,927,default
+Events,L1_HTT400er,KEEP,Bool_t,875,default
+Events,L1_HTT450er,KEEP,Bool_t,811,default
+Events,L1_IsoEG32er2p5_Mt40,KEEP,Bool_t,1098,default
+Events,L1_IsoTau52er2p1_QuadJet36er2p5,KEEP,Bool_t,979,default
+Events,L1_IsolatedBunch,KEEP,Bool_t,506,default
+Events,L1_LastBunchInTrain,KEEP,Bool_t,515,default
+Events,L1_LastCollisionInTrain,KEEP,Bool_t,527,default
+Events,L1_LooseIsoEG14er2p5_HTT200er,KEEP,Bool_t,1137,default
+Events,L1_LooseIsoEG16er2p5_HTT200er,KEEP,Bool_t,1129,default
+Events,L1_LooseIsoEG22er2p1_IsoTau26er2p1_dR_Min0p3,KEEP,Bool_t,1162,default
+Events,L1_LooseIsoEG22er2p1_Tau70er2p1_dR_Min0p3,KEEP,Bool_t,961,default
+Events,L1_LooseIsoEG24er2p1_HTT100er,KEEP,Bool_t,1173,default
+Events,L1_LooseIsoEG24er2p1_IsoTau27er2p1_dR_Min0p3,KEEP,Bool_t,1142,default
+Events,L1_LooseIsoEG26er2p1_HTT100er,KEEP,Bool_t,1173,default
+Events,L1_LooseIsoEG26er2p1_Jet34er2p5_dR_Min0p3,KEEP,Bool_t,1201,default
+Events,L1_LooseIsoEG28er2p1_HTT100er,KEEP,Bool_t,1173,default
+Events,L1_LooseIsoEG28er2p1_Jet34er2p5_dR_Min0p3,KEEP,Bool_t,1193,default
+Events,L1_LooseIsoEG30er2p1_Jet34er2p5_dR_Min0p3,KEEP,Bool_t,1181,default
+Events,L1_MinimumBiasHF0,KEEP,Bool_t,509,default
+Events,L1_MinimumBiasHF0_AND_BptxAND,KEEP,Bool_t,545,default
+Events,L1_Mu10er2p3_Jet32er2p3_dR_Max0p4_DoubleJet32er2p3_dEta_Max1p6,KEEP,Bool_t,1204,default
+Events,L1_Mu12_HTT150er,KEEP,Bool_t,1154,default
+Events,L1_Mu12er2p3_Jet40er2p3_dR_Max0p4_DoubleJet40er2p3_dEta_Max1p6,KEEP,Bool_t,1152,default
+Events,L1_Mu14_HTT150er,KEEP,Bool_t,1150,default
+Events,L1_Mu18er2p1_Tau24er2p1,KEEP,Bool_t,899,default
+Events,L1_Mu18er2p1_Tau26er2p1,KEEP,Bool_t,959,default
+Events,L1_Mu18er2p1_Tau26er2p1_Jet55,KEEP,Bool_t,1029,default
+Events,L1_Mu18er2p1_Tau26er2p1_Jet70,KEEP,Bool_t,1141,default
+Events,L1_Mu20_EG10er2p5,KEEP,Bool_t,1129,default
+Events,L1_Mu22er2p1_IsoTau30er2p1,KEEP,Bool_t,1156,default
+Events,L1_Mu22er2p1_IsoTau32er2p1,KEEP,Bool_t,1164,default
+Events,L1_Mu22er2p1_IsoTau34er2p1,KEEP,Bool_t,1184,default
+Events,L1_Mu22er2p1_IsoTau40er2p1,KEEP,Bool_t,1212,default
+Events,L1_Mu22er2p1_Tau70er2p1,KEEP,Bool_t,1139,default
+Events,L1_Mu3_Jet120er2p5_dR_Max0p4,KEEP,Bool_t,786,default
+Events,L1_Mu3_Jet16er2p5_dR_Max0p4,KEEP,Bool_t,1207,default
+Events,L1_Mu3_Jet30er2p5,KEEP,Bool_t,669,default
+Events,L1_Mu3_Jet60er2p5_dR_Max0p4,KEEP,Bool_t,1075,default
+Events,L1_Mu3er1p5_Jet100er2p5_ETMHF30,KEEP,Bool_t,1207,default
+Events,L1_Mu3er1p5_Jet100er2p5_ETMHF40,KEEP,Bool_t,1199,default
+Events,L1_Mu3er1p5_Jet100er2p5_ETMHF50,KEEP,Bool_t,1187,default
+Events,L1_Mu5_EG23er2p5,KEEP,Bool_t,1186,default
+Events,L1_Mu5_LooseIsoEG20er2p5,KEEP,Bool_t,1202,default
+Events,L1_Mu6_DoubleEG10er2p5,KEEP,Bool_t,1128,default
+Events,L1_Mu6_DoubleEG12er2p5,KEEP,Bool_t,1064,default
+Events,L1_Mu6_DoubleEG15er2p5,KEEP,Bool_t,984,default
+Events,L1_Mu6_DoubleEG17er2p5,KEEP,Bool_t,952,default
+Events,L1_Mu6_HTT240er,KEEP,Bool_t,1131,default
+Events,L1_Mu6_HTT250er,KEEP,Bool_t,1115,default
+Events,L1_Mu7_EG20er2p5,KEEP,Bool_t,1182,default
+Events,L1_Mu7_EG23er2p5,KEEP,Bool_t,1186,default
+Events,L1_Mu7_LooseIsoEG20er2p5,KEEP,Bool_t,1206,default
+Events,L1_Mu7_LooseIsoEG23er2p5,KEEP,Bool_t,1186,default
+Events,L1_NotBptxOR,KEEP,Bool_t,494,default
+Events,L1_QuadJet60er2p5,KEEP,Bool_t,757,default
+Events,L1_QuadJet_95_75_65_20_DoubleJet_75_65_er2p5_Jet20_FWD3p0,KEEP,Bool_t,857,default
+Events,L1_QuadMu0,KEEP,Bool_t,1012,default
+Events,L1_QuadMu0_OQ,KEEP,Bool_t,1049,default
+Events,L1_QuadMu0_SQ,KEEP,Bool_t,1001,default
+Events,L1_SecondBunchInTrain,KEEP,Bool_t,521,default
+Events,L1_SecondLastBunchInTrain,KEEP,Bool_t,533,default
+Events,L1_SingleEG10er2p5,KEEP,Bool_t,1136,default
+Events,L1_SingleEG15er2p5,KEEP,Bool_t,1184,default
+Events,L1_SingleEG26er2p5,KEEP,Bool_t,1176,default
+Events,L1_SingleEG28_FWD2p5,KEEP,Bool_t,618,default
+Events,L1_SingleEG28er1p5,KEEP,Bool_t,1128,default
+Events,L1_SingleEG28er2p1,KEEP,Bool_t,1152,default
+Events,L1_SingleEG28er2p5,KEEP,Bool_t,1164,default
+Events,L1_SingleEG34er2p5,KEEP,Bool_t,1120,default
+Events,L1_SingleEG36er2p5,KEEP,Bool_t,1116,default
+Events,L1_SingleEG38er2p5,KEEP,Bool_t,1100,default
+Events,L1_SingleEG40er2p5,KEEP,Bool_t,1084,default
+Events,L1_SingleEG42er2p5,KEEP,Bool_t,1080,default
+Events,L1_SingleEG45er2p5,KEEP,Bool_t,1056,default
+Events,L1_SingleEG50,KEEP,Bool_t,1021,default
+Events,L1_SingleEG60,KEEP,Bool_t,953,default
+Events,L1_SingleEG8er2p5,KEEP,Bool_t,1077,default
+Events,L1_SingleIsoEG24er2p1,KEEP,Bool_t,1153,default
+Events,L1_SingleIsoEG26er2p1,KEEP,Bool_t,1149,default
+Events,L1_SingleIsoEG26er2p5,KEEP,Bool_t,1161,default
+Events,L1_SingleIsoEG28_FWD2p5,KEEP,Bool_t,591,default
+Events,L1_SingleIsoEG28er1p5,KEEP,Bool_t,1105,default
+Events,L1_SingleIsoEG28er2p1,KEEP,Bool_t,1145,default
+Events,L1_SingleIsoEG28er2p5,KEEP,Bool_t,1153,default
+Events,L1_SingleIsoEG30er2p1,KEEP,Bool_t,1141,default
+Events,L1_SingleIsoEG30er2p5,KEEP,Bool_t,1141,default
+Events,L1_SingleIsoEG32er2p1,KEEP,Bool_t,1129,default
+Events,L1_SingleIsoEG32er2p5,KEEP,Bool_t,1137,default
+Events,L1_SingleIsoEG34er2p5,KEEP,Bool_t,1125,default
+Events,L1_SingleJet10erHE,KEEP,Bool_t,1036,default
+Events,L1_SingleJet120,KEEP,Bool_t,1139,default
+Events,L1_SingleJet120_FWD2p5,KEEP,Bool_t,724,default
+Events,L1_SingleJet120_FWD3p0,KEEP,Bool_t,576,default
+Events,L1_SingleJet120er1p3,KEEP,Bool_t,1086,default
+Events,L1_SingleJet120er2p5,KEEP,Bool_t,1158,default
+Events,L1_SingleJet12erHE,KEEP,Bool_t,1052,default
+Events,L1_SingleJet140er2p5,KEEP,Bool_t,1058,default
+Events,L1_SingleJet160er2p5,KEEP,Bool_t,982,default
+Events,L1_SingleJet180,KEEP,Bool_t,927,default
+Events,L1_SingleJet180er2p5,KEEP,Bool_t,914,default
+Events,L1_SingleJet200,KEEP,Bool_t,843,default
+Events,L1_SingleJet20er2p5_NotBptxOR,KEEP,Bool_t,545,default
+Events,L1_SingleJet20er2p5_NotBptxOR_3BX,KEEP,Bool_t,557,default
+Events,L1_SingleJet35,KEEP,Bool_t,660,default
+Events,L1_SingleJet35_FWD2p5,KEEP,Bool_t,1117,default
+Events,L1_SingleJet35_FWD3p0,KEEP,Bool_t,957,default
+Events,L1_SingleJet35er1p3,KEEP,Bool_t,979,default
+Events,L1_SingleJet35er2p5,KEEP,Bool_t,711,default
+Events,L1_SingleJet43er2p5_NotBptxOR_3BX,KEEP,Bool_t,557,default
+Events,L1_SingleJet46er2p5_NotBptxOR_3BX,KEEP,Bool_t,557,default
+Events,L1_SingleJet60,KEEP,Bool_t,936,default
+Events,L1_SingleJet60_FWD2p5,KEEP,Bool_t,945,default
+Events,L1_SingleJet8erHE,KEEP,Bool_t,1029,default
+Events,L1_SingleJet90,KEEP,Bool_t,1172,default
+Events,L1_SingleJet90_FWD2p5,KEEP,Bool_t,825,default
+Events,L1_SingleLooseIsoEG26er1p5,KEEP,Bool_t,1136,default
+Events,L1_SingleLooseIsoEG26er2p5,KEEP,Bool_t,1176,default
+Events,L1_SingleLooseIsoEG28_FWD2p5,KEEP,Bool_t,610,default
+Events,L1_SingleLooseIsoEG28er1p5,KEEP,Bool_t,1124,default
+Events,L1_SingleLooseIsoEG28er2p1,KEEP,Bool_t,1156,default
+Events,L1_SingleLooseIsoEG28er2p5,KEEP,Bool_t,1168,default
+Events,L1_SingleLooseIsoEG30er1p5,KEEP,Bool_t,1112,default
+Events,L1_SingleLooseIsoEG30er2p5,KEEP,Bool_t,1164,default
+Events,L1_SingleMu0_BMTF,KEEP,Bool_t,1045,default
+Events,L1_SingleMu0_DQ,KEEP,Bool_t,527,default
+Events,L1_SingleMu0_EMTF,KEEP,Bool_t,1153,default
+Events,L1_SingleMu0_OMTF,KEEP,Bool_t,1157,default
+Events,L1_SingleMu0_SQ13_BMTF,KEEP,Bool_t,1100,default
+Events,L1_SingleMu0_SQ14_BMTF,KEEP,Bool_t,1168,default
+Events,L1_SingleMu0_SQ15_BMTF,KEEP,Bool_t,1176,default
+Events,L1_SingleMu0_Upt10,KEEP,Bool_t,672,default
+Events,L1_SingleMu0_Upt10_BMTF,KEEP,Bool_t,1115,default
+Events,L1_SingleMu0_Upt10_EMTF,KEEP,Bool_t,1211,default
+Events,L1_SingleMu0_Upt10_OMTF,KEEP,Bool_t,1095,default
+Events,L1_SingleMu0_Upt10_SQ14_BMTF,KEEP,Bool_t,1198,default
+Events,L1_SingleMu0_Upt15_SQ14_BMTF,KEEP,Bool_t,1206,default
+Events,L1_SingleMu0_Upt20_SQ14_BMTF,KEEP,Bool_t,1218,default
+Events,L1_SingleMu0_Upt25_SQ14_BMTF,KEEP,Bool_t,1218,default
+Events,L1_SingleMu10_SQ14_BMTF,KEEP,Bool_t,1175,default
+Events,L1_SingleMu11_SQ14_BMTF,KEEP,Bool_t,1183,default
+Events,L1_SingleMu12_DQ_BMTF,KEEP,Bool_t,1085,default
+Events,L1_SingleMu12_DQ_EMTF,KEEP,Bool_t,1193,default
+Events,L1_SingleMu12_DQ_OMTF,KEEP,Bool_t,1145,default
+Events,L1_SingleMu15_DQ,KEEP,Bool_t,590,default
+Events,L1_SingleMu18,KEEP,Bool_t,621,default
+Events,L1_SingleMu20,KEEP,Bool_t,641,default
+Events,L1_SingleMu22,KEEP,Bool_t,661,default
+Events,L1_SingleMu22_BMTF,KEEP,Bool_t,1128,default
+Events,L1_SingleMu22_BMTF_NEG,KEEP,Bool_t,1184,default
+Events,L1_SingleMu22_BMTF_POS,KEEP,Bool_t,1180,default
+Events,L1_SingleMu22_DQ,KEEP,Bool_t,666,default
+Events,L1_SingleMu22_EMTF,KEEP,Bool_t,1184,default
+Events,L1_SingleMu22_EMTF_NEG,KEEP,Bool_t,1116,default
+Events,L1_SingleMu22_EMTF_POS,KEEP,Bool_t,1080,default
+Events,L1_SingleMu22_OMTF,KEEP,Bool_t,1096,default
+Events,L1_SingleMu22_OMTF_NEG,KEEP,Bool_t,988,default
+Events,L1_SingleMu22_OMTF_POS,KEEP,Bool_t,960,default
+Events,L1_SingleMu22_OQ,KEEP,Bool_t,662,default
+Events,L1_SingleMu25,KEEP,Bool_t,689,default
+Events,L1_SingleMu3,KEEP,Bool_t,530,default
+Events,L1_SingleMu5,KEEP,Bool_t,542,default
+Events,L1_SingleMu5_SQ14_BMTF,KEEP,Bool_t,1168,default
+Events,L1_SingleMu6_SQ14_BMTF,KEEP,Bool_t,1168,default
+Events,L1_SingleMu7,KEEP,Bool_t,554,default
+Events,L1_SingleMu7_DQ,KEEP,Bool_t,547,default
+Events,L1_SingleMu7_SQ14_BMTF,KEEP,Bool_t,1168,default
+Events,L1_SingleMu8_SQ14_BMTF,KEEP,Bool_t,1168,default
+Events,L1_SingleMu9_SQ14_BMTF,KEEP,Bool_t,1172,default
+Events,L1_SingleMuCosmics,KEEP,Bool_t,532,default
+Events,L1_SingleMuCosmics_BMTF,KEEP,Bool_t,1063,default
+Events,L1_SingleMuCosmics_EMTF,KEEP,Bool_t,1163,default
+Events,L1_SingleMuCosmics_OMTF,KEEP,Bool_t,1191,default
+Events,L1_SingleMuOpen,KEEP,Bool_t,523,default
+Events,L1_SingleMuOpen_BMTF,KEEP,Bool_t,1054,default
+Events,L1_SingleMuOpen_EMTF,KEEP,Bool_t,1154,default
+Events,L1_SingleMuOpen_NotBptxOR,KEEP,Bool_t,533,default
+Events,L1_SingleMuOpen_OMTF,KEEP,Bool_t,1162,default
+Events,L1_SingleMuOpen_er1p1_NotBptxOR_3BX,KEEP,Bool_t,563,default
+Events,L1_SingleMuOpen_er1p4_NotBptxOR_3BX,KEEP,Bool_t,563,default
+Events,L1_SingleMuShower_Nominal,KEEP,Bool_t,617,default
+Events,L1_SingleMuShower_Tight,KEEP,Bool_t,563,default
+Events,L1_SingleTau120er2p1,KEEP,Bool_t,878,default
+Events,L1_SingleTau130er2p1,KEEP,Bool_t,818,default
+Events,L1_TOTEM_1,KEEP,Bool_t,488,default
+Events,L1_TOTEM_2,KEEP,Bool_t,488,default
+Events,L1_TOTEM_3,KEEP,Bool_t,488,default
+Events,L1_TOTEM_4,KEEP,Bool_t,488,default
+Events,L1_TripleEG_18_17_8_er2p5,KEEP,Bool_t,813,default
+Events,L1_TripleEG_18_18_12_er2p5,KEEP,Bool_t,700,default
+Events,L1_TripleJet_100_80_70_DoubleJet_80_70_er2p5,KEEP,Bool_t,1006,default
+Events,L1_TripleJet_105_85_75_DoubleJet_85_75_er2p5,KEEP,Bool_t,954,default
+Events,L1_TripleJet_95_75_65_DoubleJet_75_65_er2p5,KEEP,Bool_t,1051,default
+Events,L1_TripleMu0,KEEP,Bool_t,1146,default
+Events,L1_TripleMu0_OQ,KEEP,Bool_t,1155,default
+Events,L1_TripleMu0_SQ,KEEP,Bool_t,1163,default
+Events,L1_TripleMu3,KEEP,Bool_t,1154,default
+Events,L1_TripleMu3_SQ,KEEP,Bool_t,1163,default
+Events,L1_TripleMu_3SQ_2p5SQ_0,KEEP,Bool_t,1179,default
+Events,L1_TripleMu_3SQ_2p5SQ_0_Mass_Max12,KEEP,Bool_t,580,default
+Events,L1_TripleMu_3SQ_2p5SQ_0_OS_Mass_Max12,KEEP,Bool_t,585,default
+Events,L1_TripleMu_4SQ_2p5SQ_0_OS_Mass_Max12,KEEP,Bool_t,585,default
+Events,L1_TripleMu_5SQ_3SQ_0OQ,KEEP,Bool_t,1179,default
+Events,L1_TripleMu_5SQ_3SQ_0OQ_DoubleMu_5_3_SQ_OS_Mass_Max9,KEEP,Bool_t,818,default
+Events,L1_TripleMu_5SQ_3SQ_0_DoubleMu_5_3_SQ_OS_Mass_Max9,KEEP,Bool_t,808,default
+Events,L1_TripleMu_5_3_3,KEEP,Bool_t,1169,default
+Events,L1_TripleMu_5_3_3_SQ,KEEP,Bool_t,1178,default
+Events,L1_TripleMu_5_3p5_2p5,KEEP,Bool_t,1181,default
+Events,L1_TripleMu_5_3p5_2p5_DoubleMu_5_2p5_OS_Mass_5to17,KEEP,Bool_t,940,default
+Events,L1_TripleMu_5_4_2p5_DoubleMu_5_2p5_OS_Mass_5to17,KEEP,Bool_t,934,default
+Events,L1_TripleMu_5_5_3,KEEP,Bool_t,1169,default
+Events,L1_TwoMuShower_Loose,KEEP,Bool_t,578,default
+Events,L1_UnpairedBunchBptxMinus,KEEP,Bool_t,533,default
+Events,L1_UnpairedBunchBptxPlus,KEEP,Bool_t,530,default
+Events,L1_ZeroBias,KEEP,Bool_t,491,default
+Events,L1_ZeroBias_copy,KEEP,Bool_t,506,default
+Events,L1_UnprefireableEvent_TriggerRules,KEEP,Bool_t,560,default
+Events,L1_UnprefireableEvent_FirstBxInTrain,KEEP,Bool_t,566,default
+Events,L1_FinalOR_BXmin1,KEEP,Bool_t,509,default
+Events,L1_FinalOR_BXmin2,KEEP,Bool_t,509,default
+Events,Flag_HBHENoiseFilter,KEEP,Bool_t,518,default
+Events,Flag_HBHENoiseIsoFilter,KEEP,Bool_t,527,default
+Events,Flag_CSCTightHaloFilter,KEEP,Bool_t,623,default
+Events,Flag_CSCTightHaloTrkMuUnvetoFilter,KEEP,Bool_t,836,default
+Events,Flag_CSCTightHalo2015Filter,KEEP,Bool_t,663,default
+Events,Flag_globalTightHalo2016Filter,KEEP,Bool_t,656,default
+Events,Flag_globalSuperTightHalo2016Filter,KEEP,Bool_t,563,default
+Events,Flag_HcalStripHaloFilter,KEEP,Bool_t,530,default
+Events,Flag_hcalLaserEventFilter,KEEP,Bool_t,533,default
+Events,Flag_EcalDeadCellTriggerPrimitiveFilter,KEEP,Bool_t,575,default
+Events,Flag_EcalDeadCellBoundaryEnergyFilter,KEEP,Bool_t,697,default
+Events,Flag_ecalBadCalibFilter,KEEP,Bool_t,527,default
+Events,Flag_goodVertices,KEEP,Bool_t,509,default
+Events,Flag_eeBadScFilter,KEEP,Bool_t,512,default
+Events,Flag_ecalLaserCorrFilter,KEEP,Bool_t,1170,default
+Events,Flag_trkPOGFilters,KEEP,Bool_t,512,default
+Events,Flag_chargedHadronTrackResolutionFilter,KEEP,Bool_t,575,default
+Events,Flag_muonBadTrackFilter,KEEP,Bool_t,531,default
+Events,Flag_BadChargedCandidateFilter,KEEP,Bool_t,548,default
+Events,Flag_BadPFMuonFilter,KEEP,Bool_t,522,default
+Events,Flag_BadPFMuonDzFilter,KEEP,Bool_t,528,default
+Events,Flag_hfNoisyHitsFilter,KEEP,Bool_t,524,default
+Events,Flag_BadChargedCandidateSummer16Filter,KEEP,Bool_t,572,default
+Events,Flag_BadPFMuonSummer16Filter,KEEP,Bool_t,542,default
+Events,Flag_trkPOG_manystripclus53X,KEEP,Bool_t,542,default
+Events,Flag_trkPOG_toomanystripclus53X,KEEP,Bool_t,551,default
+Events,Flag_trkPOG_logErrorTooManyClusters,KEEP,Bool_t,563,default
+Events,L1Reco_step,KEEP,Bool_t,491,default
+Events,L1simulation_step,KEEP,Bool_t,509,default
+Events,HLTriggerFirstPath,KEEP,Bool_t,512,default
+Events,DST_PFScouting_DoubleMuon,KEEP,Bool_t,821,default
+Events,DST_PFScouting_DoubleEG,KEEP,Bool_t,703,default
+Events,DST_PFScouting_JetHT,KEEP,Bool_t,1194,default
+Events,DST_PFScouting_DatasetMuon,KEEP,Bool_t,576,default
+Events,DST_PFScouting_AXOVLoose,KEEP,Bool_t,1186,default
+Events,DST_PFScouting_AXOLoose,KEEP,Bool_t,1163,default
+Events,DST_PFScouting_AXONominal,KEEP,Bool_t,1149,default
+Events,DST_PFScouting_AXOTight,KEEP,Bool_t,1127,default
+Events,DST_PFScouting_AXOVTight,KEEP,Bool_t,1050,default
+Events,DST_PFScouting_CICADAVLoose,KEEP,Bool_t,855,default
+Events,DST_PFScouting_CICADALoose,KEEP,Bool_t,812,default
+Events,DST_PFScouting_CICADAMedium,KEEP,Bool_t,771,default
+Events,DST_PFScouting_CICADATight,KEEP,Bool_t,716,default
+Events,DST_PFScouting_CICADAVTight,KEEP,Bool_t,687,default
+Events,DST_PFScouting_SingleMuon,KEEP,Bool_t,1177,default
+Events,DST_PFScouting_SinglePhotonEB,KEEP,Bool_t,1033,default
+Events,DST_PFScouting_ZeroBias,KEEP,Bool_t,527,default
+Events,HLT_EphemeralPhysics,KEEP,Bool_t,518,default
+Events,HLT_EphemeralZeroBias,KEEP,Bool_t,521,default
+Events,HLT_EcalCalibration,KEEP,Bool_t,515,default
+Events,HLT_HcalCalibration,KEEP,Bool_t,515,default
+Events,HLT_HcalNZS,KEEP,Bool_t,491,default
+Events,HLT_HcalPhiSym,KEEP,Bool_t,504,default
+Events,HLT_Random,KEEP,Bool_t,488,default
+Events,HLT_Physics,KEEP,Bool_t,491,default
+Events,HLT_ZeroBias,KEEP,Bool_t,494,default
+Events,HLT_ZeroBias_Alignment,KEEP,Bool_t,524,default
+Events,HLT_ZeroBias_Beamspot,KEEP,Bool_t,521,default
+Events,HLT_ZeroBias_IsolatedBunches,KEEP,Bool_t,542,default
+Events,HLT_ZeroBias_FirstBXAfterTrain,KEEP,Bool_t,548,default
+Events,HLT_ZeroBias_FirstCollisionAfterAbortGap,KEEP,Bool_t,578,default
+Events,HLT_ZeroBias_FirstCollisionInTrain,KEEP,Bool_t,560,default
+Events,HLT_ZeroBias_LastCollisionInTrain,KEEP,Bool_t,557,default
+Events,HLT_HT300_Beamspot,KEEP,Bool_t,1040,default
+Events,HLT_IsoTrackHB,KEEP,Bool_t,1124,default
+Events,HLT_IsoTrackHE,KEEP,Bool_t,784,default
+Events,HLT_PFJet40_GPUvsCPU,KEEP,Bool_t,518,default
+Events,HLT_AK8PFJet380_SoftDropMass30,KEEP,Bool_t,616,default
+Events,HLT_AK8PFJet400_SoftDropMass30,KEEP,Bool_t,612,default
+Events,HLT_AK8PFJet425_SoftDropMass30,KEEP,Bool_t,592,default
+Events,HLT_AK8PFJet450_SoftDropMass30,KEEP,Bool_t,584,default
+Events,HLT_AK8DiPFJet250_250_SoftDropMass40,KEEP,Bool_t,678,default
+Events,HLT_AK8DiPFJet250_250_SoftDropMass50,KEEP,Bool_t,666,default
+Events,HLT_AK8DiPFJet260_260_SoftDropMass30,KEEP,Bool_t,686,default
+Events,HLT_AK8DiPFJet260_260_SoftDropMass40,KEEP,Bool_t,670,default
+Events,HLT_AK8DiPFJet270_270_SoftDropMass30,KEEP,Bool_t,666,default
+Events,HLT_AK8DiPFJet280_280_SoftDropMass30,KEEP,Bool_t,666,default
+Events,HLT_AK8DiPFJet290_290_SoftDropMass30,KEEP,Bool_t,662,default
+Events,HLT_CaloJet500_NoJetID,KEEP,Bool_t,536,default
+Events,HLT_CaloJet550_NoJetID,KEEP,Bool_t,528,default
+Events,HLT_DoubleMu5_Upsilon_DoubleEle3_CaloIdL_TrackIdL,KEEP,Bool_t,613,default
+Events,HLT_DoubleMu3_DoubleEle7p5_CaloIdL_TrackIdL_Upsilon,KEEP,Bool_t,615,default
+Events,HLT_Trimuon5_3p5_2_Upsilon_Muon,KEEP,Bool_t,639,default
+Events,HLT_TrimuonOpen_5_3p5_2_Upsilon_Muon,KEEP,Bool_t,578,default
+Events,HLT_DoubleEle25_CaloIdL_MW,KEEP,Bool_t,640,default
+Events,HLT_DoubleEle27_CaloIdL_MW,KEEP,Bool_t,624,default
+Events,HLT_DoubleEle33_CaloIdL_MW,KEEP,Bool_t,608,default
+Events,HLT_DoubleEle24_eta2p1_WPTight_Gsf,KEEP,Bool_t,600,default
+Events,HLT_DoubleEle8_CaloIdM_TrackIdM_Mass8_DZ_PFHT350,KEEP,Bool_t,726,default
+Events,HLT_DoubleEle8_CaloIdM_TrackIdM_Mass8_PFHT350,KEEP,Bool_t,721,default
+Events,HLT_Mu27_Ele37_CaloIdL_MW,KEEP,Bool_t,1037,default
+Events,HLT_Mu37_Ele27_CaloIdL_MW,KEEP,Bool_t,1093,default
+Events,HLT_Mu37_TkMu27,KEEP,Bool_t,1175,default
+Events,HLT_DoubleMu4_3_Bs,KEEP,Bool_t,544,default
+Events,HLT_DoubleMu4_3_Jpsi,KEEP,Bool_t,534,default
+Events,HLT_DoubleMu4_3_LowMass,KEEP,Bool_t,647,default
+Events,HLT_DoubleMu4_LowMass_Displaced,KEEP,Bool_t,575,default
+Events,HLT_Mu0_L1DoubleMu,KEEP,Bool_t,1100,default
+Events,HLT_Mu4_L1DoubleMu,KEEP,Bool_t,1100,default
+Events,HLT_DoubleMu2_Jpsi_LowPt,KEEP,Bool_t,546,default
+Events,HLT_DoubleMu4_3_Photon4_BsToMMG,KEEP,Bool_t,555,default
+Events,HLT_DoubleMu4_3_Displaced_Photon4_BsToMMG,KEEP,Bool_t,585,default
+Events,HLT_DoubleMu3_Trk_Tau3mu,KEEP,Bool_t,550,default
+Events,HLT_DoubleMu3_TkMu_DsTau3Mu,KEEP,Bool_t,543,default
+Events,HLT_DoubleMu4_Mass3p8_DZ_PFHT350,KEEP,Bool_t,1158,default
+Events,HLT_DoubleMu4_MuMuTrk_Displaced,KEEP,Bool_t,563,default
+Events,HLT_Mu3_PFJet40,KEEP,Bool_t,691,default
+Events,HLT_Mu7p5_L2Mu2_Jpsi,KEEP,Bool_t,610,default
+Events,HLT_Mu7p5_L2Mu2_Upsilon,KEEP,Bool_t,719,default
+Events,HLT_Mu3_L1SingleMu5orSingleMu7,KEEP,Bool_t,608,default
+Events,HLT_Mu0_Barrel,KEEP,Bool_t,1048,default
+Events,HLT_Mu0_Barrel_L1HP6,KEEP,Bool_t,1162,default
+Events,HLT_Mu0_Barrel_L1HP7,KEEP,Bool_t,1158,default
+Events,HLT_Mu0_Barrel_L1HP8,KEEP,Bool_t,1166,default
+Events,HLT_Mu0_Barrel_L1HP9,KEEP,Bool_t,1170,default
+Events,HLT_Mu0_Barrel_L1HP10,KEEP,Bool_t,1177,default
+Events,HLT_Mu0_Barrel_L1HP11,KEEP,Bool_t,1177,default
+Events,HLT_Mu0_Barrel_L1HP6_IP6,KEEP,Bool_t,770,default
+Events,HLT_Mu6_Barrel_L1HP7_IP6,KEEP,Bool_t,746,default
+Events,HLT_Mu7_Barrel_L1HP8_IP6,KEEP,Bool_t,734,default
+Events,HLT_Mu8_Barrel_L1HP9_IP6,KEEP,Bool_t,726,default
+Events,HLT_Mu9_Barrel_L1HP10_IP6,KEEP,Bool_t,713,default
+Events,HLT_Mu10_Barrel_L1HP11_IP6,KEEP,Bool_t,708,default
+Events,HLT_DoublePhoton33_CaloIdL,KEEP,Bool_t,652,default
+Events,HLT_DoublePhoton70,KEEP,Bool_t,524,default
+Events,HLT_DoublePhoton85,KEEP,Bool_t,516,default
+Events,HLT_DiEle27_WPTightCaloOnly_L1DoubleEG,KEEP,Bool_t,640,default
+Events,HLT_Ele30_WPTight_Gsf,KEEP,Bool_t,1017,default
+Events,HLT_Ele32_WPTight_Gsf,KEEP,Bool_t,1009,default
+Events,HLT_Ele35_WPTight_Gsf,KEEP,Bool_t,977,default
+Events,HLT_Ele38_WPTight_Gsf,KEEP,Bool_t,969,default
+Events,HLT_Ele40_WPTight_Gsf,KEEP,Bool_t,957,default
+Events,HLT_Ele32_WPTight_Gsf_L1DoubleEG,KEEP,Bool_t,1046,default
+Events,HLT_IsoMu20,KEEP,Bool_t,815,default
+Events,HLT_IsoMu24,KEEP,Bool_t,871,default
+Events,HLT_IsoMu24_eta2p1,KEEP,Bool_t,920,default
+Events,HLT_IsoMu27,KEEP,Bool_t,899,default
+Events,HLT_UncorrectedJetE30_NoBPTX,KEEP,Bool_t,542,default
+Events,HLT_UncorrectedJetE30_NoBPTX3BX,KEEP,Bool_t,551,default
+Events,HLT_UncorrectedJetE60_NoBPTX3BX,KEEP,Bool_t,551,default
+Events,HLT_UncorrectedJetE70_NoBPTX3BX,KEEP,Bool_t,551,default
+Events,HLT_L1SingleMuCosmics,KEEP,Bool_t,541,default
+Events,HLT_L2Mu10_NoVertex_NoBPTX3BX,KEEP,Bool_t,545,default
+Events,HLT_L2Mu10_NoVertex_NoBPTX,KEEP,Bool_t,536,default
+Events,HLT_L2Mu45_NoVertex_3Sta_NoBPTX3BX,KEEP,Bool_t,560,default
+Events,HLT_L2Mu40_NoVertex_3Sta_NoBPTX3BX,KEEP,Bool_t,560,default
+Events,HLT_L2Mu23NoVtx_2Cha,KEEP,Bool_t,814,default
+Events,HLT_L2Mu23NoVtx_2Cha_CosmicSeed,KEEP,Bool_t,939,default
+Events,HLT_DoubleL2Mu30NoVtx_2Cha_CosmicSeed_Eta2p4,KEEP,Bool_t,1258,default
+Events,HLT_DoubleL2Mu30NoVtx_2Cha_Eta2p4,KEEP,Bool_t,1237,default
+Events,HLT_DoubleL2Mu50,KEEP,Bool_t,982,default
+Events,HLT_DoubleL2Mu23NoVtx_2Cha_CosmicSeed,KEEP,Bool_t,1253,default
+Events,HLT_DoubleL2Mu25NoVtx_2Cha_CosmicSeed,KEEP,Bool_t,1241,default
+Events,HLT_DoubleL2Mu25NoVtx_2Cha_CosmicSeed_Eta2p4,KEEP,Bool_t,1262,default
+Events,HLT_DoubleL2Mu23NoVtx_2Cha,KEEP,Bool_t,1196,default
+Events,HLT_DoubleL2Mu25NoVtx_2Cha,KEEP,Bool_t,1212,default
+Events,HLT_DoubleL2Mu25NoVtx_2Cha_Eta2p4,KEEP,Bool_t,1221,default
+Events,HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL,KEEP,Bool_t,1014,default
+Events,HLT_Mu19_TrkIsoVVL_Mu9_TrkIsoVVL,KEEP,Bool_t,1026,default
+Events,HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ,KEEP,Bool_t,1023,default
+Events,HLT_Mu19_TrkIsoVVL_Mu9_TrkIsoVVL_DZ,KEEP,Bool_t,1039,default
+Events,HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass8,KEEP,Bool_t,1041,default
+Events,HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass8_PFJet30,KEEP,Bool_t,1065,default
+Events,HLT_Mu19_TrkIsoVVL_Mu9_TrkIsoVVL_DZ_Mass8,KEEP,Bool_t,1057,default
+Events,HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass3p8,KEEP,Bool_t,1047,default
+Events,HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass8_CaloJet30,KEEP,Bool_t,1087,default
+Events,HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass8_AK8PFJet30,KEEP,Bool_t,1074,default
+Events,HLT_Mu17_TrkIsoVVL_Mu8_TrkIsoVVL_DZ_Mass8_AK8CaloJet30,KEEP,Bool_t,1080,default
+Events,HLT_Mu19_TrkIsoVVL_Mu9_TrkIsoVVL_DZ_Mass3p8,KEEP,Bool_t,1063,default
+Events,HLT_Mu30_TkMu0_Psi,KEEP,Bool_t,532,default
+Events,HLT_Mu30_TkMu0_Upsilon,KEEP,Bool_t,632,default
+Events,HLT_Mu25_TkMu0_Phi,KEEP,Bool_t,524,default
+Events,HLT_Mu15,KEEP,Bool_t,582,default
+Events,HLT_Mu20,KEEP,Bool_t,662,default
+Events,HLT_Mu27,KEEP,Bool_t,790,default
+Events,HLT_Mu50,KEEP,Bool_t,1126,default
+Events,HLT_Mu55,KEEP,Bool_t,1158,default
+Events,HLT_CascadeMu100,KEEP,Bool_t,978,default
+Events,HLT_HighPtTkMu100,KEEP,Bool_t,977,default
+Events,HLT_DiPFJetAve40,KEEP,Bool_t,614,default
+Events,HLT_DiPFJetAve60,KEEP,Bool_t,978,default
+Events,HLT_DiPFJetAve80,KEEP,Bool_t,1170,default
+Events,HLT_DiPFJetAve140,KEEP,Bool_t,981,default
+Events,HLT_DiPFJetAve200,KEEP,Bool_t,709,default
+Events,HLT_DiPFJetAve260,KEEP,Bool_t,601,default
+Events,HLT_DiPFJetAve320,KEEP,Bool_t,545,default
+Events,HLT_DiPFJetAve400,KEEP,Bool_t,521,default
+Events,HLT_DiPFJetAve500,KEEP,Bool_t,513,default
+Events,HLT_DiPFJetAve60_HFJEC,KEEP,Bool_t,860,default
+Events,HLT_DiPFJetAve80_HFJEC,KEEP,Bool_t,720,default
+Events,HLT_DiPFJetAve100_HFJEC,KEEP,Bool_t,631,default
+Events,HLT_DiPFJetAve160_HFJEC,KEEP,Bool_t,539,default
+Events,HLT_DiPFJetAve220_HFJEC,KEEP,Bool_t,531,default
+Events,HLT_DiPFJetAve260_HFJEC,KEEP,Bool_t,527,default
+Events,HLT_DiPFJetAve300_HFJEC,KEEP,Bool_t,527,default
+Events,HLT_DiPFJetAve180_PPSMatch_Xi0p3_QuadJet_Max2ProtPerRP,KEEP,Bool_t,620,default
+Events,HLT_AK8PFJet40,KEEP,Bool_t,520,default
+Events,HLT_AK8PFJet60,KEEP,Bool_t,816,default
+Events,HLT_AK8PFJet80,KEEP,Bool_t,1032,default
+Events,HLT_AK8PFJet140,KEEP,Bool_t,1119,default
+Events,HLT_AK8PFJet200,KEEP,Bool_t,911,default
+Events,HLT_AK8PFJet260,KEEP,Bool_t,743,default
+Events,HLT_AK8PFJet320,KEEP,Bool_t,639,default
+Events,HLT_AK8PFJet400,KEEP,Bool_t,567,default
+Events,HLT_AK8PFJet450,KEEP,Bool_t,535,default
+Events,HLT_AK8PFJet500,KEEP,Bool_t,523,default
+Events,HLT_AK8PFJet550,KEEP,Bool_t,515,default
+Events,HLT_PFJet40,KEEP,Bool_t,575,default
+Events,HLT_PFJet60,KEEP,Bool_t,983,default
+Events,HLT_PFJet80,KEEP,Bool_t,1139,default
+Events,HLT_PFJet110,KEEP,Bool_t,1138,default
+Events,HLT_PFJet140,KEEP,Bool_t,1022,default
+Events,HLT_PFJet200,KEEP,Bool_t,802,default
+Events,HLT_PFJet260,KEEP,Bool_t,658,default
+Events,HLT_PFJet320,KEEP,Bool_t,566,default
+Events,HLT_PFJet400,KEEP,Bool_t,530,default
+Events,HLT_PFJet450,KEEP,Bool_t,510,default
+Events,HLT_PFJet500,KEEP,Bool_t,506,default
+Events,HLT_PFJet550,KEEP,Bool_t,502,default
+Events,HLT_PFJetFwd40,KEEP,Bool_t,964,default
+Events,HLT_PFJetFwd60,KEEP,Bool_t,820,default
+Events,HLT_PFJetFwd80,KEEP,Bool_t,708,default
+Events,HLT_PFJetFwd140,KEEP,Bool_t,555,default
+Events,HLT_PFJetFwd200,KEEP,Bool_t,511,default
+Events,HLT_PFJetFwd260,KEEP,Bool_t,503,default
+Events,HLT_PFJetFwd320,KEEP,Bool_t,503,default
+Events,HLT_PFJetFwd400,KEEP,Bool_t,503,default
+Events,HLT_PFJetFwd450,KEEP,Bool_t,503,default
+Events,HLT_PFJetFwd500,KEEP,Bool_t,503,default
+Events,HLT_AK8PFJetFwd40,KEEP,Bool_t,1153,default
+Events,HLT_AK8PFJetFwd60,KEEP,Bool_t,921,default
+Events,HLT_AK8PFJetFwd80,KEEP,Bool_t,785,default
+Events,HLT_AK8PFJetFwd140,KEEP,Bool_t,584,default
+Events,HLT_AK8PFJetFwd200,KEEP,Bool_t,532,default
+Events,HLT_AK8PFJetFwd260,KEEP,Bool_t,512,default
+Events,HLT_AK8PFJetFwd320,KEEP,Bool_t,512,default
+Events,HLT_AK8PFJetFwd400,KEEP,Bool_t,512,default
+Events,HLT_AK8PFJetFwd450,KEEP,Bool_t,512,default
+Events,HLT_AK8PFJetFwd500,KEEP,Bool_t,512,default
+Events,HLT_PFHT180,KEEP,Bool_t,1107,default
+Events,HLT_PFHT250,KEEP,Bool_t,1175,default
+Events,HLT_PFHT370,KEEP,Bool_t,1027,default
+Events,HLT_PFHT430,KEEP,Bool_t,931,default
+Events,HLT_PFHT510,KEEP,Bool_t,811,default
+Events,HLT_PFHT590,KEEP,Bool_t,735,default
+Events,HLT_PFHT680,KEEP,Bool_t,663,default
+Events,HLT_PFHT780,KEEP,Bool_t,583,default
+Events,HLT_PFHT890,KEEP,Bool_t,555,default
+Events,HLT_PFHT1050,KEEP,Bool_t,518,default
+Events,HLT_PFHT500_PFMET100_PFMHT100_IDTight,KEEP,Bool_t,665,default
+Events,HLT_PFHT500_PFMET110_PFMHT110_IDTight,KEEP,Bool_t,645,default
+Events,HLT_PFHT700_PFMET85_PFMHT85_IDTight,KEEP,Bool_t,619,default
+Events,HLT_PFHT800_PFMET75_PFMHT75_IDTight,KEEP,Bool_t,595,default
+Events,HLT_PFMET120_PFMHT120_IDTight,KEEP,Bool_t,685,default
+Events,HLT_PFMET130_PFMHT130_IDTight,KEEP,Bool_t,653,default
+Events,HLT_PFMET140_PFMHT140_IDTight,KEEP,Bool_t,629,default
+Events,HLT_PFMET120_PFMHT120_IDTight_PFHT60,KEEP,Bool_t,706,default
+Events,HLT_PFMETNoMu120_PFMHTNoMu120_IDTight_PFHT60,KEEP,Bool_t,1006,default
+Events,HLT_PFMETTypeOne140_PFMHT140_IDTight,KEEP,Bool_t,678,default
+Events,HLT_PFMETNoMu120_PFMHTNoMu120_IDTight,KEEP,Bool_t,985,default
+Events,HLT_PFMETNoMu130_PFMHTNoMu130_IDTight,KEEP,Bool_t,957,default
+Events,HLT_PFMETNoMu140_PFMHTNoMu140_IDTight,KEEP,Bool_t,905,default
+Events,HLT_PFMETNoMu110_PFMHTNoMu110_IDTight_FilterHF,KEEP,Bool_t,1052,default
+Events,HLT_PFMETNoMu120_PFMHTNoMu120_IDTight_FilterHF,KEEP,Bool_t,1012,default
+Events,HLT_PFMETNoMu130_PFMHTNoMu130_IDTight_FilterHF,KEEP,Bool_t,984,default
+Events,HLT_PFMETNoMu140_PFMHTNoMu140_IDTight_FilterHF,KEEP,Bool_t,932,default
+Events,HLT_L1ETMHadSeeds,KEEP,Bool_t,1133,default
+Events,HLT_CaloMHT90,KEEP,Bool_t,1089,default
+Events,HLT_CaloMET90_NotCleaned,KEEP,Bool_t,1070,default
+Events,HLT_CaloMET350_NotCleaned,KEEP,Bool_t,541,default
+Events,HLT_PFMET200_NotCleaned,KEEP,Bool_t,571,default
+Events,HLT_PFMET250_NotCleaned,KEEP,Bool_t,543,default
+Events,HLT_PFMET300_NotCleaned,KEEP,Bool_t,535,default
+Events,HLT_PFMET200_BeamHaloCleaned,KEEP,Bool_t,586,default
+Events,HLT_PFMETTypeOne200_BeamHaloCleaned,KEEP,Bool_t,619,default
+Events,HLT_MET105_IsoTrk50,KEEP,Bool_t,883,default
+Events,HLT_MET120_IsoTrk50,KEEP,Bool_t,839,default
+Events,HLT_Mu12eta2p3,KEEP,Bool_t,592,default
+Events,HLT_Mu12eta2p3_PFJet40,KEEP,Bool_t,836,default
+Events,HLT_Mu12_DoublePFJets40_PNetBTag_0p11,KEEP,Bool_t,1069,default
+Events,HLT_Mu12_DoublePFJets100_PNetBTag_0p11,KEEP,Bool_t,812,default
+Events,HLT_Mu12_DoublePFJets200_PNetBTag_0p11,KEEP,Bool_t,632,default
+Events,HLT_Mu12_DoublePFJets350_PNetBTag_0p11,KEEP,Bool_t,584,default
+Events,HLT_Mu12_DoublePFJets40MaxDeta1p6_PNet2BTag_0p11,KEEP,Bool_t,758,default
+Events,HLT_Mu12_DoublePFJets54MaxDeta1p6_PNet2BTag_0p11,KEEP,Bool_t,750,default
+Events,HLT_DoublePFJets40_PNetBTag_0p11,KEEP,Bool_t,1214,default
+Events,HLT_DoublePFJets100_PNetBTag_0p11,KEEP,Bool_t,861,default
+Events,HLT_DoublePFJets200_PNetBTag_0p11,KEEP,Bool_t,637,default
+Events,HLT_DoublePFJets350_PNetBTag_0p11,KEEP,Bool_t,569,default
+Events,HLT_DoublePFJets116MaxDeta1p6_PNet2BTag_0p11,KEEP,Bool_t,654,default
+Events,HLT_DoublePFJets128MaxDeta1p6_PNet2BTag_0p11,KEEP,Bool_t,650,default
+Events,HLT_Photon300_NoHE,KEEP,Bool_t,512,default
+Events,HLT_Mu8_TrkIsoVVL,KEEP,Bool_t,617,default
+Events,HLT_Mu8_DiEle12_CaloIdL_TrackIdL_DZ,KEEP,Bool_t,751,default
+Events,HLT_Mu8_DiEle12_CaloIdL_TrackIdL,KEEP,Bool_t,758,default
+Events,HLT_Mu8_Ele8_CaloIdM_TrackIdM_Mass8_PFHT350_DZ,KEEP,Bool_t,1060,default
+Events,HLT_Mu8_Ele8_CaloIdM_TrackIdM_Mass8_PFHT350,KEEP,Bool_t,1055,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ,KEEP,Bool_t,1185,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFDiJet30,KEEP,Bool_t,1215,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_CaloDiJet30,KEEP,Bool_t,1217,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL,KEEP,Bool_t,1184,default
+Events,HLT_Mu17_TrkIsoVVL,KEEP,Bool_t,684,default
+Events,HLT_Mu19_TrkIsoVVL,KEEP,Bool_t,716,default
+Events,HLT_BTagMu_AK4DiJet20_Mu5,KEEP,Bool_t,1161,default
+Events,HLT_BTagMu_AK4DiJet40_Mu5,KEEP,Bool_t,1089,default
+Events,HLT_BTagMu_AK4DiJet70_Mu5,KEEP,Bool_t,913,default
+Events,HLT_BTagMu_AK4DiJet110_Mu5,KEEP,Bool_t,696,default
+Events,HLT_BTagMu_AK4DiJet170_Mu5,KEEP,Bool_t,604,default
+Events,HLT_BTagMu_AK4Jet300_Mu5,KEEP,Bool_t,546,default
+Events,HLT_BTagMu_AK8DiJet170_Mu5,KEEP,Bool_t,644,default
+Events,HLT_BTagMu_AK8Jet170_DoubleMu5,KEEP,Bool_t,712,default
+Events,HLT_BTagMu_AK8Jet300_Mu5,KEEP,Bool_t,554,default
+Events,HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_DZ,KEEP,Bool_t,709,default
+Events,HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL,KEEP,Bool_t,712,default
+Events,HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL_DZ,KEEP,Bool_t,1248,default
+Events,HLT_Mu23_TrkIsoVVL_Ele12_CaloIdL_TrackIdL_IsoVL,KEEP,Bool_t,1247,default
+Events,HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL,KEEP,Bool_t,1187,default
+Events,HLT_Mu12_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ,KEEP,Bool_t,1192,default
+Events,HLT_Mu12_IsoVVL_PFHT150_PNetBTag0p53,KEEP,Bool_t,1246,default
+Events,HLT_Photon33,KEEP,Bool_t,1062,default
+Events,HLT_Photon50,KEEP,Bool_t,938,default
+Events,HLT_Photon75,KEEP,Bool_t,774,default
+Events,HLT_Photon90,KEEP,Bool_t,702,default
+Events,HLT_Photon120,KEEP,Bool_t,613,default
+Events,HLT_Photon150,KEEP,Bool_t,553,default
+Events,HLT_Photon175,KEEP,Bool_t,533,default
+Events,HLT_Photon200,KEEP,Bool_t,513,default
+Events,HLT_Photon45EB,KEEP,Bool_t,968,default
+Events,HLT_Photon40EB,KEEP,Bool_t,988,default
+Events,HLT_Photon50EB,KEEP,Bool_t,932,default
+Events,HLT_Photon30EB_TightID_TightIso,KEEP,Bool_t,1039,default
+Events,HLT_Photon40EB_TightID_TightIso,KEEP,Bool_t,971,default
+Events,HLT_Photon45EB_TightID_TightIso,KEEP,Bool_t,943,default
+Events,HLT_Photon50EB_TightID_TightIso_PFJet30,KEEP,Bool_t,931,default
+Events,HLT_Photon50EB_TightID_TightIso_CaloJet30,KEEP,Bool_t,937,default
+Events,HLT_Photon50EB_TightID_TightIso_AK8PFJet30,KEEP,Bool_t,940,default
+Events,HLT_Photon50EB_TightID_TightIso_AK8CaloJet30,KEEP,Bool_t,946,default
+Events,HLT_Photon50EB_TightID_TightIso,KEEP,Bool_t,907,default
+Events,HLT_Photon55EB_TightID_TightIso,KEEP,Bool_t,871,default
+Events,HLT_Photon75EB_TightID_TightIso,KEEP,Bool_t,771,default
+Events,HLT_Photon90EB_TightID_TightIso,KEEP,Bool_t,707,default
+Events,HLT_Photon110EB_TightID_TightIso,KEEP,Bool_t,670,default
+Events,HLT_Photon110EB_TightID_TightIso_PFJet30,KEEP,Bool_t,694,default
+Events,HLT_Photon110EB_TightID_TightIso_CaloJet30,KEEP,Bool_t,700,default
+Events,HLT_Photon110EB_TightID_TightIso_AK8PFJet30,KEEP,Bool_t,703,default
+Events,HLT_Photon110EB_TightID_TightIso_AK8CaloJet30,KEEP,Bool_t,709,default
+Events,HLT_Photon100EBHE10,KEEP,Bool_t,663,default
+Events,HLT_Photon50_R9Id90_HE10_IsoM,KEEP,Bool_t,893,default
+Events,HLT_Photon75_R9Id90_HE10_IsoM,KEEP,Bool_t,781,default
+Events,HLT_Photon90_R9Id90_HE10_IsoM,KEEP,Bool_t,713,default
+Events,HLT_Photon120_R9Id90_HE10_IsoM,KEEP,Bool_t,640,default
+Events,HLT_Photon165_R9Id90_HE10_IsoM,KEEP,Bool_t,580,default
+Events,HLT_Diphoton30_22_R9Id_OR_IsoCaloId_AND_HE_R9Id_Mass90,KEEP,Bool_t,720,default
+Events,HLT_Diphoton30_22_R9Id_OR_IsoCaloId_AND_HE_R9Id_Mass95,KEEP,Bool_t,704,default
+Events,HLT_DiphotonMVA14p25_Mass90,KEEP,Bool_t,663,default
+Events,HLT_DiphotonMVA14p25_Tight_Mass90,KEEP,Bool_t,665,default
+Events,HLT_Photon35_TwoProngs35,KEEP,Bool_t,810,default
+Events,HLT_IsoMu24_TwoProngs35,KEEP,Bool_t,1087,default
+Events,HLT_Dimuon0_Jpsi_L1_NoOS,KEEP,Bool_t,546,default
+Events,HLT_Dimuon0_Jpsi_NoVertexing_NoOS,KEEP,Bool_t,585,default
+Events,HLT_Dimuon0_Jpsi,KEEP,Bool_t,522,default
+Events,HLT_Dimuon0_Jpsi_NoVertexing,KEEP,Bool_t,558,default
+Events,HLT_Dimuon0_Jpsi_L1_4R_0er1p5R,KEEP,Bool_t,564,default
+Events,HLT_Dimuon0_Jpsi_NoVertexing_L1_4R_0er1p5R,KEEP,Bool_t,600,default
+Events,HLT_Dimuon0_Jpsi3p5_Muon2,KEEP,Bool_t,545,default
+Events,HLT_Dimuon0_Upsilon_L1_4p5,KEEP,Bool_t,612,default
+Events,HLT_Dimuon0_Upsilon_L1_4p5er2p0,KEEP,Bool_t,627,default
+Events,HLT_Dimuon0_Upsilon_L1_4p5er2p0M,KEEP,Bool_t,630,default
+Events,HLT_Dimuon0_Upsilon_NoVertexing,KEEP,Bool_t,659,default
+Events,HLT_Dimuon0_LowMass_L1_0er1p5,KEEP,Bool_t,625,default
+Events,HLT_Dimuon0_LowMass,KEEP,Bool_t,623,default
+Events,HLT_Dimuon0_LowMass_L1_4,KEEP,Bool_t,634,default
+Events,HLT_Dimuon0_LowMass_L1_TM530,KEEP,Bool_t,654,default
+Events,HLT_Dimuon0_Upsilon_Muon_NoL1Mass,KEEP,Bool_t,645,default
+Events,HLT_TripleMu_5_3_3_Mass3p8_DZ,KEEP,Bool_t,1209,default
+Events,HLT_TripleMu_10_5_5_DZ,KEEP,Bool_t,1200,default
+Events,HLT_TripleMu_12_10_5,KEEP,Bool_t,1198,default
+Events,HLT_Tau3Mu_Mu7_Mu1_TkMu1_Tau15,KEEP,Bool_t,552,default
+Events,HLT_Tau3Mu_Mu7_Mu1_TkMu1_Tau15_Charge1,KEEP,Bool_t,576,default
+Events,HLT_Tau3Mu_Mu7_Mu1_TkMu1_IsoTau15,KEEP,Bool_t,557,default
+Events,HLT_Tau3Mu_Mu7_Mu1_TkMu1_IsoTau15_Charge1,KEEP,Bool_t,581,default
+Events,HLT_DoubleMu3_DZ_PFMET50_PFMHT60,KEEP,Bool_t,1030,default
+Events,HLT_DoubleMu3_DZ_PFMET70_PFMHT70,KEEP,Bool_t,922,default
+Events,HLT_DoubleMu3_DZ_PFMET90_PFMHT90,KEEP,Bool_t,798,default
+Events,HLT_DoubleMu3_Trk_Tau3mu_NoL1Mass,KEEP,Bool_t,573,default
+Events,HLT_DoubleMu4_3_LowMass_SS,KEEP,Bool_t,648,default
+Events,HLT_DoubleMu4_Jpsi_Displaced,KEEP,Bool_t,550,default
+Events,HLT_DoubleMu4_Jpsi_NoVertexing,KEEP,Bool_t,564,default
+Events,HLT_DoubleMu4_JpsiTrkTrk_Displaced,KEEP,Bool_t,568,default
+Events,HLT_DoubleMu4_JpsiTrk_Bc,KEEP,Bool_t,530,default
+Events,HLT_DoubleMu43NoFiltersNoVtx,KEEP,Bool_t,1090,default
+Events,HLT_DoubleMu48NoFiltersNoVtx,KEEP,Bool_t,1042,default
+Events,HLT_Mu43NoFiltersNoVtx_Photon43_CaloIdL,KEEP,Bool_t,1007,default
+Events,HLT_Mu48NoFiltersNoVtx_Photon48_CaloIdL,KEEP,Bool_t,975,default
+Events,HLT_Mu38NoFiltersNoVtxDisplaced_Photon38_CaloIdL,KEEP,Bool_t,698,default
+Events,HLT_Mu43NoFiltersNoVtxDisplaced_Photon43_CaloIdL,KEEP,Bool_t,666,default
+Events,HLT_Ele30_eta2p1_WPTight_Gsf_CentralPFJet35_EleCleaned,KEEP,Bool_t,1108,default
+Events,HLT_Ele28_eta2p1_WPTight_Gsf_HT150,KEEP,Bool_t,1056,default
+Events,HLT_Ele28_HighEta_SC20_Mass55,KEEP,Bool_t,561,default
+Events,HLT_Ele15_IsoVVVL_PFHT450_PFMET50,KEEP,Bool_t,749,default
+Events,HLT_Ele15_IsoVVVL_PFHT450,KEEP,Bool_t,809,default
+Events,HLT_Ele50_IsoVVVL_PFHT450,KEEP,Bool_t,725,default
+Events,HLT_Ele15_IsoVVVL_PFHT600,KEEP,Bool_t,705,default
+Events,HLT_Mu15_IsoVVVL_PFHT450_PFMET50,KEEP,Bool_t,890,default
+Events,HLT_Mu15_IsoVVVL_PFHT450,KEEP,Bool_t,990,default
+Events,HLT_Mu50_IsoVVVL_PFHT450,KEEP,Bool_t,962,default
+Events,HLT_Mu15_IsoVVVL_PFHT600,KEEP,Bool_t,858,default
+Events,HLT_Mu3er1p5_PFJet100er2p5_PFMET80_PFMHT80_IDTight,KEEP,Bool_t,896,default
+Events,HLT_Mu3er1p5_PFJet100er2p5_PFMET90_PFMHT90_IDTight,KEEP,Bool_t,820,default
+Events,HLT_Mu3er1p5_PFJet100er2p5_PFMET100_PFMHT100_IDTight,KEEP,Bool_t,782,default
+Events,HLT_Mu3er1p5_PFJet100er2p5_PFMETNoMu80_PFMHTNoMu80_IDTight,KEEP,Bool_t,1156,default
+Events,HLT_Mu3er1p5_PFJet100er2p5_PFMETNoMu90_PFMHTNoMu90_IDTight,KEEP,Bool_t,1120,default
+Events,HLT_Mu3er1p5_PFJet100er2p5_PFMETNoMu100_PFMHTNoMu100_IDTight,KEEP,Bool_t,1098,default
+Events,HLT_Dimuon10_Upsilon_y1p4,KEEP,Bool_t,601,default
+Events,HLT_Dimuon12_Upsilon_y1p4,KEEP,Bool_t,601,default
+Events,HLT_Dimuon14_Phi_Barrel_Seagulls,KEEP,Bool_t,558,default
+Events,HLT_Dimuon25_Jpsi,KEEP,Bool_t,517,default
+Events,HLT_Dimuon14_PsiPrime,KEEP,Bool_t,529,default
+Events,HLT_Dimuon14_PsiPrime_noCorrL1,KEEP,Bool_t,556,default
+Events,HLT_Dimuon18_PsiPrime,KEEP,Bool_t,529,default
+Events,HLT_Dimuon18_PsiPrime_noCorrL1,KEEP,Bool_t,556,default
+Events,HLT_Dimuon24_Upsilon_noCorrL1,KEEP,Bool_t,609,default
+Events,HLT_Dimuon24_Phi_noCorrL1,KEEP,Bool_t,541,default
+Events,HLT_Dimuon25_Jpsi_noCorrL1,KEEP,Bool_t,544,default
+Events,HLT_DiMu4_Ele9_CaloIdL_TrackIdL_DZ_Mass3p8,KEEP,Bool_t,1248,default
+Events,HLT_DiMu9_Ele9_CaloIdL_TrackIdL_DZ,KEEP,Bool_t,1208,default
+Events,HLT_DiMu9_Ele9_CaloIdL_TrackIdL,KEEP,Bool_t,1211,default
+Events,HLT_DoubleIsoMu20_eta2p1,KEEP,Bool_t,1214,default
+Events,HLT_TrkMu12_DoubleTrkMu5NoFiltersNoVtx,KEEP,Bool_t,1244,default
+Events,HLT_Mu8,KEEP,Bool_t,555,default
+Events,HLT_Mu17,KEEP,Bool_t,610,default
+Events,HLT_Mu19,KEEP,Bool_t,642,default
+Events,HLT_Mu17_Photon30_IsoCaloId,KEEP,Bool_t,1083,default
+Events,HLT_Ele8_CaloIdL_TrackIdL_IsoVL_PFJet30,KEEP,Bool_t,1247,default
+Events,HLT_Ele12_CaloIdL_TrackIdL_IsoVL_PFJet30,KEEP,Bool_t,1230,default
+Events,HLT_Ele14_eta2p5_IsoVVVL_Gsf_PFHT200_PNetBTag0p53,KEEP,Bool_t,1045,default
+Events,HLT_Ele23_CaloIdL_TrackIdL_IsoVL_PFJet30,KEEP,Bool_t,1174,default
+Events,HLT_Ele8_CaloIdM_TrackIdM_PFJet30,KEEP,Bool_t,1237,default
+Events,HLT_Ele17_CaloIdM_TrackIdM_PFJet30,KEEP,Bool_t,1200,default
+Events,HLT_Ele23_CaloIdM_TrackIdM_PFJet30,KEEP,Bool_t,1168,default
+Events,HLT_Ele50_CaloIdVT_GsfTrkIdT_PFJet165,KEEP,Bool_t,765,default
+Events,HLT_Ele115_CaloIdVT_GsfTrkIdT,KEEP,Bool_t,657,default
+Events,HLT_Ele135_CaloIdVT_GsfTrkIdT,KEEP,Bool_t,625,default
+Events,HLT_PFHT330PT30_QuadPFJet_75_60_45_40,KEEP,Bool_t,1013,default
+Events,HLT_PFHT400_SixPFJet32,KEEP,Bool_t,880,default
+Events,HLT_PFHT400_SixPFJet32_PNet2BTagMean0p50,KEEP,Bool_t,882,default
+Events,HLT_PFHT450_SixPFJet36,KEEP,Bool_t,812,default
+Events,HLT_PFHT450_SixPFJet36_PNetBTag0p35,KEEP,Bool_t,835,default
+Events,HLT_PFHT400_FivePFJet_120_120_60_30_30,KEEP,Bool_t,960,default
+Events,HLT_PFHT350,KEEP,Bool_t,1023,default
+Events,HLT_Photon60_R9Id90_CaloIdL_IsoL_DisplacedIdL_PFHT350,KEEP,Bool_t,641,default
+Events,HLT_Photon60_R9Id90_CaloIdL_IsoL_DisplacedIdL_PFHT380,KEEP,Bool_t,633,default
+Events,HLT_Photon60_R9Id90_CaloIdL_IsoL_DisplacedIdL_PFHT400,KEEP,Bool_t,633,default
+Events,HLT_ECALHT800,KEEP,Bool_t,497,default
+Events,HLT_DiSC30_18_EIso_AND_HE_Mass70,KEEP,Bool_t,734,default
+Events,HLT_Photon20_HoverELoose,KEEP,Bool_t,1198,default
+Events,HLT_Photon30_HoverELoose,KEEP,Bool_t,1150,default
+Events,HLT_L1_CDC_SingleMu_3_er1p2_TOP120_DPHI2p618_3p142,KEEP,Bool_t,608,default
+Events,HLT_CDC_L2cosmic_10_er1p0,KEEP,Bool_t,533,default
+Events,HLT_CDC_L2cosmic_5p5_er1p0,KEEP,Bool_t,536,default
+Events,HLT_Ele16_Ele12_Ele8_CaloIdL_TrackIdL,KEEP,Bool_t,585,default
+Events,HLT_VBF_DoubleMediumDeepTauPFTauHPS20_eta2p1,KEEP,Bool_t,602,default
+Events,HLT_Photon60_R9Id90_HE10_IsoM_EBOnly_PFJetsMJJ300DEta3,KEEP,Bool_t,688,default
+Events,HLT_Photon75_R9Id90_HE10_IsoM_EBOnly_PFJetsMJJ300DEta3,KEEP,Bool_t,672,default
+Events,HLT_Mu18_Mu9_SameSign,KEEP,Bool_t,1197,default
+Events,HLT_DoubleMu2_Jpsi_DoubleTrk1_Phi1p05,KEEP,Bool_t,569,default
+Events,HLT_DoubleMu3_DCA_PFMET50_PFMHT60,KEEP,Bool_t,1233,default
+Events,HLT_DoubleMu3_DCA_PFMET50_PFMHT60_Mass2p0,KEEP,Bool_t,1257,default
+Events,HLT_DoubleMu3_DCA_PFMET50_PFMHT60_Mass2p0_noDCA,KEEP,Bool_t,1271,default
+Events,HLT_TripleMu_5_3_3_Mass3p8_DCA,KEEP,Bool_t,1224,default
+Events,HLT_QuadPFJet103_88_75_15,KEEP,Bool_t,969,default
+Events,HLT_QuadPFJet105_88_76_15,KEEP,Bool_t,957,default
+Events,HLT_QuadPFJet111_90_80_15,KEEP,Bool_t,933,default
+Events,HLT_Diphoton30_18_R9IdL_AND_HE_AND_IsoCaloId,KEEP,Bool_t,706,default
+Events,HLT_Diphoton30_18_R9IdL_AND_HE_AND_IsoCaloId_Mass55,KEEP,Bool_t,691,default
+Events,HLT_DoubleMediumDeepTauPFTauHPS35_L2NN_eta2p1,KEEP,Bool_t,697,default
+Events,HLT_Ele24_eta2p1_WPTight_Gsf_LooseDeepTauPFTauHPS30_eta2p1_CrossL1,KEEP,Bool_t,804,default
+Events,HLT_Ele24_eta2p1_WPTight_Gsf_PNetTauhPFJet30_Tight_eta2p3_CrossL1,KEEP,Bool_t,781,default
+Events,HLT_Ele24_eta2p1_WPTight_Gsf_PNetTauhPFJet30_Medium_eta2p3_CrossL1,KEEP,Bool_t,816,default
+Events,HLT_Ele24_eta2p1_WPTight_Gsf_PNetTauhPFJet30_Loose_eta2p3_CrossL1,KEEP,Bool_t,821,default
+Events,HLT_IsoMu20_eta2p1_LooseDeepTauPFTauHPS27_eta2p1_CrossL1,KEEP,Bool_t,1254,default
+Events,HLT_IsoMu24_eta2p1_LooseDeepTauPFTauHPS180_eta2p1,KEEP,Bool_t,657,default
+Events,HLT_IsoMu24_eta2p1_LooseDeepTauPFTauHPS30_eta2p1_CrossL1,KEEP,Bool_t,650,default
+Events,HLT_IsoMu24_eta2p1_MediumDeepTauPFTauHPS35_L2NN_eta2p1_CrossL1,KEEP,Bool_t,1196,default
+Events,HLT_LooseDeepTauPFTauHPS180_L2NN_eta2p1,KEEP,Bool_t,635,default
+Events,HLT_PFHT330PT30_QuadPFJet_75_60_45_40_TriplePFBTagDeepJet_4p5,KEEP,Bool_t,745,default
+Events,HLT_PFHT330PT30_QuadPFJet_75_60_45_40_PNet3BTag_4p3,KEEP,Bool_t,755,default
+Events,HLT_PFHT330PT30_QuadPFJet_75_60_45_40_PNet3BTag_2p0,KEEP,Bool_t,695,default
+Events,HLT_PFHT400_FivePFJet_120_120_60_30_30_PNet2BTag_5p6,KEEP,Bool_t,882,default
+Events,HLT_PFHT400_FivePFJet_120_120_60_30_30_PNet2BTag_4p3,KEEP,Bool_t,878,default
+Events,HLT_QuadPFJet103_88_75_15_PNetBTag_0p4_VBF2,KEEP,Bool_t,647,default
+Events,HLT_QuadPFJet103_88_75_15_PNet2BTag_0p4_0p12_VBF1,KEEP,Bool_t,729,default
+Events,HLT_QuadPFJet105_88_76_15_PNetBTag_0p4_VBF2,KEEP,Bool_t,647,default
+Events,HLT_QuadPFJet105_88_76_15_PNet2BTag_0p4_0p12_VBF1,KEEP,Bool_t,721,default
+Events,HLT_QuadPFJet111_90_80_15_PNetBTag_0p4_VBF2,KEEP,Bool_t,639,default
+Events,HLT_QuadPFJet111_90_80_15_PNet2BTag_0p4_0p12_VBF1,KEEP,Bool_t,709,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFDiJet30_PFBtagDeepJet_1p5,KEEP,Bool_t,1189,default
+Events,HLT_PFHT250_QuadPFJet25,KEEP,Bool_t,1139,default
+Events,HLT_PFHT250_QuadPFJet25_PNet2BTagMean0p55,KEEP,Bool_t,1057,default
+Events,HLT_PFHT250_QuadPFJet25_PNet1BTag0p20_PNet1Tauh0p50,KEEP,Bool_t,1203,default
+Events,HLT_PFHT250_QuadPFJet30_PNet2BTagMean0p55,KEEP,Bool_t,1045,default
+Events,HLT_PFHT250_QuadPFJet30_PNet1BTag0p20_PNet1Tauh0p50,KEEP,Bool_t,1195,default
+Events,HLT_PFHT280_QuadPFJet30_PNet1BTag0p20_PNet1Tauh0p50,KEEP,Bool_t,1195,default
+Events,HLT_PFHT280_QuadPFJet30,KEEP,Bool_t,1127,default
+Events,HLT_PFHT280_QuadPFJet30_PNet2BTagMean0p55,KEEP,Bool_t,1045,default
+Events,HLT_PFHT280_QuadPFJet30_PNet2BTagMean0p60,KEEP,Bool_t,1029,default
+Events,HLT_PFHT280_QuadPFJet35_PNet2BTagMean0p60,KEEP,Bool_t,985,default
+Events,HLT_PFHT340_QuadPFJet70_50_40_40_PNet2BTagMean0p70,KEEP,Bool_t,916,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFHT280,KEEP,Bool_t,1129,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFHT280_QuadPFJet30,KEEP,Bool_t,1125,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFHT280_QuadPFJet30_PNet2BTagMean0p55,KEEP,Bool_t,1027,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFDiJet30_PNet2BTagMean0p50,KEEP,Bool_t,1153,default
+Events,HLT_QuadPFJet100_88_70_30,KEEP,Bool_t,1009,default
+Events,HLT_QuadPFJet105_88_75_30,KEEP,Bool_t,981,default
+Events,HLT_QuadPFJet111_90_80_30,KEEP,Bool_t,961,default
+Events,HLT_QuadPFJet100_88_70_30_PNet1CvsAll0p5_VBF3Tight,KEEP,Bool_t,620,default
+Events,HLT_QuadPFJet105_88_75_30_PNet1CvsAll0p5_VBF3Tight,KEEP,Bool_t,616,default
+Events,HLT_QuadPFJet111_90_80_30_PNet1CvsAll0p6_VBF3Tight,KEEP,Bool_t,616,default
+Events,HLT_AK8PFJet220_SoftDropMass40,KEEP,Bool_t,840,default
+Events,HLT_AK8PFJet220_SoftDropMass40_PNetBB0p06_DoubleAK4PFJet60_30_PNet2BTagMean0p50,KEEP,Bool_t,815,default
+Events,HLT_AK8PFJet220_SoftDropMass40_PNetBB0p06_DoubleAK4PFJet60_30_PNet2BTagMean0p53,KEEP,Bool_t,803,default
+Events,HLT_AK8PFJet220_SoftDropMass40_PNetBB0p06_DoubleAK4PFJet60_30_PNet2BTagMean0p55,KEEP,Bool_t,799,default
+Events,HLT_AK8PFJet220_SoftDropMass40_PNetBB0p06_DoubleAK4PFJet60_30_PNet2BTagMean0p60,KEEP,Bool_t,787,default
+Events,HLT_AK8PFJet230_SoftDropMass40,KEEP,Bool_t,812,default
+Events,HLT_AK8PFJet230_SoftDropMass40_PNetBB0p06,KEEP,Bool_t,729,default
+Events,HLT_AK8PFJet230_SoftDropMass40_PNetBB0p10,KEEP,Bool_t,689,default
+Events,HLT_AK8PFJet230_SoftDropMass40_PNetTauTau0p03,KEEP,Bool_t,757,default
+Events,HLT_AK8PFJet230_SoftDropMass40_PNetTauTau0p05,KEEP,Bool_t,745,default
+Events,HLT_AK8PFJet250_SoftDropMass40_PNetBB0p06,KEEP,Bool_t,717,default
+Events,HLT_AK8PFJet250_SoftDropMass40_PNetBB0p10,KEEP,Bool_t,681,default
+Events,HLT_AK8PFJet250_SoftDropMass40_PNetTauTau0p03,KEEP,Bool_t,753,default
+Events,HLT_AK8PFJet250_SoftDropMass40_PNetTauTau0p05,KEEP,Bool_t,741,default
+Events,HLT_AK8PFJet275_SoftDropMass40_PNetBB0p06,KEEP,Bool_t,701,default
+Events,HLT_AK8PFJet275_SoftDropMass40_PNetBB0p10,KEEP,Bool_t,673,default
+Events,HLT_AK8PFJet275_SoftDropMass40_PNetTauTau0p03,KEEP,Bool_t,729,default
+Events,HLT_AK8PFJet275_SoftDropMass40_PNetTauTau0p05,KEEP,Bool_t,725,default
+Events,HLT_AK8PFJet275_Nch45,KEEP,Bool_t,521,default
+Events,HLT_AK8PFJet275_Nch40,KEEP,Bool_t,529,default
+Events,HLT_IsoMu50_AK8PFJet220_SoftDropMass40,KEEP,Bool_t,812,default
+Events,HLT_IsoMu50_AK8PFJet220_SoftDropMass40_PNetBB0p06,KEEP,Bool_t,725,default
+Events,HLT_IsoMu50_AK8PFJet230_SoftDropMass40,KEEP,Bool_t,792,default
+Events,HLT_IsoMu50_AK8PFJet230_SoftDropMass40_PNetBB0p06,KEEP,Bool_t,717,default
+Events,HLT_IsoMu50_AK8PFJet230_SoftDropMass40_PNetBB0p10,KEEP,Bool_t,685,default
+Events,HLT_Ele50_CaloIdVT_GsfTrkIdT_AK8PFJet220_SoftDropMass40,KEEP,Bool_t,739,default
+Events,HLT_Ele50_CaloIdVT_GsfTrkIdT_AK8PFJet220_SoftDropMass40_PNetBB0p06,KEEP,Bool_t,700,default
+Events,HLT_Ele50_CaloIdVT_GsfTrkIdT_AK8PFJet230_SoftDropMass40,KEEP,Bool_t,731,default
+Events,HLT_Ele50_CaloIdVT_GsfTrkIdT_AK8PFJet230_SoftDropMass40_PNetBB0p06,KEEP,Bool_t,700,default
+Events,HLT_Ele50_CaloIdVT_GsfTrkIdT_AK8PFJet230_SoftDropMass40_PNetBB0p10,KEEP,Bool_t,684,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_DoubleAK4PFJet60_30,KEEP,Bool_t,1237,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_DoubleAK4PFJet60_30_PNet2BTagMean0p50,KEEP,Bool_t,1175,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFHT250,KEEP,Bool_t,1165,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFHT250_QuadPFJet25,KEEP,Bool_t,1165,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFHT250_QuadPFJet25_PNet2BTagMean0p55,KEEP,Bool_t,1067,default
+Events,HLT_Mu8_TrkIsoVVL_Ele23_CaloIdL_TrackIdL_IsoVL_DZ_PFHT250_QuadPFJet25_PNet1BTag0p20,KEEP,Bool_t,1195,default
+Events,HLT_DoubleMediumDeepTauPFTauHPS30_L2NN_eta2p1_PFJet60,KEEP,Bool_t,761,default
+Events,HLT_DoubleMediumDeepTauPFTauHPS30_L2NN_eta2p1_PFJet75,KEEP,Bool_t,733,default
+Events,HLT_IsoMu24_eta2p1_MediumDeepTauPFTauHPS30_L2NN_eta2p1_CrossL1,KEEP,Bool_t,1236,default
+Events,HLT_IsoMu24_eta2p1_MediumDeepTauPFTauHPS30_L2NN_eta2p1_PFJet60_CrossL1,KEEP,Bool_t,1216,default
+Events,HLT_IsoMu24_eta2p1_MediumDeepTauPFTauHPS30_L2NN_eta2p1_PFJet75_CrossL1,KEEP,Bool_t,1160,default
+Events,HLT_IsoMu24_eta2p1_MediumDeepTauPFTauHPS20_eta2p1_SingleL1,KEEP,Bool_t,1288,default
+Events,HLT_IsoMu24_eta2p1_MediumDeepTauPFTauHPS45_L2NN_eta2p1_CrossL1,KEEP,Bool_t,1188,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet30_Medium_L2NN_eta2p3_CrossL1,KEEP,Bool_t,1181,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet30_Tight_L2NN_eta2p3_CrossL1,KEEP,Bool_t,1174,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet26_L2NN_eta2p3_CrossL1,KEEP,Bool_t,1204,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet26_L2NN_eta2p3_CrossL1_PFJet60,KEEP,Bool_t,1172,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet26_L2NN_eta2p3_CrossL1_PFJet75,KEEP,Bool_t,1128,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet30_Tight_eta2p3_CrossL1_ETau_Monitoring,KEEP,Bool_t,695,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet30_Medium_eta2p3_CrossL1_ETau_Monitoring,KEEP,Bool_t,698,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet30_Loose_eta2p3_CrossL1_ETau_Monitoring,KEEP,Bool_t,699,default
+Events,HLT_IsoMu20_eta2p1_PNetTauhPFJet27_Tight_eta2p3_CrossL1,KEEP,Bool_t,1263,default
+Events,HLT_IsoMu20_eta2p1_PNetTauhPFJet27_Medium_eta2p3_CrossL1,KEEP,Bool_t,1266,default
+Events,HLT_IsoMu20_eta2p1_PNetTauhPFJet27_Loose_eta2p3_CrossL1,KEEP,Bool_t,1267,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet20_eta2p2_SingleL1,KEEP,Bool_t,1264,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet45_L2NN_eta2p3_CrossL1,KEEP,Bool_t,1124,default
+Events,HLT_IsoMu24_eta2p1_PFHT250,KEEP,Bool_t,1148,default
+Events,HLT_IsoMu24_eta2p1_PFHT250_QuadPFJet25,KEEP,Bool_t,1232,default
+Events,HLT_IsoMu24_eta2p1_PFHT250_QuadPFJet25_PNet1Tauh0p50,KEEP,Bool_t,1250,default
+Events,HLT_IsoMu24_eta2p1_SinglePFJet25_PNet1Tauh0p50,KEEP,Bool_t,1024,default
+Events,HLT_DoublePNetTauhPFJet30_Medium_L2NN_eta2p3,KEEP,Bool_t,718,default
+Events,HLT_DoublePNetTauhPFJet30_Tight_L2NN_eta2p3,KEEP,Bool_t,707,default
+Events,HLT_DoublePNetTauhPFJet26_L2NN_eta2p3_PFJet60,KEEP,Bool_t,705,default
+Events,HLT_DoublePNetTauhPFJet26_L2NN_eta2p3_PFJet75,KEEP,Bool_t,689,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet130_Loose_L2NN_eta2p3_CrossL1,KEEP,Bool_t,745,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet130_Medium_L2NN_eta2p3_CrossL1,KEEP,Bool_t,740,default
+Events,HLT_IsoMu24_eta2p1_PNetTauhPFJet130_Tight_L2NN_eta2p3_CrossL1,KEEP,Bool_t,721,default
+Events,HLT_SinglePNetTauhPFJet130_Loose_L2NN_eta2p3,KEEP,Bool_t,690,default
+Events,HLT_SinglePNetTauhPFJet130_Medium_L2NN_eta2p3,KEEP,Bool_t,689,default
+Events,HLT_SinglePNetTauhPFJet130_Tight_L2NN_eta2p3,KEEP,Bool_t,674,default
+Events,HLT_DoubleL2Mu10NoVtx_2Cha_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,597,default
+Events,HLT_DoubleL2Mu12NoVtx_2Cha_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,593,default
+Events,HLT_DoubleL2Mu14NoVtx_2Cha_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,593,default
+Events,HLT_DoubleL3Mu16_10NoVtx_DxyMin0p01cm,KEEP,Bool_t,705,default
+Events,HLT_DoubleL3Mu18_10NoVtx_DxyMin0p01cm,KEEP,Bool_t,705,default
+Events,HLT_DoubleL3Mu20_10NoVtx_DxyMin0p01cm,KEEP,Bool_t,697,default
+Events,HLT_L2Mu10NoVtx_2Cha,KEEP,Bool_t,654,default
+Events,HLT_L2Mu10NoVtx_2Cha_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,595,default
+Events,HLT_L3Mu10NoVtx,KEEP,Bool_t,595,default
+Events,HLT_L3Mu10NoVtx_DxyMin0p01cm,KEEP,Bool_t,1114,default
+Events,HLT_DoubleL2Mu_L3Mu16NoVtx_VetoL3Mu0DxyMax0p1cm,KEEP,Bool_t,619,default
+Events,HLT_DoubleL2Mu_L3Mu18NoVtx_VetoL3Mu0DxyMax0p1cm,KEEP,Bool_t,619,default
+Events,HLT_DoubleL2Mu10NoVtx_2Cha_CosmicSeed_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,630,default
+Events,HLT_DoubleL2Mu12NoVtx_2Cha_CosmicSeed_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,630,default
+Events,HLT_L2Mu10NoVtx_2Cha_CosmicSeed,KEEP,Bool_t,715,default
+Events,HLT_L2Mu10NoVtx_2Cha_CosmicSeed_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,612,default
+Events,HLT_DoubleL3dTksMu16_10NoVtx_DxyMin0p01cm,KEEP,Bool_t,645,default
+Events,HLT_L2Mu50NoVtx_3Cha_CosmicSeed_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,608,default
+Events,HLT_L2Mu50NoVtx_3Cha_VetoL3Mu0DxyMax1cm,KEEP,Bool_t,595,default
+Events,HLT_L3Mu30NoVtx_DxyMin0p01cm,KEEP,Bool_t,782,default
+Events,HLT_L3Mu50NoVtx_DxyMin0p01cm,KEEP,Bool_t,662,default
+Events,HLT_L3dTksMu10_NoVtx_DxyMin0p01cm,KEEP,Bool_t,1009,default
+Events,HLT_Mu20NoFiltersNoVtxDisplaced_Photon20_CaloCustomId,KEEP,Bool_t,825,default
+Events,HLT_DisplacedMu24_MediumChargedIsoDisplacedPFTauHPS24,KEEP,Bool_t,1233,default
+Events,HLT_Photon34_R9Id90_CaloIdL_IsoL_DisplacedIdL_MediumChargedIsoDisplacedPFTauHPS34,KEEP,Bool_t,785,default
+Events,HLT_DoubleMediumChargedIsoDisplacedPFTauHPS32_Trk1_eta2p1,KEEP,Bool_t,633,default
+Events,HLT_DoubleMediumChargedIsoDisplacedPFTauHPS36_Trk1_eta2p1,KEEP,Bool_t,633,default
+Events,HLT_DoubleMediumChargedIsoDisplacedPFTauHPS32_Trk1_eta2p1_noDxy,KEEP,Bool_t,719,default
+Events,HLT_IsoMu27_MediumChargedIsoDisplacedPFTauHPS24_eta2p1_SingleL1,KEEP,Bool_t,1319,default
+Events,HLT_HT350_DelayedJet40_SingleDelay1p5To3p5nsInclusive,KEEP,Bool_t,673,default
+Events,HLT_HT350_DelayedJet40_SingleDelay1p6To3p5nsInclusive,KEEP,Bool_t,657,default
+Events,HLT_HT350_DelayedJet40_SingleDelay1p75To3p5nsInclusive,KEEP,Bool_t,636,default
+Events,HLT_HT350_DelayedJet40_SingleDelay3nsInclusive,KEEP,Bool_t,600,default
+Events,HLT_HT350_DelayedJet40_SingleDelay3p25nsInclusive,KEEP,Bool_t,609,default
+Events,HLT_HT350_DelayedJet40_SingleDelay3p5nsInclusive,KEEP,Bool_t,606,default
+Events,HLT_HT430_DelayedJet40_SingleDelay0p5nsInclusive,KEEP,Bool_t,814,default
+Events,HLT_HT430_DelayedJet40_SingleDelay1nsInclusive,KEEP,Bool_t,696,default
+Events,HLT_HT430_DelayedJet40_SingleDelay1To1p5nsInclusive,KEEP,Bool_t,687,default
+Events,HLT_HT430_DelayedJet40_SingleDelay1p1To1p6nsInclusive,KEEP,Bool_t,665,default
+Events,HLT_HT430_DelayedJet40_SingleDelay1p25To1p75nsInclusive,KEEP,Bool_t,675,default
+Events,HLT_HT430_DelayedJet40_SingleDelay1p5nsInclusive,KEEP,Bool_t,634,default
+Events,HLT_HT430_DelayedJet40_SingleDelay2nsInclusive,KEEP,Bool_t,604,default
+Events,HLT_HT430_DelayedJet40_SingleDelay2p25nsInclusive,KEEP,Bool_t,613,default
+Events,HLT_HT430_DelayedJet40_SingleDelay2p5nsInclusive,KEEP,Bool_t,610,default
+Events,HLT_HT430_DelayedJet40_SingleDelay0p5nsTrackless,KEEP,Bool_t,658,default
+Events,HLT_HT430_DelayedJet40_SingleDelay1nsTrackless,KEEP,Bool_t,620,default
+Events,HLT_HT430_DelayedJet40_SingleDelay1p25nsTrackless,KEEP,Bool_t,617,default
+Events,HLT_HT430_DelayedJet40_SingleDelay1p5nsTrackless,KEEP,Bool_t,610,default
+Events,HLT_HT430_DelayedJet40_DoubleDelay0p5nsInclusive,KEEP,Bool_t,678,default
+Events,HLT_HT430_DelayedJet40_DoubleDelay1nsInclusive,KEEP,Bool_t,608,default
+Events,HLT_HT430_DelayedJet40_DoubleDelay1p25nsInclusive,KEEP,Bool_t,609,default
+Events,HLT_HT430_DelayedJet40_DoubleDelay1p5nsInclusive,KEEP,Bool_t,606,default
+Events,HLT_HT430_DelayedJet40_DoubleDelay0p5nsTrackless,KEEP,Bool_t,626,default
+Events,HLT_HT430_DelayedJet40_DoubleDelay0p75nsTrackless,KEEP,Bool_t,617,default
+Events,HLT_HT430_DelayedJet40_DoubleDelay1nsTrackless,KEEP,Bool_t,600,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay2p5To4nsInclusive,KEEP,Bool_t,623,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay2p6To4nsInclusive,KEEP,Bool_t,619,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay2p75To4nsInclusive,KEEP,Bool_t,618,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay3p5nsInclusive,KEEP,Bool_t,610,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay3p75nsInclusive,KEEP,Bool_t,613,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay4nsInclusive,KEEP,Bool_t,604,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay2p5nsTrackless,KEEP,Bool_t,602,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay2p75nsTrackless,KEEP,Bool_t,605,default
+Events,HLT_L1Tau_DelayedJet40_SingleDelay3nsTrackless,KEEP,Bool_t,596,default
+Events,HLT_L1Tau_DelayedJet40_DoubleDelay0p75nsInclusive,KEEP,Bool_t,725,default
+Events,HLT_L1Tau_DelayedJet40_DoubleDelay1p25nsInclusive,KEEP,Bool_t,625,default
+Events,HLT_L1Tau_DelayedJet40_DoubleDelay1p5nsInclusive,KEEP,Bool_t,614,default
+Events,HLT_L1Tau_DelayedJet40_DoubleDelay1p75nsInclusive,KEEP,Bool_t,613,default
+Events,HLT_L1Tau_DelayedJet40_DoubleDelay0p5nsTrackless,KEEP,Bool_t,650,default
+Events,HLT_L1Tau_DelayedJet40_DoubleDelay1nsTrackless,KEEP,Bool_t,600,default
+Events,HLT_L1Tau_DelayedJet40_DoubleDelay1p25nsTrackless,KEEP,Bool_t,609,default
+Events,HLT_L1Tau_DelayedJet40_DoubleDelay1p5nsTrackless,KEEP,Bool_t,606,default
+Events,HLT_L1Mu6HT240,KEEP,Bool_t,1128,default
+Events,HLT_Mu6HT240_DisplacedDijet30_Inclusive1PtrkShortSig5_DisplacedLoose,KEEP,Bool_t,742,default
+Events,HLT_Mu6HT240_DisplacedDijet35_Inclusive0PtrkShortSig5,KEEP,Bool_t,697,default
+Events,HLT_Mu6HT240_DisplacedDijet35_Inclusive1PtrkShortSig5_DisplacedLoose,KEEP,Bool_t,730,default
+Events,HLT_Mu6HT240_DisplacedDijet40_Inclusive0PtrkShortSig5,KEEP,Bool_t,677,default
+Events,HLT_Mu6HT240_DisplacedDijet40_Inclusive1PtrkShortSig5_DisplacedLoose,KEEP,Bool_t,722,default
+Events,HLT_Mu6HT240_DisplacedDijet45_Inclusive0PtrkShortSig5,KEEP,Bool_t,673,default
+Events,HLT_Mu6HT240_DisplacedDijet50_Inclusive0PtrkShortSig5,KEEP,Bool_t,653,default
+Events,HLT_HT350,KEEP,Bool_t,941,default
+Events,HLT_HT425,KEEP,Bool_t,829,default
+Events,HLT_HT360_DisplacedDijet40_Inclusive1PtrkShortSig5,KEEP,Bool_t,712,default
+Events,HLT_HT360_DisplacedDijet45_Inclusive1PtrkShortSig5,KEEP,Bool_t,696,default
+Events,HLT_HT390_DisplacedDijet40_Inclusive1PtrkShortSig5,KEEP,Bool_t,696,default
+Events,HLT_HT390_DisplacedDijet45_Inclusive1PtrkShortSig5,KEEP,Bool_t,676,default
+Events,HLT_HT390eta2p0_DisplacedDijet40_Inclusive1PtrkShortSig5,KEEP,Bool_t,694,default
+Events,HLT_HT430_DisplacedDijet40_Inclusive1PtrkShortSig5,KEEP,Bool_t,664,default
+Events,HLT_HT400_DisplacedDijet40_DisplacedTrack,KEEP,Bool_t,589,default
+Events,HLT_HT430_DisplacedDijet40_DisplacedTrack,KEEP,Bool_t,589,default
+Events,HLT_HT550_DisplacedDijet60_Inclusive,KEEP,Bool_t,590,default
+Events,HLT_HT650_DisplacedDijet60_Inclusive,KEEP,Bool_t,582,default
+Events,HLT_CaloMET60_DTCluster50,KEEP,Bool_t,857,default
+Events,HLT_CaloMET60_DTClusterNoMB1S50,KEEP,Bool_t,723,default
+Events,HLT_L1MET_DTCluster50,KEEP,Bool_t,849,default
+Events,HLT_L1MET_DTClusterNoMB1S50,KEEP,Bool_t,711,default
+Events,HLT_CscCluster_Loose,KEEP,Bool_t,518,default
+Events,HLT_CscCluster_Medium,KEEP,Bool_t,521,default
+Events,HLT_CscCluster_Tight,KEEP,Bool_t,518,default
+Events,HLT_CscCluster50_Photon20Unseeded,KEEP,Bool_t,565,default
+Events,HLT_CscCluster50_Photon30Unseeded,KEEP,Bool_t,565,default
+Events,HLT_CscCluster100_Ele5,KEEP,Bool_t,528,default
+Events,HLT_CscCluster100_Mu5,KEEP,Bool_t,529,default
+Events,HLT_CscCluster100_PNetTauhPFJet10_Loose,KEEP,Bool_t,583,default
+Events,HLT_DoubleCscCluster75,KEEP,Bool_t,524,default
+Events,HLT_IsoTrk200_L1SingleMuShower,KEEP,Bool_t,548,default
+Events,HLT_IsoTrk400_L1SingleMuShower,KEEP,Bool_t,548,default
+Events,HLT_DoubleCscCluster100,KEEP,Bool_t,527,default
+Events,HLT_L1CSCShower_DTCluster50,KEEP,Bool_t,539,default
+Events,HLT_L1CSCShower_DTCluster75,KEEP,Bool_t,539,default
+Events,HLT_PFMET105_IsoTrk50,KEEP,Bool_t,673,default
+Events,HLT_L1SingleLLPJet,KEEP,Bool_t,604,default
+Events,HLT_HT170_L1SingleLLPJet_DisplacedDijet40_DisplacedTrack,KEEP,Bool_t,626,default
+Events,HLT_HT200_L1SingleLLPJet_DisplacedDijet40_DisplacedTrack,KEEP,Bool_t,626,default
+Events,HLT_HT200_L1SingleLLPJet_DisplacedDijet60_DisplacedTrack,KEEP,Bool_t,626,default
+Events,HLT_HT270_L1SingleLLPJet_DisplacedDijet40_DisplacedTrack,KEEP,Bool_t,626,default
+Events,HLT_HT200_L1SingleLLPJet_DisplacedDijet40_Inclusive1PtrkShortSig5,KEEP,Bool_t,665,default
+Events,HLT_HT240_L1SingleLLPJet_DisplacedDijet40_Inclusive1PtrkShortSig5,KEEP,Bool_t,661,default
+Events,HLT_HT280_L1SingleLLPJet_DisplacedDijet40_Inclusive1PtrkShortSig5,KEEP,Bool_t,661,default
+Events,HLT_HT320_L1SingleLLPJet_DisplacedDijet60_Inclusive,KEEP,Bool_t,611,default
+Events,HLT_HT420_L1SingleLLPJet_DisplacedDijet60_Inclusive,KEEP,Bool_t,611,default
+Events,HLT_HT200_L1SingleLLPJet_DelayedJet40_SingleDelay1nsTrackless,KEEP,Bool_t,645,default
+Events,HLT_HT200_L1SingleLLPJet_DelayedJet40_SingleDelay2nsInclusive,KEEP,Bool_t,641,default
+Events,HLT_HT200_L1SingleLLPJet_DelayedJet40_DoubleDelay0p5nsTrackless,KEEP,Bool_t,647,default
+Events,HLT_HT200_L1SingleLLPJet_DelayedJet40_DoubleDelay1nsInclusive,KEEP,Bool_t,641,default
+Events,HLT_HT200_L1SingleLLPJet_PFJet60_NeutralHadronFrac0p7,KEEP,Bool_t,621,default
+Events,HLT_HT200_L1SingleLLPJet_PFJet60_NeutralHadronFrac0p8,KEEP,Bool_t,617,default
+Events,HLT_DiPhoton10Time1ns,KEEP,Bool_t,521,default
+Events,HLT_DiPhoton10Time1p2ns,KEEP,Bool_t,527,default
+Events,HLT_DiPhoton10Time1p4ns,KEEP,Bool_t,527,default
+Events,HLT_DiPhoton10Time1p6ns,KEEP,Bool_t,527,default
+Events,HLT_DiPhoton10Time1p8ns,KEEP,Bool_t,527,default
+Events,HLT_DiPhoton10Time2ns,KEEP,Bool_t,521,default
+Events,HLT_DiPhoton10_CaloIdL,KEEP,Bool_t,1068,default
+Events,HLT_DoubleEle6p5_eta1p22_mMax6,KEEP,Bool_t,556,default
+Events,HLT_DoubleEle8_eta1p22_mMax6,KEEP,Bool_t,550,default
+Events,HLT_DoubleEle10_eta1p22_mMax6,KEEP,Bool_t,549,default
+Events,HLT_SingleEle8,KEEP,Bool_t,552,default
+Events,HLT_SingleEle8_SingleEGL1,KEEP,Bool_t,1197,default
+Events,HLT_Diphoton20_14_eta1p5_R9IdL_AND_HE_AND_IsoTCaloIdT,KEEP,Bool_t,725,default
+Events,HLT_Diphoton20_14_eta1p5_R9IdL_AND_HET_AND_IsoTCaloIdT,KEEP,Bool_t,716,default
+Events,HLT_Diphoton22_14_eta1p5_R9IdL_AND_HE_AND_IsoTCaloIdT,KEEP,Bool_t,725,default
+Events,HLT_Diphoton22_14_eta1p5_R9IdL_AND_HET_AND_IsoTCaloIdT,KEEP,Bool_t,712,default
+Events,HLT_Diphoton24_14_eta1p5_R9IdL_AND_HET_AND_IsoTCaloIdT,KEEP,Bool_t,712,default
+Events,HLT_Diphoton24_16_eta1p5_R9IdL_AND_HET_AND_IsoTCaloIdT,KEEP,Bool_t,704,default
+Events,HLT_Mu50_L1SingleMuShower,KEEP,Bool_t,593,default
+Events,HLT_IsoMu24_OneProng32,KEEP,Bool_t,1088,default
+Events,HLT_Photon32_OneProng32_M50To105,KEEP,Bool_t,766,default
+Events,HLT_DoubleMediumDeepTauPFTauHPS30_L2NN_eta2p1_OneProng,KEEP,Bool_t,712,default
+Events,HLT_IsoMu24_eta2p1_MediumDeepTauPFTauHPS30_L2NN_eta2p1_OneProng_CrossL1,KEEP,Bool_t,1239,default
+Events,HLT_VBF_DiPFJet125_45_Mjj1050,KEEP,Bool_t,637,default
+Events,HLT_VBF_DiPFJet125_45_Mjj1200,KEEP,Bool_t,621,default
+Events,HLT_VBF_DiPFJet75_45_Mjj800_DiPFJet60,KEEP,Bool_t,689,default
+Events,HLT_VBF_DiPFJet75_45_Mjj850_DiPFJet60,KEEP,Bool_t,681,default
+Events,HLT_VBF_DiPFJet80_45_Mjj650_PFMETNoMu85,KEEP,Bool_t,759,default
+Events,HLT_VBF_DiPFJet80_45_Mjj750_PFMETNoMu85,KEEP,Bool_t,723,default
+Events,HLT_VBF_DiPFJet95_45_Mjj750_Mu3_TrkIsoVVL,KEEP,Bool_t,781,default
+Events,HLT_VBF_DiPFJet95_45_Mjj850_Mu3_TrkIsoVVL,KEEP,Bool_t,737,default
+Events,HLT_VBF_DiPFJet50_Mjj650_Photon22,KEEP,Bool_t,653,default
+Events,HLT_VBF_DiPFJet50_Mjj750_Photon22,KEEP,Bool_t,637,default
+Events,HLT_VBF_DiPFJet50_Mjj600_Ele22_eta2p1_WPTight_Gsf,KEEP,Bool_t,689,default
+Events,HLT_VBF_DiPFJet50_Mjj650_Ele22_eta2p1_WPTight_Gsf,KEEP,Bool_t,677,default
+Events,HLT_VBF_DiPFJet45_Mjj650_MediumDeepTauPFTauHPS45_L2NN_eta2p1,KEEP,Bool_t,690,default
+Events,HLT_VBF_DiPFJet45_Mjj750_MediumDeepTauPFTauHPS45_L2NN_eta2p1,KEEP,Bool_t,686,default
+Events,HLT_VBF_DoublePNetTauhPFJet20_eta2p2,KEEP,Bool_t,642,default
+Events,HLT_VBF_DiPFJet45_Mjj650_PNetTauhPFJet45_L2NN_eta2p3,KEEP,Bool_t,678,default
+Events,HLT_VBF_DiPFJet45_Mjj750_PNetTauhPFJet45_L2NN_eta2p3,KEEP,Bool_t,674,default
+Events,HLT_PFJet200_TimeLtNeg2p5ns,KEEP,Bool_t,539,default
+Events,HLT_PFJet200_TimeGt2p5ns,KEEP,Bool_t,530,default
+Events,HLT_Photon50_TimeLtNeg2p5ns,KEEP,Bool_t,539,default
+Events,HLT_Photon50_TimeGt2p5ns,KEEP,Bool_t,530,default
+Events,HLT_PPSMaxTracksPerArm1,KEEP,Bool_t,535,default
+Events,HLT_PPSMaxTracksPerRP4,KEEP,Bool_t,552,default
+Events,HLT_PPSRandom,KEEP,Bool_t,497,default
+Events,MC_PFScouting,KEEP,Bool_t,497,default
+Events,HLT_L1AXOVTight,KEEP,Bool_t,1023,default
+Events,HLTriggerFinalPath,KEEP,Bool_t,512,default
+Events,Dataset_ScoutingPFMonitor,KEEP,Bool_t,709,default
+Events,Dataset_ScoutingPFRun3,KEEP,Bool_t,524,default
+LuminosityBlocks,run,KEEP,UInt_t,86,default
+LuminosityBlocks,luminosityBlock,KEEP,UInt_t,98,default
+LuminosityBlocks,GenFilter_filterEfficiency,KEEP,Float_t,109,default
+LuminosityBlocks,GenFilter_filterEfficiencyError,KEEP,Float_t,114,default
+LuminosityBlocks,GenFilter_numEventsPassed,KEEP,Int_t,108,default
+LuminosityBlocks,GenFilter_numEventsTotal,KEEP,Int_t,107,default
+Runs,run,KEEP,UInt_t,74,default
+Runs,genEventCount,KEEP,Long64_t,88,default
+Runs,genEventSumw,KEEP,Double_t,87,default
+Runs,genEventSumw2,KEEP,Double_t,88,default
+Runs,nLHEScaleSumw,KEEP,Int_t,84,default
+Runs,LHEScaleSumw,KEEP,Double_t[nLHEScaleSumw],163,default
+Runs,nLHEPdfSumw,KEEP,Int_t,82,default
+Runs,LHEPdfSumw,KEEP,Double_t[nLHEPdfSumw],822,default
+Runs,nPSSumw,KEEP,Int_t,78,default
+Runs,PSSumw,KEEP,Double_t[nPSSumw],117,default
+MetaData,ProcessHistory,KEEP,vector<edm::ProcessHistory>,414,default
+ParameterSets,IdToParameterSetsBlobs,KEEP,pair<edm::Hash<1>;edm::ParameterSetBlob>,2217591,default

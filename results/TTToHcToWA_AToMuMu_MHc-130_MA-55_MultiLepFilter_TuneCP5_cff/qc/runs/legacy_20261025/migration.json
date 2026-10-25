@@ -1,0 +1,67 @@
+{
+ "moved": [
+  {
+   "src": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/files.csv",
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/files.csv",
+   "sha256": "8ea72c9aee3b5802df774d7bc40dd2b1b30420750978e3eaad62e3529bd568f7"
+  },
+  {
+   "src": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/summary.csv",
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/summary.csv",
+   "sha256": "b8f3f60356ac2f658f919a488c0ea9b7dd4556f93ed5236c4c2a42e78d4ff11e"
+  },
+  {
+   "src": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/.work/lists",
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/runs/legacy_20261025/lists",
+   "files": 5
+  },
+  {
+   "src": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/.work/log",
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/runs/legacy_20261025/logs",
+   "files": 11
+  },
+  {
+   "src": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/.work/missing.txt",
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/runs/legacy_20261025/missing.txt",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "src": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/.work/out",
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/runs/legacy_20261025/out",
+   "files": 5
+  },
+  {
+   "src": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/.work/submit.sub",
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/runs/legacy_20261025/submit.sub",
+   "sha256": "a1c13d55393f3224289e306b0d6748a324d2bf0313db0bb389b14c3e50235be7"
+  }
+ ],
+ "created": [
+  {
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/exclude.txt",
+   "lines": 0
+  },
+  {
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/removed.txt",
+   "lines": 2
+  },
+  {
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/deletion/log_20261025_184901.csv",
+   "rows": 2,
+   "origin_sha256": "5b45f91a364c020152a3531ffa7a20428fef0fecc79f8b0461ad1bf260ac54cb"
+  },
+  {
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/deletion/manifest_20261025_184353.csv",
+   "rows": 2,
+   "origin_sha256": "f5f66163bbad28d6b6d6a4894734db805876f28d6aad55517190b57f39c8acae"
+  },
+  {
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/runs/legacy_20261025/driver.log",
+   "lines": 1
+  },
+  {
+   "dst": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-55_MultiLepFilter_TuneCP5_cff/qc/records.json",
+   "records": 91
+  }
+ ]
+}

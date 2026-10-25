@@ -1,0 +1,24 @@
+universe = vanilla
+executable = /d0/scratch/choij/RNTuplizer/scripts/rnt_validate.sh
+arguments = /d0/scratch/choij/RNTuplizer /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-60_MultiLepFilter_TuneCP5_cff/rntuple/runs/val_20261026_003249 $(chunk) /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-60_MultiLepFilter_TuneCP5_cff/rntuple/branch_selection.csv
+output = /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-60_MultiLepFilter_TuneCP5_cff/rntuple/runs/val_20261026_003249/logs/chunk_$(chunk).out
+error = /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-60_MultiLepFilter_TuneCP5_cff/rntuple/runs/val_20261026_003249/logs/chunk_$(chunk).err
+log = /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-60_MultiLepFilter_TuneCP5_cff/rntuple/runs/val_20261026_003249/logs/cluster.log
+should_transfer_files = NO
+getenv = False
+# workers do not inherit the caller's RNT_* overrides
+environment = "RNT_SUPERSEDED=/pnfs/knu.ac.kr/data/cms/store/user/choij/RNTuple_superseded"
+request_cpus = 1
+request_memory = 4 GB
++JobFlavour = "longlunch"
+max_retries = 0
+# a stalled worker (disk/IO) must not block a chunk forever: remove after 1 h, the driver resubmits the chunk
+periodic_remove = (JobStatus == 2) && ((time() - JobCurrentStartDate) > 3600)
+queue chunk from (
+000
+001
+002
+003
+004
+005
+)

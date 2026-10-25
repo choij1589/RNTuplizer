@@ -1,0 +1,7 @@
+---
+name: rnt-manifest
+description: Conversion plan for one masspoint - merge consecutive clean sources into ~20k-event groups and classify every group as convert / skip-valid / reconvert-stale / conflict (read-only on /pnfs).
+---
+`python3 python/rnt_make_manifest.py <mp> [--branches CONF]` -> `results/<mp>/rntuple/manifest_<ts>.csv` (+`.sha256`; one row per SOURCE file: input, size, mtime, events, group, output, action, group_digest, toolchain_digest, note) and `branch_selection.csv`. Needs QC clean (no corrupted/missing).
+Grouping (`python/rnt_groups.py`, `config/rntuple_output.conf` TARGET_EVENTS=20000): clean sources sorted by (timestamp dir, N numeric) are cut into k = round(events/20000) contiguous groups; output `/pnfs/.../RNTuple/<mp>/rntpl_<NNN>.root`. Typical group = 5-6 sources, 17k-21k events. The cut points depend on the masspoint's total, so changing the source set regroups much of the masspoint (reconvert-stale for all affected groups) - do cleanup before converting.
+Actions per group: `convert` (no output yet), `skip-valid` (record ok, same group digest = same sources/sizes/mtimes/events, same toolchain digest), `reconvert-stale` (sources, output or toolchain digest changed; the old output is later renamed into RNTuple_superseded/), `conflict` (output without record, leftover `.part.*`/`.failed*`, orphan `rntpl_NNN` beyond the plan, not enough free space). Toolchain digest = sha256(LCG view, ROOT version, rnt_convert binary, selection digest, COMPRESSION). Exit 4 on conflict (gate P fails), 2 on selection errors.

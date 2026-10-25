@@ -1,0 +1,8 @@
+work/
+bin/
+build/
+__pycache__/
+*.pyc
+results/*/*/runs/*/logs/
+results/*/*/runs/*/out/
+results/*/*/runs/*/lists/

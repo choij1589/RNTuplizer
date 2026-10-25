@@ -1,0 +1,10 @@
+{
+ "stage": "qc",
+ "masspoint": "TTToHcToWA_AToMuMu_MHc-130_MA-25_MultiLepFilter_TuneCP5_cff",
+ "run_id": "legacy_20261025",
+ "legacy": true,
+ "migrated": "2026-10-25 22:06:06",
+ "n_records": 95,
+ "n_chunks": 6,
+ "input_digest": "2a1af42cafbcb8f4e8733c9101de80c15ad6ef6a25fdd9d9cb36fdd3ff89e357"
+}

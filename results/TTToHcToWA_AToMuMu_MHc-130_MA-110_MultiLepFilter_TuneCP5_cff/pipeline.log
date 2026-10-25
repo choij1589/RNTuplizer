@@ -1,0 +1,17 @@
+=== 2026-10-26 00:06:11 pipeline TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff 
+GATE A TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff: PASS
+/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff/rntuple/manifest_20261026_000613.csv 
+sha256 d561318244c9853bbfb33e250dc39ea9c5cb95ad98976b34227c525ec147ee0c
+TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff: 93 clean sources -> 15 outputs {'convert': 15}; events/output min 19710 median 19855 max 23195; input 1440 MB, free 1151328.9 TB
+selection: conf=/d0/scratch/choij/RNTuplizer/config/rntuple_branches.conf rules=14 Events dropped=254; compression=512 target=20000; toolchain digest a22e670ac5673159
+  plan (outputs): {'convert': 15}
+GATE P TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff: PASS
+2026-10-26 00:06:13 TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff convert run=run_20261026_000613 files=15 chunks=15
+TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff: run run_20261026_000613: expected 15 outputs, recorded 15, ok 15, failed 0, missing 0 -> /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff/rntuple/conversion.csv
+  15 planned outputs
+GATE B TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff: PASS
+2026-10-26 00:09:15 TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff validate run=val_20261026_000915 files=15 chunks=5
+{'masspoint': 'TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff', 'n_sources_clean_qc': 93, 'n_outputs_planned': 15, 'n_converted_ok': 15, 'n_conversion_failed': 0, 'n_validated_ok': 15, 'n_validation_failed': 0, 'n_not_validated': 0, 'events_rntuple': 307245, 'events_qc_clean': 307245, 'events_match': 1, 'genEventCount_rntuple': 307245, 'genEventCount_qc': 307245, 'genEventCount_match': 1, 'filter_efficiency_rntuple': '0.660742', 'filter_efficiency_qc': '0.660742', 'efficiency_match': 1, 'events_per_output_min': 19710, 'events_per_output_median': 19855, 'events_per_output_max': 23195, 'input_bytes': 1440177373, 'output_bytes': 735484847, 'size_ratio': 0.5107, 'branches_kept': '1761', 'branches_dropped': '254', 'toolchain_digests': 1, 'toolchain_digest': 'a22e670ac5673159', 'all_pass': 1}
+  events 307245 vs QC 307245; efficiency 0.660742 vs 0.660742; size ratio 0.5107
+GATE C TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff: PASS
+=== 2026-10-26 00:12:21 TTToHcToWA_AToMuMu_MHc-130_MA-110_MultiLepFilter_TuneCP5_cff DONE

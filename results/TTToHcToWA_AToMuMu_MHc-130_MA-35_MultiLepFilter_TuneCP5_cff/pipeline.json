@@ -1,0 +1,29 @@
+{
+ "masspoint": "TTToHcToWA_AToMuMu_MHc-130_MA-35_MultiLepFilter_TuneCP5_cff",
+ "qc": {
+  "run_id": "legacy_20261025",
+  "recorded": "2026-10-26 00:21:28",
+  "n_files": 91,
+  "n_files_corrupted": 0,
+  "n_events_clean": 313287,
+  "filter_efficiency": "0.688543",
+  "source_digest": "a3628728632839672460e5bf7bdbf9c6ae3d5cd616fc606a4b17ab7fc4c61fc4"
+ },
+ "updated": "2026-10-26 00:29:41",
+ "convert": {
+  "run_id": "run_20261026_002129",
+  "recorded": "2026-10-26 00:24:34",
+  "toolchain_digest": "a22e670ac56731592adb83f0ff70ea35314d7bbd13aeba4d2c8da14e8dab3d6f",
+  "manifest": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-35_MultiLepFilter_TuneCP5_cff/rntuple/manifest_20261026_002129.csv",
+  "n_outputs": 16,
+  "n_sources": 91
+ },
+ "validate": {
+  "run_id": "val_20261026_002434",
+  "recorded": "2026-10-26 00:29:41",
+  "all_pass": 1,
+  "n_validated_ok": 16,
+  "events_rntuple": 313287,
+  "size_ratio": "0.524"
+ }
+}

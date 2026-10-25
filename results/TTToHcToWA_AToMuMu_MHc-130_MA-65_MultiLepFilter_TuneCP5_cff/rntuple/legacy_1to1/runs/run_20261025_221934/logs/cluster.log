@@ -1,0 +1,342 @@
+000 (9915609.000.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+000 (9915609.001.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+000 (9915609.002.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+000 (9915609.003.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+000 (9915609.004.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+000 (9915609.005.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+000 (9915609.006.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+000 (9915609.007.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+000 (9915609.008.000) 2026-10-25 22:19:34 Job submitted from host: <155.230.20.251:9618?addrs=155.230.20.251-9618&alias=cms.knu.ac.kr&noUDP&sock=schedd_1553_ceab>
+...
+001 (9915609.002.000) 2026-10-25 22:19:36 Job executing on host: <155.230.21.85:9618?addrs=155.230.21.85-9618+[2407-c000-c025--21-85]-9618&alias=cluster285.knu.ac.kr&noUDP&sock=startd_1266_f2fd>
+	SlotName: slot1_19@cluster285.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_2487384"
+	Cpus = 1
+	Disk = 2819
+	GPUs = 0
+	Memory = 3100
+...
+001 (9915609.000.000) 2026-10-25 22:19:36 Job executing on host: <155.230.21.126:9618?addrs=155.230.21.126-9618+[2407-c000-c025--21-126]-9618&alias=cluster326.knu.ac.kr&noUDP&sock=startd_1855_f445>
+	SlotName: slot1_54@cluster326.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_2321203"
+	Cpus = 1
+	Disk = 2820
+	GPUs = 0
+	Memory = 3100
+...
+001 (9915609.001.000) 2026-10-25 22:19:36 Job executing on host: <155.230.21.90:9618?addrs=155.230.21.90-9618+[2407-c000-c025--21-90]-9618&alias=cluster290.knu.ac.kr&noUDP&sock=startd_1302_a465>
+	SlotName: slot1_12@cluster290.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_3695886"
+	Cpus = 1
+	Disk = 2840
+	GPUs = 0
+	Memory = 3100
+...
+006 (9915609.002.000) 2026-10-25 22:19:50 Image size of job updated: 159248
+	58  -  MemoryUsage of job (MB)
+	58864  -  ResidentSetSize of job (KB)
+...
+006 (9915609.000.000) 2026-10-25 22:19:50 Image size of job updated: 145916
+	2  -  MemoryUsage of job (MB)
+	1588  -  ResidentSetSize of job (KB)
+...
+006 (9915609.001.000) 2026-10-25 22:19:50 Image size of job updated: 9804
+	10  -  MemoryUsage of job (MB)
+	9804  -  ResidentSetSize of job (KB)
+...
+001 (9915609.003.000) 2026-10-25 22:20:03 Job executing on host: <155.230.21.88:9618?addrs=155.230.21.88-9618+[2407-c000-c025--21-88]-9618&alias=cluster288.knu.ac.kr&noUDP&sock=startd_1288_0a12>
+	SlotName: slot1_18@cluster288.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_3035030"
+	Cpus = 1
+	Disk = 2763
+	GPUs = 0
+	Memory = 3100
+...
+001 (9915609.004.000) 2026-10-25 22:20:04 Job executing on host: <155.230.21.98:9618?addrs=155.230.21.98-9618+[2407-c000-c025--21-98]-9618&alias=cluster298.knu.ac.kr&noUDP&sock=startd_1067_73a4>
+	SlotName: slot1_4@cluster298.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_1349095"
+	Cpus = 1
+	Disk = 2817
+	GPUs = 0
+	Memory = 3100
+...
+001 (9915609.005.000) 2026-10-25 22:20:04 Job executing on host: <155.230.21.90:9618?addrs=155.230.21.90-9618+[2407-c000-c025--21-90]-9618&alias=cluster290.knu.ac.kr&noUDP&sock=startd_1302_a465>
+	SlotName: slot1_15@cluster290.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_3696144"
+	Cpus = 1
+	Disk = 2840
+	GPUs = 0
+	Memory = 3100
+...
+001 (9915609.007.000) 2026-10-25 22:20:04 Job executing on host: <155.230.21.141:9618?addrs=155.230.21.141-9618+[2407-c000-c025--21-141]-9618&alias=cluster341.knu.ac.kr&noUDP&sock=startd_1469_30b6>
+	SlotName: slot1_10@cluster341.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_1107289"
+	Cpus = 1
+	Disk = 2774
+	GPUs = 0
+	Memory = 3100
+...
+001 (9915609.008.000) 2026-10-25 22:20:04 Job executing on host: <155.230.21.126:9618?addrs=155.230.21.126-9618+[2407-c000-c025--21-126]-9618&alias=cluster326.knu.ac.kr&noUDP&sock=startd_1855_f445>
+	SlotName: slot1_7@cluster326.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_2321529"
+	Cpus = 1
+	Disk = 2820
+	GPUs = 0
+	Memory = 3100
+...
+001 (9915609.006.000) 2026-10-25 22:20:05 Job executing on host: <155.230.21.133:9618?addrs=155.230.21.133-9618+[2407-c000-c025--21-133]-9618&alias=cluster333.knu.ac.kr&noUDP&sock=startd_2109_2d53>
+	SlotName: slot1_19@cluster333.knu.ac.kr
+	CondorScratchDir = "/home/condor/dir_4103594"
+	Cpus = 1
+	Disk = 2833
+	GPUs = 0
+	Memory = 3100
+...
+006 (9915609.004.000) 2026-10-25 22:20:17 Image size of job updated: 26360
+	26  -  MemoryUsage of job (MB)
+	26360  -  ResidentSetSize of job (KB)
+...
+006 (9915609.003.000) 2026-10-25 22:20:17 Image size of job updated: 144684
+	142  -  MemoryUsage of job (MB)
+	144684  -  ResidentSetSize of job (KB)
+...
+006 (9915609.006.000) 2026-10-25 22:20:18 Image size of job updated: 19708
+	20  -  MemoryUsage of job (MB)
+	19708  -  ResidentSetSize of job (KB)
+...
+006 (9915609.005.000) 2026-10-25 22:20:18 Image size of job updated: 159788
+	157  -  MemoryUsage of job (MB)
+	159788  -  ResidentSetSize of job (KB)
+...
+006 (9915609.007.000) 2026-10-25 22:20:18 Image size of job updated: 157236
+	47  -  MemoryUsage of job (MB)
+	47948  -  ResidentSetSize of job (KB)
+...
+006 (9915609.008.000) 2026-10-25 22:20:18 Image size of job updated: 147016
+	1  -  MemoryUsage of job (MB)
+	560  -  ResidentSetSize of job (KB)
+...
+006 (9915609.002.000) 2026-10-25 22:21:04 Image size of job updated: 182516
+	58  -  MemoryUsage of job (MB)
+	58864  -  ResidentSetSize of job (KB)
+...
+005 (9915609.002.000) 2026-10-25 22:21:04 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:01:00, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:00, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.72        1         1 
+	   Disk (KB)            :     3           3      2819 
+	   GPUs                 :                           0 
+	   Memory (MB)          :    58        3072      3100 
+	   TimeExecute (s)      :    88                       
+	   TimeSlotBusy (s)     :    89                       
+
+	Job terminated of its own accord at 2026-10-25T13:21:04Z with exit-code 0.
+...
+006 (9915609.000.000) 2026-10-25 22:21:18 Image size of job updated: 186712
+	2  -  MemoryUsage of job (MB)
+	1588  -  ResidentSetSize of job (KB)
+...
+005 (9915609.000.000) 2026-10-25 22:21:18 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:01:10, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:10, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.78        1         1 
+	   Disk (KB)            :     3           3      2820 
+	   GPUs                 :                           0 
+	   Memory (MB)          :     2        3072      3100 
+	   TimeExecute (s)      :   102                       
+	   TimeSlotBusy (s)     :   102                       
+
+	Job terminated of its own accord at 2026-10-25T13:21:17Z with exit-code 0.
+...
+006 (9915609.007.000) 2026-10-25 22:21:26 Image size of job updated: 186620
+	47  -  MemoryUsage of job (MB)
+	48080  -  ResidentSetSize of job (KB)
+...
+005 (9915609.007.000) 2026-10-25 22:21:26 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:01:00, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:00, Sys 0 00:00:02  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.95        1         1 
+	   Disk (KB)            :     3           3      2774 
+	   GPUs                 :                           0 
+	   Memory (MB)          :    47        3072      3100 
+	   TimeExecute (s)      :    82                       
+	   TimeSlotBusy (s)     :    83                       
+
+	Job terminated of its own accord at 2026-10-25T13:21:26Z with exit-code 0.
+...
+006 (9915609.008.000) 2026-10-25 22:21:26 Image size of job updated: 168344
+	1  -  MemoryUsage of job (MB)
+	560  -  ResidentSetSize of job (KB)
+...
+005 (9915609.008.000) 2026-10-25 22:21:27 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:56, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:56, Sys 0 00:00:02  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.78        1         1 
+	   Disk (KB)            :     3           3      2820 
+	   GPUs                 :                           0 
+	   Memory (MB)          :     1        3072      3100 
+	   TimeExecute (s)      :    82                       
+	   TimeSlotBusy (s)     :    82                       
+
+	Job terminated of its own accord at 2026-10-25T13:21:26Z with exit-code 0.
+...
+006 (9915609.006.000) 2026-10-25 22:21:32 Image size of job updated: 185456
+	20  -  MemoryUsage of job (MB)
+	19708  -  ResidentSetSize of job (KB)
+...
+005 (9915609.006.000) 2026-10-25 22:21:32 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:52, Sys 0 00:00:02  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:52, Sys 0 00:00:02  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.41        1         1 
+	   Disk (KB)            :     3           3      2833 
+	   GPUs                 :                           0 
+	   Memory (MB)          :    20        3072      3100 
+	   TimeExecute (s)      :    87                       
+	   TimeSlotBusy (s)     :    88                       
+
+	Job terminated of its own accord at 2026-10-25T13:21:32Z with exit-code 0.
+...
+006 (9915609.005.000) 2026-10-25 22:21:42 Image size of job updated: 184300
+	157  -  MemoryUsage of job (MB)
+	159788  -  ResidentSetSize of job (KB)
+...
+005 (9915609.005.000) 2026-10-25 22:21:42 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:01:03, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:03, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.79        1         1 
+	   Disk (KB)            :     3           3      2840 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   157        3072      3100 
+	   TimeExecute (s)      :    98                       
+	   TimeSlotBusy (s)     :   100                       
+
+	Job terminated of its own accord at 2026-10-25T13:21:42Z with exit-code 0.
+...
+006 (9915609.001.000) 2026-10-25 22:21:45 Image size of job updated: 186156
+	10  -  MemoryUsage of job (MB)
+	9804  -  ResidentSetSize of job (KB)
+...
+005 (9915609.001.000) 2026-10-25 22:21:45 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:01:05, Sys 0 00:00:03  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:05, Sys 0 00:00:03  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.80        1         1 
+	   Disk (KB)            :     3           3      2840 
+	   GPUs                 :                           0 
+	   Memory (MB)          :    10        3072      3100 
+	   TimeExecute (s)      :   129                       
+	   TimeSlotBusy (s)     :   129                       
+
+	Job terminated of its own accord at 2026-10-25T13:21:45Z with exit-code 0.
+...
+006 (9915609.003.000) 2026-10-25 22:22:29 Image size of job updated: 184368
+	142  -  MemoryUsage of job (MB)
+	144684  -  ResidentSetSize of job (KB)
+...
+005 (9915609.003.000) 2026-10-25 22:22:29 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:01:59, Sys 0 00:00:05  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:59, Sys 0 00:00:05  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.84        1         1 
+	   Disk (KB)            :     3           3      2763 
+	   GPUs                 :                           0 
+	   Memory (MB)          :   142        3072      3100 
+	   TimeExecute (s)      :   146                       
+	   TimeSlotBusy (s)     :   146                       
+
+	Job terminated of its own accord at 2026-10-25T13:22:29Z with exit-code 0.
+...
+006 (9915609.004.000) 2026-10-25 22:22:39 Image size of job updated: 186740
+	26  -  MemoryUsage of job (MB)
+	26360  -  ResidentSetSize of job (KB)
+...
+005 (9915609.004.000) 2026-10-25 22:22:40 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:01:57, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:01:57, Sys 0 00:00:06  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.66        1         1 
+	   Disk (KB)            :     3           3      2817 
+	   GPUs                 :                           0 
+	   Memory (MB)          :    26        3072      3100 
+	   TimeExecute (s)      :   155                       
+	   TimeSlotBusy (s)     :   157                       
+
+	Job terminated of its own accord at 2026-10-25T13:22:39Z with exit-code 0.
+...

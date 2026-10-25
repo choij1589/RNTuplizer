@@ -1,0 +1,12 @@
+{
+ "stage": "validate",
+ "masspoint": "TTToHcToWA_AToMuMu_MHc-130_MA-100_MultiLepFilter_TuneCP5_cff",
+ "run_id": "val_20261026_001015",
+ "created": "2026-10-26 00:10:15",
+ "manifest": "/d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-100_MultiLepFilter_TuneCP5_cff/rntuple/manifest_20261026_000613.csv",
+ "manifest_sha256": "67734a3fe4949babd71a1226b3533d49234dd95aa222c2d8e0d9ad305af9cfc1",
+ "n_outputs": 15,
+ "n_chunks": 5,
+ "n_files": 89,
+ "toolchain_digest": "a22e670ac56731592adb83f0ff70ea35314d7bbd13aeba4d2c8da14e8dab3d6f"
+}

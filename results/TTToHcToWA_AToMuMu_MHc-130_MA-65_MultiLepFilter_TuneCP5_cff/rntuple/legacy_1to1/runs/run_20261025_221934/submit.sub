@@ -1,0 +1,25 @@
+universe = vanilla
+executable = /d0/scratch/choij/RNTuplizer/scripts/rnt_convert.sh
+arguments = /d0/scratch/choij/RNTuplizer /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-65_MultiLepFilter_TuneCP5_cff/rntuple/runs/run_20261025_221934 $(chunk) /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-65_MultiLepFilter_TuneCP5_cff/rntuple/branch_selection.csv
+output = /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-65_MultiLepFilter_TuneCP5_cff/rntuple/runs/run_20261025_221934/logs/chunk_$(chunk).out
+error = /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-65_MultiLepFilter_TuneCP5_cff/rntuple/runs/run_20261025_221934/logs/chunk_$(chunk).err
+log = /d0/scratch/choij/RNTuplizer/results/TTToHcToWA_AToMuMu_MHc-130_MA-65_MultiLepFilter_TuneCP5_cff/rntuple/runs/run_20261025_221934/logs/cluster.log
+should_transfer_files = NO
+getenv = False
+request_cpus = 1
+request_memory = 3 GB
++JobFlavour = "longlunch"
+max_retries = 0
+# normal chunks take 1-2 min; a job running far longer sits on a stalled worker (disk/IO): remove it, the driver resubmits the chunk
+periodic_remove = (JobStatus == 2) && ((time() - JobCurrentStartDate) > 1800)
+queue chunk from (
+000
+001
+002
+003
+004
+005
+006
+007
+008
+)

@@ -1,5 +1,7 @@
 ---
 name: qc-env
-description: Set up CMSSW_15_0_22 (el9_amd64_gcc12) so PyROOT is available locally and on HTCondor workers. Use before any ROOT work in SampleFactoryQC.
+description: The one pinned toolchain for every stage - LCG_110 view (ROOT 6.40.02, Python 3.13, gcc 15, cmake). Use before any ROOT/PyROOT/cmake work in this repo; CMSSW is retired.
 ---
-Source `scripts/env.sh` (`source /d0/scratch/choij/SampleFactoryQC/.claude/skills/qc-env/scripts/env.sh`). It creates `cmssw/CMSSW_15_0_22` on first use and runs `cmsenv`. System python has no ROOT/uproot, so every ROOT command must run after this. Never install packages.
+`source scripts/env.sh` (from the repo root). It reads `config/rntuple_env.conf` (`LCG_VIEW`, `LCG_PLATFORM`, `ROOT_VERSION`), sources `/cvmfs/sft.cern.ch/lcg/views/<view>/<platform>/setup.sh` and aborts if `root-config --version` differs from the pinned version.
+Condor wrappers (`scripts/run_qc.sh`, `rnt_convert.sh`, `rnt_validate.sh`) source it themselves (`getenv = False`). System python (3.9) has no ROOT; only `layout.py`, `aggregate.py` and the other pure-python tools run without it.
+Changing any value in `config/rntuple_env.conf` changes the toolchain digest: converted files become stale and are reconverted.

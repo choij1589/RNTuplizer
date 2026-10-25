@@ -1,240 +1,186 @@
-# SampleFactoryQC
+# RNTuplizer
 
-Quality control and cleanup for private NanoAODv15 samples produced with custom electron branches
-(CMSSW_15_0_22 campaign, KNU Tier-3). It checks every ROOT file for corruption, checks that the custom electron
-branches exist, computes the generator filter efficiency, writes per-masspoint CSV reports, and (optionally and carefully)
-removes the corrupted files.
+Quality control and TTree -> RNTuple conversion of private NanoAODv15 samples with custom electron branches.
+For each masspoint a fixed workflow runs on the KNU Tier-3 HTCondor pool:
 
-Sample area: `/u/user/choij/SE_UserHome/SampleFactory` (a symlink to `/pnfs/knu.ac.kr/data/cms/store/user/choij/SampleFactory`),
-layout `<masspoint>/chain_RunIII2024Summer24/<YYYYMMDD_HHMMSS>/NanoAODv15_<N>.root`.
-Every timestamp directory is treated as independent files.
+    QC (corruption, 8 custom branches, filter efficiency)  ->  [cleanup of corrupted files]  ->  conversion to RNTuple  ->  independent validation
+
+Sources: `/u/user/choij/SE_UserHome/SampleFactory` (= `/pnfs/knu.ac.kr/data/cms/store/user/choij/SampleFactory`),
+`<mp>/chain_RunIII2024Summer24/<YYYYMMDD_HHMMSS>/NanoAODv15_<N>.root`; every timestamp directory is an independent set of files.
+Converted data: `/pnfs/knu.ac.kr/data/cms/store/user/choij/RNTuple/<mp>/rntpl_<NNN>.root` - consecutive source files of a masspoint are merged into outputs of about 20k events
+(typically 5-6 sources each; zstd level 12); which sources went into which output is recorded in `results/<mp>/rntuple/groups.csv`.
 
 ---------------------------------------------------------------------------------------------------
 
 ## 1. Quick start
 
-Run everything from `/d0/scratch/choij/SampleFactoryQC` in a Claude Code session. After adding or editing agents/skills
-run `/reload-plugins` (new agent types are not visible until then).
+Work in a Claude Code session in this repo. After adding/editing agents or skills run `/reload-plugins`.
 
 | Goal | Command |
 |---|---|
-| Run the whole QC (all masspoints) | `/sample-qc all` (or `/sample-qc <masspoint>`) |
-| Look at results | `results/<masspoint>/files.csv`, `results/<masspoint>/summary.csv`, `results/overall.csv` |
-| Remove corrupted files (safe, 2 stages) | `/qc-cleanup` (quarantine) then, much later, `/qc-cleanup purge` |
-| Undo a quarantine | `python3 .claude/skills/qc-quarantine/scripts/restore.py --log results/deletion/log_<ts>.csv --apply` |
+| Whole workflow for one masspoint | `/pipeline <masspoint> [--branches config/rntuple_branches.test.conf]` |
+| Only the QC stage (one / all masspoints) | `/sample-qc <masspoint>` / `/sample-qc all` |
+| Remove the corrupted files of a masspoint (human-approved, 2 stages) | `/qc-cleanup <masspoint>` then, much later, `/qc-cleanup purge <masspoint>` |
+| Look at results | `results/<mp>/qc/{files,summary}.csv`, `results/<mp>/rntuple/{conversion,validation,summary}.csv`, `results/overall.csv` |
+| Undo a quarantine | `python3 python/restore.py --log results/<mp>/qc/deletion/log_<ts>.csv --apply` |
 
-Without Claude (plain shell, bash):
+Without Claude (plain bash, from the repo root):
 
 ```bash
-cd /d0/scratch/choij/SampleFactoryQC
-# one masspoint end to end
 MP=TTToHcToWA_AToMuMu_MHc-130_MA-65_MultiLepFilter_TuneCP5_cff
-S=$(python3 .claude/skills/qc-condor/scripts/make_submit.py $MP | awk '{print $1}'); condor_submit $S
-bash .claude/skills/qc-condor/scripts/status.sh $MP              # chunks done/total, idle/running/held
-python3 .claude/skills/qc-report/scripts/aggregate.py $MP        # files.csv + summary.csv (exit 2 = results missing)
-python3 .claude/skills/qc-report/scripts/rollup.py               # results/overall.csv
-# all masspoints, submitted at once, with retries and aggregation
-nohup bash .claude/skills/sample-qc/scripts/run_all.sh > results/run_all.out 2>&1 &   # progress: results/run_all.log (ALLDONE)
-# check a few files by hand
-source .claude/skills/qc-env/scripts/env.sh
-python3 .claude/skills/qc-check-rootfile/scripts/check_file.py /tmp/out.json file1.root file2.root
+bash scripts/rnt_build.sh                                             # once: build bin/rnt_convert, rnt_inventory, rnt_validate
+bash scripts/qc_run_mp.sh $MP && python3 python/pipeline_gate.py A $MP         # 1 QC  (exit 3 at gate A = corrupted files, run the cleanup)
+bash scripts/rnt_run_mp.sh $MP convert --branches config/rntuple_branches.conf  # 2 plan + convert  (gates P and B)
+bash scripts/rnt_run_mp.sh $MP validate                                         # 3 validate        (gate C)
+python3 python/rollup.py                                                        # results/overall.csv
 ```
 
-Rules of thumb: ROOT is only available after sourcing `qc-env` (system python has no ROOT/uproot). Use `bash` for scripts
-(zsh does not word-split variables). Never match processes with `pkill -f <name>` in a command that itself contains that name.
+Rules of thumb: ROOT only after `source scripts/env.sh`; use `bash` for multi-line shell logic (the login shell is zsh);
+remove condor jobs by cluster id only; never read files whose dCache locality is `UNAVAILABLE` (check `cat <dir>/.(get)(<file>)(locality)`).
 
 ---------------------------------------------------------------------------------------------------
 
 ## 2. Design concept
 
-1. **Cheap, parallel, reproducible.** ~2,200 files / 33 GB are read in full (every branch of every event), so the work runs on
-   HTCondor in chunks of 20 files (~16 min per job). ROOT comes from CMSSW_15_0_22 (`el9_amd64_gcc12`, created in `cmssw/`)
-   and works identically on login and worker nodes (`/u`, `/d0`, `/pnfs` are NFS).
-2. **Separate detection, aggregation and judgement.** Workers only write one JSON record per file (facts). All definitions that
-   need cross-file or cross-tree reasoning (`incomplete`, exclusions, removed files, efficiency) are applied at aggregation, so
-   rules can change without re-reading 33 GB.
-3. **A job failure is not file corruption.** A chunk without output is "missing result" (aggregate exits 2 and the masspoint is not
-   final); it is never counted as clean.
-4. **Storage can lie or hang.** `/pnfs` is a `hard` NFS mount; a file on an offline dCache pool blocks the reader forever (process in
-   `D` state). Each file is therefore checked in its own subprocess with a timeout (`io_timeout`), and dCache locality
-   (`.(get)(file)(locality)`) is used as evidence.
-5. **Independent verification.** Results are re-checked by a separate agent that writes its own PyROOT code and is given
-   paths, never conclusions.
-6. **Destructive actions are staged, guarded and human-approved.** Nothing is deleted in the step that decides it.
-   Plan -> independent audit -> explicit user approval of a manifest hash -> canary -> reversible quarantine (rename) ->
-   post-audit -> later, separately approved purge. Destructive scripts run only in the main session, never in subagents.
-7. **Orchestration lives in the main session** (subagents cannot spawn subagents). Skills hold the logic and scripts; agents are
-   thin, tool-restricted workers that follow a skill.
+1. **One pinned toolchain.** `config/rntuple_env.conf` selects the LCG view (`LCG_110`, `x86_64-el9-gcc15-opt` = ROOT 6.40.02, Python 3.13,
+   gcc 15, cmake). `scripts/env.sh` asserts the ROOT version; the C++ tools refuse to run on another ROOT. RNTuple's format and API still move, and
+   ROOT >= 6.40 is required for the importer used here (CMSSW_15_0_22 has 6.32.13 and was retired after a regression check: identical QC records).
+2. **Everything about a masspoint lives in `results/<mp>/`** (reports, condor run directories with logs, deletion records); `/pnfs` sample directories hold data only.
+   All paths come from `python/layout.py`; roots can be overridden with `RNT_*` environment variables, which is how every tool is tested in a sandbox first.
+3. **Detect, aggregate, judge.** Workers only write per-file facts. Cross-file rules (`incomplete`, exclusions, removed files, efficiency, cross-checks) are applied when
+   aggregating, so a rule change never needs a re-read of 33 GB. A job failure is never counted as file corruption or as a clean file.
+4. **Storage can hang.** `/pnfs` is a hard NFS mount; a file on an offline dCache pool blocks readers forever. Every file is checked in its own subprocess with a timeout (`io_timeout`),
+   and dCache locality is evidence.
+5. **Plan, run, gate.** Conversion first produces a read-only manifest over groups of sources (`convert | skip-valid | reconvert-stale | conflict`), then runs exactly that manifest; each stage ends in a gate
+   (A, P, B, C) whose reasons are printed. Outputs are published by atomic rename; nothing is overwritten.
+6. **Digest-based staleness.** Every conversion record carries `toolchain_digest = sha256(LCG view, ROOT version, rnt_convert binary, KEEP/DROP selection, compression)` and a `group_digest` over the exact sources (path, size, mtime, events). A changed digest marks the output stale; it is reconverted (the old file is renamed into `RNTuple_superseded/`), never silently reused.
+   Grouping cut points are global over a masspoint, so changing one source regroups much of it: run cleanup before converting.
+7. **Independent validation.** `rnt_validate` shares no code with the converter (separate type dispatch, TTreeReader vs RNTupleView) and compares values, not only counts; agents re-check with their own code and are given paths, not conclusions.
+8. **Destructive actions are staged and human-gated.** Plan -> independent audit -> explicit approval of a manifest hash -> canary -> reversible quarantine -> post-audit; purge is a separate later run. Only the main session runs them. Conversion and validation delete nothing.
+9. **Orchestration lives in the main session** (subagents cannot spawn subagents). Skills hold the playbook (`SKILL.md` only); code lives in `python/`, `scripts/`, `src/`.
 
 ### Definitions
+Corrupted file reasons: `zombie`, `recovered`, `size0`, `no_tree`, `zero_events`, `read_error`, `missing_branch` (any of Electron_superclusterPhi, _superclusterEnergy, _DeltaEtaInSC, _DeltaPhiInSC, _DeltaPhiInSeed, _ecalPFClusIso, _hcalPFClusIso, _dr03HcalTowerSumEt),
+`check_exception`, `io_timeout` (no result in 300 s: storage read hangs), `incomplete` (readable, but Events entries < sum of `GenFilter_numEventsPassed`: events silently lost). Warnings: `count_mismatch`, `no_genfilter_branches`.
+Generator filter efficiency = sum(`LuminosityBlocks.GenFilter_numEventsPassed`) / sum(`GenFilter_numEventsTotal`) over clean files (`Runs.genEventCount` is post-filter).
+Not importable, reported but not errors: trees with `edm::` branches (`MetaData`, `ParameterSets`) and non-tree objects (`tag`).
 
-A file is **corrupted** if any of these reasons applies:
-
-| Reason | Meaning |
-|---|---|
-| `zombie` | cannot be opened / truncated (footer missing) |
-| `recovered` | ROOT had to recover the file |
-| `size0` | smaller than 1000 bytes or missing |
-| `no_tree` | `Events`, `Runs` or `LuminosityBlocks` missing |
-| `zero_events` | Events has 0 entries |
-| `read_error` | `GetEntry` < 0 or exception on Events / Runs / LuminosityBlocks (bad baskets) |
-| `missing_branch` | any of the 8 custom branches is absent (below) |
-| `check_exception` | the checker crashed on the file |
-| `io_timeout` | no result within `QC_FILE_TIMEOUT` (300 s): storage read hangs (seen: dCache locality `UNAVAILABLE`) |
-| `incomplete` | valid ROOT but Events entries < sum of `GenFilter_numEventsPassed` (events silently lost); added at aggregation |
-
-Warnings (not corruption): `count_mismatch` (Events entries != sum of `Runs.genEventCount`), `no_genfilter_branches`.
-
-Custom electron branches: `Electron_superclusterPhi`, `Electron_superclusterEnergy`, `Electron_DeltaEtaInSC`, `Electron_DeltaPhiInSC`,
-`Electron_DeltaPhiInSeed`, `Electron_ecalPFClusIso`, `Electron_hcalPFClusIso`, `Electron_dr03HcalTowerSumEt`.
-
-**Generator filter efficiency** = sum(`LuminosityBlocks.GenFilter_numEventsPassed`) / sum(`GenFilter_numEventsTotal`) over clean files,
-with binomial error. (`Runs.genEventCount` is post-filter and cannot give it.)
-
-**Event accounting:** `n_events` of a corrupted file is its Events entry count, or 0 if unreadable (then it appears in
-`n_files_unreadable`). So `n_events_total` is a lower bound while unreadable files exist.
+### Branch selection (KEEP/DROP)
+`config/rntuple_branches.conf`: one rule per line, `KEEP|DROP [tree:]pattern` (shell glob, tree defaults to `Events`). Everything is kept by default; rules apply in order and the last match wins
+(`DROP HLT_*` then `KEEP HLT_IsoMu24`). The 8 custom electron branches are protected; a collection's counter (`nPhoton`) is dropped automatically when all members are dropped and may never be dropped while a member is kept;
+unmatched patterns and kept index branches pointing at a dropped collection (`Electron_photonIdx`) are warnings. `config/rntuple_branches.conf` holds the approved production table: `DROP HTXS_* Tau_* boostedTau_* Photon_* FsrPhoton_* IsoTrack_* LowPtElectron_* SoftActivityJet_* TauProd_* TauSpinner_* TrackGenJetAK4_*` plus `Electron_photonIdx`, `Electron_fsrPhotonIdx`, `Muon_fsrPhotonIdx` (254 of 2015 Events branches, nine counters such as `nTau`, `nPhoton` dropped automatically; ~17.7% of the Events TTree bytes; Tau 6.7%, Photon 3.6%, LowPtElectron 2.1%, boostedTau 1.5%, TrackGenJetAK4 1.1%, TauProd 0.9%, SoftActivityJet 0.8%, IsoTrack 0.5%). All `HLT_*` and `L1_*` trigger branches are kept (decision: keep all triggers). The resolver reports no warnings for this table. `config/rntuple_branches.test.conf` = `DROP Photon_*` (test only).
+`python3 python/rnt_branches.py draft --inventory INV.csv --out config/rntuple_branches.draft.conf` writes a commented, inactive proposal grouped by prefix with sizes.
 
 ---------------------------------------------------------------------------------------------------
 
-## 3. Repository layout
+## 3. Output structure
 
 ```
-README.md  CLAUDE.md
-.claude/skills/<name>/SKILL.md (+ scripts/)     skills (logic + scripts)
-.claude/agents/*.md                             agents (tool-restricted workers)
-cmssw/CMSSW_15_0_22/                            ROOT environment (created by qc-env)
-config/exclude.txt                              paths/globs excluded from QC (NOT deleted)
-config/removed.txt                              paths quarantined/purged (dropped from reports, counted as removed)
-results/<masspoint>/files.csv, summary.csv      per-masspoint reports
-results/<masspoint>/.work/{lists,out,log}       condor chunk lists, per-chunk JSON, logs
-results/overall.csv                             one row per masspoint
-results/run_all.log                             driver log (ALLDONE when finished)
-results/deletion/manifest_*.csv(+.sha256), log_*.csv, purge_*.csv   cleanup manifests and audit trail
+results/
+  overall.csv                       rollup of results/<mp>/qc/summary.csv (only cross-masspoint file)
+  <mp>/
+    pipeline.json                   what ran, with which run ids and digests
+    qc/
+      records.json                  per-file QC facts (authoritative input of aggregate.py; each record stamped with its run)
+      files.csv  summary.csv        QC reports
+      exclude.txt  removed.txt      excluded from QC (not deleted) / quarantined or purged paths
+      current_run                   id of the run aggregate.py expects results from
+      runs/<run_id>/                lists/ out/ logs/ params.json submit.sub driver.log   (legacy_20261025 = migrated old run)
+      deletion/                     manifest_<ts>.csv(+.sha256), log_<ts>.csv, purge_<ts>.csv, *.origin
+    rntuple/
+      branch_selection.csv          resolved KEEP/DROP decisions (tree,branch,decision,type,zip_bytes,rule)
+      manifest_<ts>.csv(+.sha256)   plan: one row per source file with its group, output, action, group digest, toolchain digest
+      groups.csv                    provenance: output <- sources (events, size, mtime)
+      conversion.csv                per OUTPUT: status, n_sources, group digest, events, bytes, trees converted/skipped, kept/dropped, digest, ROOT version, seconds, superseded, error
+      validation.csv                per output: ok, entries, fields compared, missing/extra/type/value mismatches, RNTuple genEventCount and GenFilter sums
+      summary.csv                   per masspoint: counts, events, QC cross-checks (events, genEventCount, efficiency), sizes, all_pass
+      runs/<run_id>/                conversion (run_*) and validation (val_*) runs: lists/ out/ logs/ params.json submit.sub driver.log
+/pnfs/knu.ac.kr/data/cms/store/user/choij/
+  SampleFactory/<mp>/chain_RunIII2024Summer24/<ts>/NanoAODv15_<N>.root        sources (data only)
+  SampleFactory_quarantine/<YYYYMMDD>/<mp>/chain_RunIII2024Summer24/<ts>/...   quarantined files
+  RNTuple/<mp>/rntpl_<NNN>.root                                                converted RNTuple files, ~20k events each
+  RNTuple_superseded/<date>/<mp>/rntpl_<NNN>.root.<run_id>                     replaced outputs, renamed aside (never deleted by the pipeline; purge only with approval via `python/purge_rnt.py`)
+```
+Other repo folders: `python/`, `scripts/`, `src/` + `CMakeLists.txt`, `config/`, `bin/` + `build/` (gitignored), `work/` (gitignored sandboxes).
+
+---------------------------------------------------------------------------------------------------
+
+## 4. Workflow graph (skills `[ ]` and agents `( )`)
+
+```
+/pipeline <mp>   [pipeline]  ── state: [pipeline-state] → results/<mp>/pipeline.json
+ │
+ ├─ 0 PREFLIGHT   [qc-env] pinned LCG_110 · [rnt-build] bin/ tools · [rnt-branches] KEEP/DROP resolver     (rnt-scout) on first use
+ │
+ ├─ 1 QC          [sample-qc] ─┬─ [qc-condor]  ← (qc-condor-runner)   submit / monitor / retry chunks
+ │                             ├─ [qc-check-rootfile]  python/check_file.py
+ │                             └─ [qc-report]  ← (qc-aggregator)      records.json · files.csv · summary.csv
+ │                (qc-scout) discovery · (qc-verifier) independent re-check
+ │    ▼
+ │   G-A: no missing results · 8 custom branches present · QC fresh (file set + sizes unchanged) · corrupted files = 0 ?
+ │        └─ corrupted > 0 ─► STOP ─► [qc-cleanup] ─ [qc-delete-manifest] ← (qc-delete-planner)
+ │                                        ▼ audit ← (qc-delete-auditor)
+ │                                        ▼ HUMAN APPROVAL (main session)
+ │                                        └─ [qc-quarantine]: dry-run → canary → quarantine → post-audit ← (qc-delete-auditor)
+ │                                           then re-aggregate, re-check G-A;  purge = separate later run
+ │    ▼ pass
+ ├─ 2 CONVERT     [rnt-manifest] ← (rnt-planner)  → manifest_<ts>.csv
+ │                   ▼ G-P: no conflicts · space OK · plan counts reported
+ │                [rnt-convert] + [rnt-branches] ← (rnt-condor-runner)   scripts/rnt_run_mp.sh <mp> convert → bin/rnt_convert
+ │    ▼
+ │   G-B: every clean file ok · output size as recorded · current toolchain digest · no .part/.failed leftovers
+ │    ▼ pass
+ ├─ 3 VALIDATE    [rnt-validate] ← (rnt-condor-runner)   scripts/rnt_run_mp.sh <mp> validate → bin/rnt_validate;  (rnt-validator) independent sample
+ │    ▼
+ │   G-C: all files pass · Events entries = QC n_events_clean · Runs.genEventCount = QC · efficiency (from RNTuple) = QC efficiency
+ └─ 4 FINALIZE    [pipeline-state] → pipeline.json · results/overall.csv · report
+
+One-time (done): [results-migration] python/migrate_results.py ← audit (layout-auditor)
 ```
 
-### Report columns
-
-`files.csv`: `path, timestamp_dir, size_bytes, n_events, corrupted, reasons, events_missing, warnings, missing_branches`
-
-`summary.csv`: `masspoint, n_files, n_files_corrupted, n_files_clean, n_events_total, n_events_corrupted, n_events_clean,
-n_files_unreadable, gen_num_passed, gen_num_total, filter_efficiency, filter_eff_err, n_files_incomplete,
-n_events_missing_incomplete, n_files_missing_result, n_files_removed, all_custom_branches_present`
-(invariants: clean + corrupted = total; `files.csv` rows = `n_files` = `.root` files on disk minus excluded/removed).
-
----------------------------------------------------------------------------------------------------
-
-## 4. Skills
-
-| Skill | Purpose | Key scripts |
-|---|---|---|
-| `qc-env` | Sets up CMSSW_15_0_22 (`el9_amd64_gcc12`) for PyROOT locally and on workers. | `scripts/env.sh` (source it; creates the release area on first use) |
-| `qc-check-rootfile` | Corruption definition and the per-file checker. Each file is checked in its own subprocess with a 300 s timeout. Emits JSON: sizes, entries, readable entries, missing branches, reasons, warnings, GenFilter sums. | `scripts/check_file.py OUT.json FILE...` |
-| `qc-condor` | Splits a masspoint into chunks of 20 files, submits, monitors, resubmits. Chunks write atomically (tmp + mv), so a present `chunk_N.json` is complete. | `make_submit.py <mp> [--only ids]`, `run_qc.sh` (worker wrapper), `status.sh <mp>` (also writes `.work/missing.txt`), `retry_failed.py [--reason io_timeout] [--submit]` |
-| `qc-report` | Merges chunk JSONs into the CSVs; applies `incomplete`, `config/exclude.txt` and `config/removed.txt`; rollup across masspoints. | `aggregate.py <mp>` (exit 2 = missing results), `rollup.py` |
-| `sample-qc` | Orchestrator playbook, `/sample-qc [mp\|all]`. | `run_all.sh [batch]` (all masspoints at once by default; idempotent, resubmits only missing chunks, retries twice, aggregates, rolls up) |
-| `qc-delete-manifest` | Builds the deletion manifest (+ sha256 and a per-masspoint "healthy events after removal >= 300000" guard). Read-only, never reads file data. | `make_manifest.py [--min-healthy N]` |
-| `qc-quarantine` | The only code that moves/removes samples. Dry-run by default. | `quarantine.py`, `restore.py`, `purge.py`, `common.py` |
-| `qc-cleanup` | Orchestrator playbook for removal, `/qc-cleanup [purge]`. | (uses the two skills above) |
-
-Retry mechanism: `retry_failed.py` puts files with a given reason into an extra chunk `chunk_rNNN`; during aggregation the later
-chunk record overrides the earlier one for the same path.
-
-### qc-quarantine in detail
-
-- `quarantine.py --manifest M --confirm-hash <sha256 of M> [--canary] [--apply] [--root R] [--qc Q] [--no-condor-check]`
-  Per-file hard checks (a failure means skip and report, never "fix"): the real path matches
-  `<root>/<mp>/chain_RunIII2024Summer24/<14-digit ts>/NanoAODv15_<N>.root`; regular file, not a symlink; size and mtime equal to the
-  manifest; destination does not exist; no condor jobs of the user are queued; and fresh evidence:
-  `io_timeout` rows must still be locality `UNAVAILABLE` (otherwise skip: "recovered, re-QC it"), other rows are re-checked
-  with `check_file.py` and must still be bad. Action: `mv --no-clobber` (a metadata-only rename on the same filesystem) into
-  `<root>_quarantine/<YYYYMMDD>/<same relative path>`, every filesystem call under a 60 s timeout. After each move it verifies
-  source gone / destination present / same size, and stops the whole run on any failure. Appends to the audit log
-  `results/deletion/log_<ts>.csv` and to `config/removed.txt`. It never uses `rm`, globs or recursion.
-- `restore.py --log L [--apply]` moves quarantined files back (refuses to overwrite) and removes them from `config/removed.txt`.
-- `purge.py --log L --confirm-hash <sha256 of L> [--apply]` permanently unlinks only files that the log lists as quarantined and that
-  are inside the quarantine directory with the logged size. Writes `purge_<ts>.csv`.
+| Stage | Skills | Agents | Main code | Writes | Gate |
+|---|---|---|---|---|---|
+| 0 Preflight | qc-env, rnt-build, rnt-branches, pipeline-state | rnt-scout | `scripts/env.sh`, `scripts/rnt_build.sh`, `python/rnt_branches.py`, `python/layout.py` | `bin/`, `rntuple/branch_selection.csv` | env + build + config |
+| 1 QC | sample-qc, qc-condor, qc-check-rootfile, qc-report | qc-scout, qc-condor-runner, qc-aggregator, qc-verifier | `qc_run_mp.sh`, `make_submit.py`, `run_qc.sh`, `check_file.py`, `qc_merge.py`, `aggregate.py` | `results/<mp>/qc/*` | A |
+| 1b Cleanup | qc-cleanup, qc-delete-manifest, qc-quarantine | qc-delete-planner, qc-delete-auditor | `make_manifest.py`, `quarantine.py`, `restore.py`, `purge.py`, `purge_rnt.py` | `qc/deletion/*`, quarantine dir | human approval |
+| 2a Plan | rnt-manifest, rnt-branches | rnt-planner | `rnt_make_manifest.py`, `rnt_branches.py` | `rntuple/manifest_<ts>.csv` | P |
+| 2b Convert | rnt-convert | rnt-condor-runner | `rnt_run_mp.sh`, `rnt_make_jobs.py`, `rnt_convert.sh`, `bin/rnt_convert`, `rnt_aggregate.py` | `/pnfs/.../RNTuple/<mp>/`, `rntuple/conversion.csv` | B |
+| 3 Validate | rnt-validate | rnt-condor-runner, rnt-validator | `rnt_run_mp.sh`, `rnt_validate.sh`, `bin/rnt_validate`, `rnt_validate_report.py` | `rntuple/{validation,summary}.csv` | C |
+| 4 Finalize | pipeline-state | – | `pipeline_state.py`, `pipeline_gate.py`, `rollup.py` | `pipeline.json`, `overall.csv` | – |
+| One-time | results-migration | layout-auditor | `migrate_results.py` | `results/<mp>/` reorganized | audit |
 
 ---------------------------------------------------------------------------------------------------
 
-## 5. Agents
+## 5. Skills (16, `.claude/skills/<name>/SKILL.md`)
+`qc-env` pinned toolchain · `qc-check-rootfile` corruption definition + checker · `qc-condor` per-masspoint condor QC runs · `qc-report` merge/aggregate/rollup · `sample-qc` QC stage playbook ·
+`qc-delete-manifest` deletion manifest · `qc-quarantine` quarantine / restore / purge · `qc-cleanup` cleanup playbook · `rnt-build` C++ tools · `rnt-branches` KEEP/DROP ·
+`rnt-manifest` conversion plan · `rnt-convert` conversion stage · `rnt-validate` validation stage · `pipeline-state` state + gates · `results-migration` one-time reorganization · `pipeline` the fixed workflow.
 
-All agents are read-only or limited; none performs a destructive step. The main session decides, the user approves.
-
+## 6. Agents (11, `.claude/agents/*.md`) - none performs a destructive step
 | Agent | Tools | Job |
 |---|---|---|
-| `qc-scout` | Bash, Read, Grep, Glob | Discovery: list masspoints/files, probe trees and branches of one file (Events, Runs, LuminosityBlocks incl. `GenFilter_*`), confirm the 8 custom branches, check path visibility. Never modifies samples or submits jobs. |
-| `qc-condor-runner` | Bash, Read, Write | Runs one masspoint on HTCondor following `qc-condor`: create, submit, monitor (>= 60 s between checks), resubmit missing/held chunks up to 2 times. Reports job failures with causes; never edits check logic or deletes samples. |
-| `qc-aggregator` | Bash, Read, Write | Runs `aggregate.py` / `rollup.py` and validates invariants (clean + corrupted = total, rows = `find` count, no missing results, efficiency in (0,1]). |
-| `qc-verifier` | Read, Grep, Glob, Bash | Independent re-check: re-opens all flagged files plus random clean files with its own PyROOT code (entries, 8 branches, full `GetEntry` loop, GenFilter sums), re-sums CSV totals, recomputes the efficiency. For `io_timeout` files it only tests with `timeout cat`. Reports mismatches only. |
-| `qc-delete-planner` | Read, Bash, Grep | Builds the deletion manifest and guard table; may run only read-only commands. |
-| `qc-delete-auditor` | Read, Grep, Bash | Adversarial audit. PRE mode (given a manifest path): the manifest must equal the recomputed `corrupted=1` set exactly, sha256 and path-pattern valid, no healthy or excluded file, per-masspoint healthy events >= 300000, and independent evidence per row (dCache locality for `io_timeout`, Events vs GenFilter for `incomplete`; never opens unavailable files). POST mode (given a log): sources gone, destinations present with the right sizes, quarantine tree contains exactly the logged files, `removed.txt` and CSVs consistent. |
+| `qc-scout` | Bash, Read, Grep, Glob | read-only discovery: masspoints/files, trees/branches of one file, locality of paths |
+| `qc-condor-runner` | Bash, Read, Write | QC run of one masspoint (submit, monitor, retry max 2x) |
+| `qc-aggregator` | Bash, Read, Write | merge + aggregate + invariants + rollup |
+| `qc-verifier` | Read, Grep, Glob, Bash | independent re-check of flagged and sampled clean files with its own code |
+| `qc-delete-planner` | Read, Bash, Grep | builds the deletion manifest (read-only) |
+| `qc-delete-auditor` | Read, Grep, Bash | adversarial pre-/post-audit of a deletion |
+| `rnt-scout` | Bash, Read, Grep, Glob | read-only discovery for conversion: env on workers, importer API, inventory, draft DROP list |
+| `rnt-planner` | Read, Bash, Grep | builds/explains the conversion manifest; cannot write to /pnfs or submit |
+| `rnt-condor-runner` | Bash, Read, Write | conversion or validation run of one masspoint (retry max 2x, gate result) |
+| `rnt-validator` | Read, Grep, Bash | independent sample re-check of converted files, own code |
+| `layout-auditor` | Read, Grep, Glob, Bash | audit of the results layout / reorganization |
 
-Guidance: give verifiers/auditors file paths, not the conclusion you expect.
-
----------------------------------------------------------------------------------------------------
-
-## 6. Workflows
-
-### 6.1 QC (`/sample-qc`)
-
-0. **Discovery gate.** `qc-scout` + `qc-env`: list masspoints/files, confirm trees and branches (including `GenFilter_*` in
-   `LuminosityBlocks`). Stop and show anything unexpected.
-1. **Pilot gate.** Smallest masspoint end to end on condor, aggregate, then `qc-verifier`. Confirms worker visibility of `/pnfs`,
-   runtime and memory. Do not change check logic afterwards without re-running the pilot.
-2. **Fan-out.** All remaining masspoints submitted at once (HTCondor schedules); `run_all.sh` waits, resubmits missing chunks
-   (max 2 retries) and aggregates.
-3. **Per-masspoint close.** `aggregate.py` must exit 0 (every file has a result).
-4. **Final gate.** `rollup.py`, report corrupted files / job failures / anomalies (efficiency spread, missing branches),
-   `qc-verifier` spot check, summary to the user. Re-runs skip masspoints that already have a `summary.csv` unless forced.
-
-Typical timeline: ~16 min per chunk job; a hanging file adds up to 5 min. If a job runs far longer than 20 min it is blocked on
-storage: `condor_ssh_to_job <id>` and look for `D`-state `check_file.py`, then
-`ls -l /proc/<pid>/fd` for the file and `cat <dir>/.(get)(<file>)(locality)`.
-
-### 6.2 Retrying unreadable files
-
-`python3 .claude/skills/qc-condor/scripts/retry_failed.py --submit`, wait for the jobs, then re-run `aggregate.py` for the affected
-masspoints and `rollup.py`. If files stay `UNAVAILABLE`, ask the dCache admins to bring the pools back.
-
-### 6.3 Cleanup (`/qc-cleanup`)
-
-0. **Preconditions.** No QC condor jobs; `files.csv`/`summary.csv` are final.
-1. **Plan.** `qc-delete-planner` (or `make_manifest.py`) writes `results/deletion/manifest_<ts>.csv` and its `.sha256`; exit code 3 means a
-   masspoint would drop below the healthy-events guard (300k) and the run stops.
-2. **Audit gate.** `qc-delete-auditor` (PRE) must report zero discrepancies.
-3. **Human gate.** The main session shows the per-masspoint table, lists the `UNAVAILABLE` files separately (they are not proven
-   corrupt), the total size and the manifest hash, and asks for explicit approval (AskUserQuestion). An agent's report is never approval.
-4. **Execute.** `quarantine.py` dry-run, then `--canary --apply`, verify, then `--apply` with the same hash.
-5. **Post-audit.** `qc-delete-auditor` (POST); re-run `aggregate.py` for all masspoints and `rollup.py`.
-6. **Purge (separate, later).** `/qc-cleanup purge`: recheck dCache locality of the `io_timeout` files (any now `ONLINE` should be
-   restored and re-QC'd instead), ask again with the hash of the quarantine log, then `purge.py --apply`.
-
-Quarantine location: `/pnfs/knu.ac.kr/data/cms/store/user/choij/SampleFactory_quarantine/<YYYYMMDD>/`.
-
-### 6.4 Exclusions
-
-Add a path or fnmatch glob to `config/exclude.txt` to drop a file from QC (it stays on disk; example: a leftover test file),
-then re-run `aggregate.py` for its masspoint and `rollup.py`.
-
----------------------------------------------------------------------------------------------------
-
-## 7. Status of the first production QC (2026-10-25)
-
-- 23 masspoints (MHc-130, MA = 15..125 in steps of 5), 2,165 files; 1 stray leftover test file excluded
-  (`MA-90/.../20261019_043451/NanoAODv15_.root`); 2,164 files checked.
-- 23 files were corrupted (13 `io_timeout` with dCache locality `UNAVAILABLE`, 10 `incomplete`); all 8 custom electron branches
-  were present in every file that could be opened.
-- The 23 files were moved to quarantine (not yet purged). After re-aggregation: 2,141 files, 0 corrupted, 7,176,252 healthy
-  events, at least 301,809 per masspoint. Filter efficiency (clean files) ranges from 0.544 (MA-125) to 0.703 (MA-55).
-- The stray MA-90 file was also moved to quarantine on request (logged in `results/deletion/manual_removals.csv`; its now-empty
-  timestamp directory `20261019_043451` was left in place). The sample area now holds exactly the 2,141 checked files; the
-  quarantine holds 24 files.
-- Pending: decide on the purge (see 6.3 step 6).
+## 7. C++ tools (`src/`, built into `bin/` by `scripts/rnt_build.sh`)
+`rnt_convert [--branches TABLE] [--json OUT] [--compression N] (IN | --inputs LIST) OUT` (RNTupleImporter, several inputs are concatenated in order; branch selection by cloning only kept branches; `.part` + atomic rename; never overwrites; self-check of entry counts) ·
+`rnt_inventory IN` (trees, branches, types, compressed bytes as CSV) · `rnt_validate [--table TABLE] [--json OUT] (IN | --inputs LIST) OUT` (TChain of the sources vs the merged RNTuple: entries, field set, types, value identity per field with order-sensitive checksums; exact equality).
+RDataFrame was rejected for validation: its JIT needs about a minute per 300 columns.
 
 ## 8. Known pitfalls
-
 - New or edited agents/skills are visible only after `/reload-plugins` / `/reload-skills`.
-- `condor_q -constraint` needs ClassAd syntax: `regexp("<path>", Args)`, not `~=`.
-- `condor_rm <user>` removes all of the user's jobs; remove by cluster id (`condor_q -constraint 'regexp("SampleFactoryQC/results", Args)' -af ClusterId`).
-- Do not read `UNAVAILABLE` files directly with ROOT/`cat`; use the locality query or a `timeout`-wrapped, backgrounded test.
-- Paths in `files.csv` use the `/u/user/choij/SE_UserHome/...` symlink form; cleanup scripts always work on the `/pnfs/...` realpath.
+- Condor workers cannot see the login node's `/tmp`; sandboxes that run condor jobs must live on NFS (`work/`).
+- `condor_q -constraint` needs ClassAd syntax: `regexp("<run dir>", Args)`; the run dir is followed by a space in `Args`, not a slash.
+- `scripts/condor_wait.sh` removes jobs that are only held (reason printed) so the retry logic can resubmit.
+- Output size: sources are ~3.4k events each; outputs are normalized to ~20k events (`config/rntuple_output.conf`: `TARGET_EVENTS`, `COMPRESSION`). Measured on one 20.9k-event group: zstd 505 63.3 MB, 509 60.6 MB, 512 60.2 MB (plateau), LZMA 209 60.1 MB but 2.2x slower full reads and 5x slower subset reads, so zstd 512 is used (read speed does not depend on the zstd level).
+- Do not read `UNAVAILABLE` files with ROOT or `cat`; use the locality dot-file or a `timeout`-wrapped, backgrounded test.
+- Paths in reports use the `/u/user/choij/SE_UserHome/...` symlink form; destructive tools always work on the `/pnfs/...` realpath.

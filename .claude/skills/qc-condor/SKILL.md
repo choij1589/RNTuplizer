@@ -1,9 +1,7 @@
 ---
 name: qc-condor
-description: Run the file check for one masspoint on KNU HTCondor (chunks of 20 files), monitor, and resubmit missing chunks.
+description: Run the file check for one masspoint on HTCondor (chunks of 20 files) - submit, monitor, resubmit, merge, aggregate. Per-masspoint run directories under results/<mp>/qc/runs/.
 ---
-1. `python3 scripts/make_submit.py <masspoint>` -> `results/<mp>/.work/{lists,out,log,submit.sub}`; prints the .sub path. All timestamp dirs are scanned and treated as independent files.
-2. `condor_submit <.sub>`.
-3. `scripts/status.sh <mp>` -> done/total chunks, idle/running/held; writes `.work/missing.txt`. Don't poll faster than ~60 s.
-4. Held/failed/missing chunks: read `.work/log/chunk_N.err`, `condor_release`/`condor_rm` as needed, then `make_submit.py <mp> --only .work/missing.txt` and resubmit (max 2 retries). A chunk that still fails is a job failure, NOT file corruption: report it, never count its files as clean (aggregate.py exits 2 when results are missing).
-Outputs are written atomically (tmp+mv), so a present chunk_N.json is complete. Jobs use getenv=False and source cvmfs themselves; paths must be visible on workers (/u, /d0, /pnfs are NFS).
+One command per masspoint: `bash scripts/qc_run_mp.sh <mp>` (submit -> wait -> resubmit missing chunks max 2x -> `qc_merge.py` -> `aggregate.py`; log in `<run>/driver.log`; exit 2 = files still without result). `bash scripts/run_all.sh` does all masspoints at once (HTCondor schedules).
+Pieces: `python/make_submit.py <mp> [--only ids]` (strict discovery `chain_RunIII2024Summer24/<ts>/NanoAODv15_<N>.root`; creates `results/<mp>/qc/runs/<run_id>/{lists,out,logs,params.json,submit.sub}` and sets `qc/current_run`), `scripts/run_qc.sh` (worker), `scripts/status.sh <mp>` (done/total, idle/running/held, writes `<run>/missing.txt`), `scripts/condor_wait.sh <run>` (held-only jobs are reported and removed so the retry logic can resubmit), `python/retry_failed.py <mp> [--reason io_timeout] [--submit]` (extra chunk `chunk_rNNN`).
+A job-level failure is not file corruption: records from an older run never satisfy a new run (`_run` stamp), so missing chunks keep `aggregate.py` at exit 2. Remove jobs only by cluster id, never `condor_rm <user>`.
